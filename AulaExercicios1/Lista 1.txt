@@ -244,4 +244,96 @@
             alert("O número está fora da faixa")
         }
 
-      
+        //Exercicio 7
+        A = 10 e B = 20
+
+        Boolean(A > 10 && B <= 20) // false
+        Boolean(A > 10 || B <= 20) // true
+        Boolean((A === 10 || B > 20) && B === 20) // true
+        console.log(null || 2 || undefined) // 2
+        Boolean(0 && 1) // 0
+            
+        //Exercicio 8
+        let valorA = Number(prompt("Me dê o numero A"))
+        let valorB = Number(prompt("Me dê o numero B"))
+        let valorC = Number(prompt("Me dê o numero C"))
+
+        if (valorA >= valorC && valorA >= valorB){
+            console.log(`O maior numero é ${valorA}`)
+        }
+        else if (valorB >= valorA && valorB >= valorC){
+            console.log(`O maior numero é ${valorB}`)
+        }
+        else{
+            console.log(`O maior numero é ${valorC}`)
+        }
+        
+        9) Reescreva o script abaixo utilizando o operador ternário:
+        let resultado;
+
+        if (a + b < 4) {
+            resultado = "Abaixo"
+        } else {
+            resultado = "Acima"
+        }
+
+        a + b < 4 ? resultado = "Abaixo" : resultado = "Acima"
+
+        10) Escreva	um programa que	leia as	medidas	dos	lados de um	triângulo e	
+        escreva	se ele é Equilátero, Isósceles ou Escaleno.	Sendo que:	
+        − Triângulo	Equilátero:	possui os 3 lados iguais.	
+        − Triângulo	Isósceles: possui 2	lados iguais.	
+        − Triângulo	Escaleno: possui 3 lados diferentes.
+
+        ladoa = Number(prompt("Me dê o lado A"))
+        ladob = Number(prompt("Me dê o lado B"))
+        ladoc = Number(prompt("Me dê o lado C"))
+
+        if ((ladoa === ladob) && (ladoa === ladoc)){
+            console.log("Este é um triangulo Equilátero!")
+        }  
+        else if ((ladoa != ladob) && (ladoa != ladoc) && (ladoc != ladob)){
+            console.log("Este é um triangulo Escaleno!")
+        }         
+        else{
+            console.log("Este é um triangulo Isósceles!")
+        }
+
+        11) Leia um numero fornecido pelo usuário. Se esse número for positivo, calcule a raiz
+quadrada do numero. Se o número for negativo, mostre uma mensagem dizendo que o
+numero é inválido.
+
+        let numeroEscolhido = Number(prompt("Me diga um numero."))
+        if (numeroEscolhido>0){
+            raizQuadradada = numeroEscolhido**(1/2)
+            console.log(`Seu numero é positivo\nEntão a raiz quadrada dele é ${raizQuadradada}`)
+        }
+        else{
+            console.log("Seu numero é invalido!")
+        }
+
+        12) Leia um numero real. Se o numero for positivo imprima a raiz quadrada. Do contrário,
+imprima o numero ao quadrado.
+        let numeroEscolhidoReal = Number(prompt("Me diga um numero."))
+        if (numeroEscolhidoReal>0){
+            raizQuadradada = numeroEscolhidoReal**(1/2)
+            console.log(`Seu numero é positivo\nEntão a raiz quadrada dele é ${raizQuadradada}`)
+        }
+        else{
+            numeroQuadrado = numeroEscolhidoReal**2
+            console.log(`Seu numero é negativo\nEntão ele ao quadrado é ${numeroQuadrado}`)
+        }
+
+        13) Leia o salario de um trabalhador e o valor da prestação de um empréstimo. Se a prestaçao
+for maior que 20% do salário imprima: “empréstimo não concedido”, caso contrario imprima:
+“empréstimo concedido”.
+        let salarioTrabalhador = Number(prompt("Me diga o seu salário."))
+        let valorPrestacao = Number(prompt("Me diga o valor da prestação."))
+        if (valorPrestacao>(salarioTrabalhador*0.20)){
+            console.log("empréstimo não concedido")
+        }
+        else{
+            console.log("empréstimo concedido")
+        }
+
+        
