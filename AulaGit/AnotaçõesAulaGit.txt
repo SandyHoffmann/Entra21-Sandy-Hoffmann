@@ -10,3 +10,6 @@ git commit -m "msg"
 git push - da area local pra remota
 git clone
 git status
+
+git config --local user.name "SandyHoffmann"
+git config --local user.email "manglesan98@gmail.com"
