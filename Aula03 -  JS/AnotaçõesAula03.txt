@@ -1,0 +1,75 @@
+Anotações aula 1 - JS
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis</title>
+</head>
+<body>
+    <>
+        let exemplo = "Teste";
+
+        /*Comentario
+            Longo
+
+        */
+
+        //Comentario curto
+
+        //camelCase
+        let variavelVazia
+        // Ctrl+; = seleciona todas as frases e transforma em comentário.
+
+        // regras de escrita
+        // N pode iniciar com numero
+        // N pode ser comando, nem simbolo (excessao $ e _)
+        //camelCase é norma, arquivos tbm devem ser nomeados desse jeito .html
+        //variaveis com nomes que tenham sentido
+
+        //typeof mostra tipo da variavel
+        console.log(typeof variavelVazia);
+
+        //declarar var constante
+        //sempre em maiusculo, n pode estar sem definição, e n pode ser mudado!
+        const PI = 3.1415
+        const ANO_NASCIMENTO = 20/05/2002
+
+        let testeTroca = "teste"
+        testeTroca = "teste trocado"
+
+        console.log(testeTroca);
+
+        //js usa tipagem dinamica - da pra mudar o tipo de dado
+        // tipagem estatica n é possivel, entao a = 1 n pode virar a = "teste", so com comando.
+
+        //Operadores
+
+        // = -> Atribuicao
+        // + -> Soma 
+        // - -> Substracao
+        // / -> Divisao
+        // * -> Multiplicacao
+        // * -> Potenciação
+        // % -> Resto
+
+        //é possível fazer operador= tipo += -= *=
+
+        //x++ -> x+1
+        //x-- -> x-1
+
+        // Precedência
+
+        // Agrupamento
+        // Exponenciacao - **
+        // Multiplicação, Divisão e Resto 
+        // Adicao e Subtracao
+
+        let nome = prompt("Digite o seu nome")
+        console.log(nome);
+
+    </>
+    
+</body>
+</html>

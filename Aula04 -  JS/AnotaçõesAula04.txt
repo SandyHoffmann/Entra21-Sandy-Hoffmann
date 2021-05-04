@@ -1,0 +1,25 @@
+Abrir code no terminal: code .
+
+' . 'sempre se trata da pasta atual
+
+jeito certo de concatenar
+
+        let sobrenome = "João"
+        console.log(`O meu sobrenome é ${sobrenome}`)
+
+Se usar + na frente de numero string ele converte pra Number
+
+typeof(mostra tipo de dado)
+
+(numero.toFixed(2)) entre parênteses é o numero de casas decimais que quero que apareça. -> arredondar.
+ele retorna STR.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <>

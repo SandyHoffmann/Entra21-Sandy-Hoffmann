@@ -1,0 +1,313 @@
+    //Exercicio 1
+
+    //mensagem mostrada no console
+    console.log("Oi meu nome é Sandy!")
+
+    //mensagem mostrada na tela
+    alert("Oi meu nome é Sandy!")
+
+    //Exercicio 2
+    console.log("Cadastro de Funcionários:\n1) Cadastrar funcionário\n2) Listar funcionários\n3) Editar funcionário\n4) Deletar funcionário\n5) Sair")
+    //Exercicio 3
+    let admin
+    let nome
+    nome="João"
+    admin = nome
+    console.log(nome)
+
+    //Exercício 4
+    let primeiroNome = "Sandy"
+    let idade = 18
+    let peso = 56.5
+    let altura = 1.90
+    let telefone= 33334360
+
+    console.log(`O meu nome é ${primeiroNome}`)
+    console.log(`A minha idade é ${idade}`)
+    console.log(`O meu peso é ${peso}`)
+    console.log(`A minha altura é ${altura}`)
+    console.log(`O meu telefone é ${telefone}`)
+
+    //Exercício 5
+    let titulo = "Dracula"
+    let edicao = 2
+    let autor = "Bram Stoker"
+    let dataPublicacao = "19/07/1920"
+
+    console.log(`*Título: ${titulo}`)
+    console.log(`*Edicao: é ${edicao}`)
+    console.log(`*Autor: ${autor}`)
+    console.log(`*Data de Publicacao: ${dataPublicacao}`)
+
+    //Exercicio 6
+    let dataNascimento
+    let quantidadeFilhos
+    let usuarioLogadoSistema
+
+    //Exercicio 7
+    // let nome = "João"
+    // console.log(`Olá ${1}`) // Olá 1
+    // console.log(`Olá ${"nome"}`) // ? Olá nome
+    // alert(`Olá ${nome}`) // ? Olá João
+
+    //Exercicio 8
+    // let x = 10
+    // let y = 8
+    // let area = (x * y) / 2 + 3 ** 4
+    //              80/2 + 3**4
+    //               80/2 + 81
+    //                  40+81
+    //                   121
+    // console.log(area)
+    // Qual é a saida de dados (output)? 121
+
+    //Exercicio 9
+    // let a = 2
+    // let x = 1 + (a *= 2) --> 1+4
+    // console.log(a, x)
+    //a será 4, e x será 5
+
+    //Exercicio 10
+    // A) "" + 1 + 0 // 10
+    // B) "" - 1 + 0 // -1
+    // C) 6 / "3" // 2
+    // D) "2" * "3" // 6
+    // E) 4 + 5 + "px" // "9px"
+    // F) "$" + 4 + 5 // "$45"
+    // G) "4" - 2 // 2
+
+    //Exercicio 11
+    let larguraRetangulo = Number(prompt("Me dê a largura do retangulo "))
+    let alturaRetangulo = Number(prompt("Me dê a altura do retangulo "))
+
+    let area = larguraRetangulo*alturaRetangulo
+    let perimetro = larguraRetangulo*2+alturaRetangulo*2
+        
+    console.log(`*A área do retangulo é de: ${area}, e o perimetro é de:${perimetro}`)
+    
+    //Exercicio 12
+
+    let numero1 = Number(prompt("Me dê um numero "))
+    let numero2 = Number(prompt("Me dê outro numero "))
+    let somaNumeros = numero1 + numero2
+
+    console.log(`A soma dos numeros é de: ${somaNumeros}`)
+
+    //Exercicio 13
+
+    let nota1 = Number(prompt("Me dê a primeira nota "))
+    let nota2 = Number(prompt("Me dê a segunda nota "))
+    let medianotas = (nota1 + nota2)/2
+
+    console.log(`*A sua média é: ${medianotas}`)
+
+    //Exercicio 14
+
+    let primeiroNumero = Number(prompt("Me dê o primeiro numero "))
+    let segundoNumero = Number(prompt("Me dê o segundo numero "))
+    let terceiroNumero = Number(prompt("Me dê o terceiro numero "))
+
+    let quadradoNumero1 = primeiroNumero**2
+    let quadradoNumero2 = segundoNumero**2
+    let quadradoNumero3 = terceiroNumero**2
+
+    console.log(`*O quadrado do primeiro numero é: ${quadradoNumero1}`)
+    console.log(`*O quadrado do segundo numero é: ${quadradoNumero2}`)
+    console.log(`*O quadrado do terceiro numero é: ${quadradoNumero3}`)
+
+    //Exercicio 15
+    let a =10 // a = 10
+    let b =20 // a = 10, b = 20
+    console.log(a,b)
+
+        let varAuxiliar = a // a = 10, b = 20, varAuxiliar = 10
+        a = b // a = 20, b = 20, varAuxiliar = 10
+        b = varAuxiliar // a = 20, b = 10, varAuxiliar = 10
+        console.log(a,b)
+
+        //Exercicio 16
+
+        let numeroDeMeses = Number(prompt("Me dê um numero de meses: "))
+        let totalDias = 30*numeroDeMeses
+
+        console.log(`O numero total de dias é de: ${totalDias}`)
+
+        //Exercicio 17
+
+        let numeroDado = Number(prompt("Me dê um numero"))
+        let antecessorNumero = numeroDado-1
+        let sucessorNumero = numeroDado+1
+
+        console.log(`O antecessor do numero ${numeroDado} é: ${antecessorNumero}, e o sucessor é: ${sucessorNumero}`)
+
+        
+        //Exercicio 18
+
+        let raioEsfera = Number(prompt("Me dê o raio da esfera"))
+        let pi = 3.14159
+        let volumeEsfera = (4/3) * pi * raioEsfera
+
+        console.log(`O volume da esfera é de: ${volumeEsfera}`)
+
+        //Exercicio 19
+
+        let baseTriangulo = Number(prompt("Me dê a base do triangulo"))
+        let alturaTriangulo = Number(prompt("Me dê o altura do triangulo"))
+
+        let areaTriangulo = (baseTriangulo*alturaTriangulo)/2
+
+        console.log(`Dada a base do Triangulo: ${baseTriangulo}, a altura: ${alturaTriangulo} a área será de ${areaTriangulo}`)
+
+        //Exercicio 20
+        let precoProduto = Number(prompt("Qual é o preço do produto?"))
+        let porcentagemProduto = Number(prompt("Me dê a porcentagem do desconto"))
+
+        let valorProdutoComDesconto = precoProduto * ((100-(porcentagemProduto))/100)
+        let descontoProduto = precoProduto-valorProdutoComDesconto
+        console.log(`O valor do produto foi de ${precoProduto} para ${valorProdutoComDesconto.toFixed(2)}, você ganhou ${descontoProduto.toFixed(2)} reais de desconto.`)
+
+        //Exercicio 21
+
+        let nomeVendedor = prompt("Qual é o nome do vendedor? ")
+        let salarioFixo = Number(prompt("Qual é o salario fixo? "))
+        let totalVendas = Number(prompt("Qual é o total de vendas? "))
+
+        let valorAdicionalVendas = totalVendas*0.15
+        let salarioTotal = salarioFixo+valorAdicionalVendas
+        console.log(`O vendedor ${nomeVendedor} ganhou ${salarioTotal.toFixed(2)} de salário, com ${valorAdicionalVendas.toFixed(2)} reais de adicional.`)
+
+        //Exercicio 1 (condicional)
+
+        // 1) Qual é a saída dos seguintes comandos
+        // console.log(!10) // false
+        // console.log(!!"String") // true
+        // console.log(!!2.3) // true
+        // console.log(Boolean(null)) // false
+        
+        // 2) Qual é a saída das seguintes instruções
+        // console.log(10 > 2) // true
+        // console.log(5 >= "5") // true
+        // console.log(5 >== "5") // n existe
+        // console.log("apple" > "pineapple") false
+        // console.log("2" > "12") true
+        // console.log(undefined == null) true
+        // console.log(undefined === null) false
+        // console.log(null == "\n0\n") false
+        // console.log(null === +"\n0\n") false
+
+        //Exercicio 3
+
+        let a = Number(prompt("Me de o valor A "))
+        
+        if (a>10){
+            alert("O valor A é maior que 10, Programa finalizado...")
+        }
+        else{
+            alert("Programa finalizado...")
+        }
+
+        //Exercicio 4
+
+        let numeroRecebido = Number(prompt("Me de um numero "))
+        
+        if (numeroRecebido%2==0){
+            let metadenumero = numeroRecebido/2
+            alert(`${metadenumero}, Programa finalizando...`)
+        }
+        else{
+            alert("Programa finalizado...")
+        }
+
+        //Exercicio 5
+
+        let numeroRecebido2 = Number(prompt("Me de um numero "))
+        
+        if (numeroRecebido2%2==0){
+            alert("O numero é par")
+        }
+        else{
+            alert("O numero é impar")
+        }
+        //Exercicio 6
+
+        let numeroRecebido3 = Number(prompt("Me de um numero "))
+        
+        if (numeroRecebido3>20){
+            if (numeroRecebido3<90){
+                alert("O número está na faixa entre 20 e 90")
+            }
+            else{
+                alert("O número está fora da faixa")
+            }
+        }
+        else{
+            alert("O número está fora da faixa")
+        }
+
+        //Exercicio 1 (condicional)
+
+        // 1) Qual é a saída dos seguintes comandos
+        // console.log(!10) // false
+        // console.log(!!"String") // true
+        // console.log(!!2.3) // true
+        // console.log(Boolean(null)) // false
+        
+        // 2) Qual é a saída das seguintes instruções
+        // console.log(10 > 2) // true
+        // console.log(5 >= "5") // true
+        // console.log(5 >== "5") // n existe
+        // console.log("apple" > "pineapple") false
+        // console.log("2" > "12") true
+        // console.log(undefined == null) true
+        // console.log(undefined === null) false
+        // console.log(null == "\n0\n") false
+        // console.log(null === +"\n0\n") false
+
+        //Exercicio 3
+
+        let a = Number(prompt("Me de o valor A "))
+        
+        if (a>10){
+            alert("O valor A é maior que 10, Programa finalizado...")
+        }
+        else{
+            alert("Programa finalizado...")
+        }
+
+        //Exercicio 4
+
+        let numeroRecebido = Number(prompt("Me de um numero "))
+        
+        if (numeroRecebido%2==0){
+            let metadenumero = numeroRecebido/2
+            alert(`${metadenumero}, Programa finalizando...`)
+        }
+        else{
+            alert("Programa finalizado...")
+        }
+
+        //Exercicio 5
+
+        let numeroRecebido2 = Number(prompt("Me de um numero "))
+        
+        if (numeroRecebido2%2==0){
+            alert("O numero é par")
+        }
+        else{
+            alert("O numero é impar")
+        }
+        //Exercicio 6
+
+        let numeroRecebido3 = Number(prompt("Me de um numero "))
+        
+        if (numeroRecebido3>20){
+            if (numeroRecebido3<90){
+                alert("O número está na faixa entre 20 e 90")
+            }
+            else{
+                alert("O número está fora da faixa")
+            }
+        }
+        else{
+            alert("O número está fora da faixa")
+        }

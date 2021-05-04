@@ -1,0 +1,12 @@
+Git
+
+git init
+git config --global user.name "[nome]"
+
+Working Directory
+
+git add <nomearq>
+git commit -m "msg"
+git push - da area local pra remota
+git clone
+git status
