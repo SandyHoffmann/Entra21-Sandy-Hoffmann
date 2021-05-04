@@ -144,8 +144,8 @@
         //Exercicio 18
 
         let raioEsfera = Number(prompt("Me dê o raio da esfera"))
-        let pi = 3.14159
-        let volumeEsfera = (4/3) * pi * raioEsfera
+        const PI = 3.14159
+        let volumeEsfera = (4/3) * PI * raioEsfera ** 3
 
         console.log(`O volume da esfera é de: ${volumeEsfera}`)
 
