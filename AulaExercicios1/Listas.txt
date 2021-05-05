@@ -1,0 +1,520 @@
+    //Exercicio 1
+
+    //mensagem mostrada no console
+    console.log("Oi meu nome é Sandy!")
+
+    //mensagem mostrada na tela
+    alert("Oi meu nome é Sandy!")
+
+    //Exercicio 2
+    console.log("Cadastro de Funcionários:\n1) Cadastrar funcionário\n2) Listar funcionários\n3) Editar funcionário\n4) Deletar funcionário\n5) Sair")
+    //Exercicio 3
+    let admin
+    let nome
+    nome="João"
+    admin = nome
+    console.log(nome)
+
+    //Exercício 4
+    let primeiroNome = "Sandy"
+    let idade = 18
+    let peso = 56.5
+    let altura = 1.90
+    let telefone= 33334360
+
+    console.log(`O meu nome é ${primeiroNome}`)
+    console.log(`A minha idade é ${idade}`)
+    console.log(`O meu peso é ${peso}`)
+    console.log(`A minha altura é ${altura}`)
+    console.log(`O meu telefone é ${telefone}`)
+
+    //Exercício 5
+    let titulo = "Dracula"
+    let edicao = 2
+    let autor = "Bram Stoker"
+    let dataPublicacao = "19/07/1920"
+
+    console.log(`*Título: ${titulo}`)
+    console.log(`*Edicao: é ${edicao}`)
+    console.log(`*Autor: ${autor}`)
+    console.log(`*Data de Publicacao: ${dataPublicacao}`)
+
+    //Exercicio 6
+    let dataNascimento
+    let quantidadeFilhos
+    let usuarioLogadoSistema
+
+    //Exercicio 7
+    // let nome = "João"
+    // console.log(`Olá ${1}`) // Olá 1
+    // console.log(`Olá ${"nome"}`) // ? Olá nome
+    // alert(`Olá ${nome}`) // ? Olá João
+
+    //Exercicio 8
+    // let x = 10
+    // let y = 8
+    // let area = (x * y) / 2 + 3 ** 4
+    //              80/2 + 3**4
+    //               80/2 + 81
+    //                  40+81
+    //                   121
+    // console.log(area)
+    // Qual é a saida de dados (output)? 121
+
+    //Exercicio 9
+    // let a = 2
+    // let x = 1 + (a *= 2) --> 1+4
+    // console.log(a, x)
+    //a será 4, e x será 5
+
+    //Exercicio 10
+    // A) "" + 1 + 0 // 10
+    // B) "" - 1 + 0 // -1
+    // C) 6 / "3" // 2
+    // D) "2" * "3" // 6
+    // E) 4 + 5 + "px" // "9px"
+    // F) "$" + 4 + 5 // "$45"
+    // G) "4" - 2 // 2
+
+    //Exercicio 11
+    let larguraRetangulo = Number(prompt("Me dê a largura do retangulo "))
+    let alturaRetangulo = Number(prompt("Me dê a altura do retangulo "))
+
+    let area = larguraRetangulo*alturaRetangulo
+    let perimetro = larguraRetangulo*2+alturaRetangulo*2
+        
+    console.log(`*A área do retangulo é de: ${area}, e o perimetro é de:${perimetro}`)
+    
+    //Exercicio 12
+
+    let numero1 = Number(prompt("Me dê um numero "))
+    let numero2 = Number(prompt("Me dê outro numero "))
+    let somaNumeros = numero1 + numero2
+
+    console.log(`A soma dos numeros é de: ${somaNumeros}`)
+
+    //Exercicio 13
+
+    let nota1 = Number(prompt("Me dê a primeira nota "))
+    let nota2 = Number(prompt("Me dê a segunda nota "))
+    let medianotas = (nota1 + nota2)/2
+
+    console.log(`*A sua média é: ${medianotas}`)
+
+    //Exercicio 14
+
+    let primeiroNumero = Number(prompt("Me dê o primeiro numero "))
+    let segundoNumero = Number(prompt("Me dê o segundo numero "))
+    let terceiroNumero = Number(prompt("Me dê o terceiro numero "))
+
+    let quadradoNumero1 = primeiroNumero**2
+    let quadradoNumero2 = segundoNumero**2
+    let quadradoNumero3 = terceiroNumero**2
+
+    console.log(`*O quadrado do primeiro numero é: ${quadradoNumero1}`)
+    console.log(`*O quadrado do segundo numero é: ${quadradoNumero2}`)
+    console.log(`*O quadrado do terceiro numero é: ${quadradoNumero3}`)
+
+    //Exercicio 15
+    let a =10 // a = 10
+    let b =20 // a = 10, b = 20
+    console.log(a,b)
+
+        let varAuxiliar = a // a = 10, b = 20, varAuxiliar = 10
+        a = b // a = 20, b = 20, varAuxiliar = 10
+        b = varAuxiliar // a = 20, b = 10, varAuxiliar = 10
+        console.log(a,b)
+
+        //Exercicio 16
+
+        let numeroDeMeses = Number(prompt("Me dê um numero de meses: "))
+        let totalDias = 30*numeroDeMeses
+
+        console.log(`O numero total de dias é de: ${totalDias}`)
+
+        //Exercicio 17
+
+        let numeroDado = Number(prompt("Me dê um numero"))
+        let antecessorNumero = numeroDado-1
+        let sucessorNumero = numeroDado+1
+
+        console.log(`O antecessor do numero ${numeroDado} é: ${antecessorNumero}, e o sucessor é: ${sucessorNumero}`)
+
+        
+        //Exercicio 18
+
+        let raioEsfera = Number(prompt("Me dê o raio da esfera"))
+        const PI = 3.14159
+        let volumeEsfera = (4/3) * PI * raioEsfera ** 3
+
+        console.log(`O volume da esfera é de: ${volumeEsfera}`)
+
+        //Exercicio 19
+
+        let baseTriangulo = Number(prompt("Me dê a base do triangulo"))
+        let alturaTriangulo = Number(prompt("Me dê o altura do triangulo"))
+
+        let areaTriangulo = (baseTriangulo*alturaTriangulo)/2
+
+        console.log(`Dada a base do Triangulo: ${baseTriangulo}, a altura: ${alturaTriangulo} a área será de ${areaTriangulo}`)
+
+        //Exercicio 20
+        let precoProduto = Number(prompt("Qual é o preço do produto?"))
+        let porcentagemProduto = Number(prompt("Me dê a porcentagem do desconto"))
+
+        let valorProdutoComDesconto = precoProduto * ((100-(porcentagemProduto))/100)
+        let descontoProduto = precoProduto-valorProdutoComDesconto
+        console.log(`O valor do produto foi de ${precoProduto} para ${valorProdutoComDesconto.toFixed(2)}, você ganhou ${descontoProduto.toFixed(2)} reais de desconto.`)
+
+        //Exercicio 21
+
+        let nomeVendedor = prompt("Qual é o nome do vendedor? ")
+        let salarioFixo = Number(prompt("Qual é o salario fixo? "))
+        let totalVendas = Number(prompt("Qual é o total de vendas? "))
+
+        let valorAdicionalVendas = totalVendas*0.15
+        let salarioTotal = salarioFixo+valorAdicionalVendas
+        console.log(`O vendedor ${nomeVendedor} ganhou ${salarioTotal.toFixed(2)} de salário, com ${valorAdicionalVendas.toFixed(2)} reais de adicional.`)
+
+        //Exercicio 1 (condicional)
+
+        // 1) Qual é a saída dos seguintes comandos
+        // console.log(!10) // false
+        // console.log(!!"String") // true
+        // console.log(!!2.3) // true
+        // console.log(Boolean(null)) // false
+        
+        // 2) Qual é a saída das seguintes instruções
+        // console.log(10 > 2) // true
+        // console.log(5 >= "5") // true
+        // console.log(5 >== "5") // n existe
+        // console.log("apple" > "pineapple") false
+        // console.log("2" > "12") true
+        // console.log(undefined == null) true
+        // console.log(undefined === null) false
+        // console.log(null == "\n0\n") false
+        // console.log(null === +"\n0\n") false
+
+        //Exercicio 3
+
+        let a = Number(prompt("Me de o valor A "))
+        
+        if (a>10){
+            alert("O valor A é maior que 10, Programa finalizado...")
+        }
+        else{
+            alert("Programa finalizado...")
+        }
+
+        //Exercicio 4
+
+        let numeroRecebido = Number(prompt("Me de um numero "))
+        
+        if (numeroRecebido%2==0){
+            let metadenumero = numeroRecebido/2
+            alert(`${metadenumero}, Programa finalizando...`)
+        }
+        else{
+            alert("Programa finalizado...")
+        }
+
+        //Exercicio 5
+
+        let numeroRecebido2 = Number(prompt("Me de um numero "))
+        
+        if (numeroRecebido2%2==0){
+            alert("O numero é par")
+        }
+        else{
+            alert("O numero é impar")
+        }
+        //Exercicio 6
+
+        let numeroRecebido3 = Number(prompt("Me de um numero "))
+        
+        if (numeroRecebido3>20 && numeroRecebido3<90){
+            alert("O número está na faixa entre 20 e 90")
+        }
+        else{
+            alert("O número está fora da faixa")
+        }
+
+        //Exercicio 7
+        A = 10 e B = 20
+
+        Boolean(A > 10 && B <= 20) // false
+        Boolean(A > 10 || B <= 20) // true
+        Boolean((A === 10 || B > 20) && B === 20) // true
+        console.log(null || 2 || undefined) // 2
+        Boolean(0 && 1) // 0
+            
+        //Exercicio 8
+        let valorA = Number(prompt("Me dê o numero A"))
+        let valorB = Number(prompt("Me dê o numero B"))
+        let valorC = Number(prompt("Me dê o numero C"))
+
+        if (valorA >= valorC && valorA >= valorB){
+            console.log(`O maior numero é ${valorA}`)
+        }
+        else if (valorB >= valorA && valorB >= valorC){
+            console.log(`O maior numero é ${valorB}`)
+        }
+        else{
+            console.log(`O maior numero é ${valorC}`)
+        }
+        
+        9) Reescreva o script abaixo utilizando o operador ternário:
+        let resultado;
+
+        if (a + b < 4) {
+            resultado = "Abaixo"
+        } else {
+            resultado = "Acima"
+        }
+
+        a + b < 4 ? resultado = "Abaixo" : resultado = "Acima"
+
+        10) Escreva	um programa que	leia as	medidas	dos	lados de um	triângulo e	
+        escreva	se ele é Equilátero, Isósceles ou Escaleno.	Sendo que:	
+        − Triângulo	Equilátero:	possui os 3 lados iguais.	
+        − Triângulo	Isósceles: possui 2	lados iguais.	
+        − Triângulo	Escaleno: possui 3 lados diferentes.
+
+        ladoa = Number(prompt("Me dê o lado A"))
+        ladob = Number(prompt("Me dê o lado B"))
+        ladoc = Number(prompt("Me dê o lado C"))
+
+        if ((ladoa === ladob) && (ladoa === ladoc)){
+            console.log("Este é um triangulo Equilátero!")
+        }  
+        else if ((ladoa != ladob) && (ladoa != ladoc) && (ladoc != ladob)){
+            console.log("Este é um triangulo Escaleno!")
+        }         
+        else{
+            console.log("Este é um triangulo Isósceles!")
+        }
+
+        11) Leia um numero fornecido pelo usuário. Se esse número for positivo, calcule a raiz
+quadrada do numero. Se o número for negativo, mostre uma mensagem dizendo que o
+numero é inválido.
+
+        let numeroEscolhido = Number(prompt("Me diga um numero."))
+        if (numeroEscolhido>0){
+            raizQuadradada = numeroEscolhido**(1/2)
+            console.log(`Seu numero é positivo\nEntão a raiz quadrada dele é ${raizQuadradada}`)
+        }
+        else{
+            console.log("Seu numero é invalido!")
+        }
+
+        12) Escreva um script para ler um número e informar se ele é divisível por 5.
+
+        let numeroEscolhido = Number(prompt("Me diga um numero."))
+        if (numeroEscolhido%5===0){
+            console.log(`O numero ${numeroEscolhido} é divisivel por 5.`)
+        }
+        else{
+            console.log(`O numero ${numeroEscolhido} não é divisivel por 5.`)
+        }
+
+
+
+
+        13) Leia um numero real. Se o numero for positivo imprima a raiz quadrada. Do contrário,
+imprima o numero ao quadrado.
+        let numeroEscolhidoReal = Number(prompt("Me diga um numero."))
+        if (numeroEscolhidoReal>0){
+            raizQuadradada = numeroEscolhidoReal**(1/2)
+            console.log(`Seu numero é positivo\nEntão a raiz quadrada dele é ${raizQuadradada}`)
+        }
+        else{
+            numeroQuadrado = numeroEscolhidoReal**2
+            console.log(`Seu numero é negativo\nEntão ele ao quadrado é ${numeroQuadrado}`)
+        }
+
+        14) Leia o salario de um trabalhador e o valor da prestação de um empréstimo. Se a prestaçao
+for maior que 20% do salário imprima: “empréstimo não concedido”, caso contrario imprima:
+“empréstimo concedido”.
+        let salarioTrabalhador = Number(prompt("Me diga o seu salário."))
+        let valorPrestacao = Number(prompt("Me diga o valor da prestação."))
+        if (valorPrestacao>(salarioTrabalhador*0.20)){
+            console.log("empréstimo não concedido")
+        }
+        else{
+            console.log("empréstimo concedido")
+        }
+
+        15) Desenvolva um programa que recebe do usuário o placar de um jogo de futebol (os gols de cada time) e 
+informe se o resultado foi um empate, a vitória do primeiro time ou do segundo time.
+
+        let golTime1 = Number(prompt("Me diga quantos gols o time 1 fez."))
+        let golTime2 = Number(prompt("Me diga quantos gols o time 2 fez."))
+
+        if (golTime1 === golTime2){
+            console.log("foi um empate! ")
+        }
+        else if (golTime1 > golTime2){
+            console.log("O time 1 ganhou! ")
+        }
+        else if (golTime2 > golTime1){
+            console.log("O time 2 ganhou! ")
+        }
+
+        16) Desenvolva um programa que receba do usuário a sua idade e informe a situação de voto dele
+("Não precisa votar", "Voto opcional", "Voto obrigatório").
+
+        let idadeUsuario = Number(prompt("Me diga a sua idade."))
+        if (idadeUsuario<16){
+            console.log("Não precisa votar")
+        }
+        else if ((idadeUsuario>=16 && idadeUsuario<18) || (idadeUsuario>=70)){
+            console.log("Voto opcional")
+        }
+        else{
+            console.log("Voto obrigatório")
+        }
+
+    17) Faça um script que leia três números e mostre-os em ordem decrescente.
+
+        let numeroA = Number(prompt("Me diga um numero."))
+        let numeroB = Number(prompt("Me diga outro numero."))
+        let numeroC = Number(prompt("Me diga mais um numero."))
+
+        if (numeroA>=numeroB && numeroA>=numeroC){
+            if (numeroB>=numeroC){
+                console.log(`A ordem dos numeros é ${numeroA}, ${numeroB} e ${numeroC}`)
+            }
+            else if (numeroC>=numeroB){
+                console.log(`A ordem dos numeros é ${numeroA}, ${numeroC} e ${numeroB}`)
+            }
+        }
+        else if (numeroB>=numeroA && numeroB>=numeroC){
+            if (numeroA>=numeroC){
+                console.log(`A ordem dos numeros é ${numeroB}, ${numeroA} e ${numeroC}`)
+            }
+            else if (numeroC>=numeroA){
+                console.log(`A ordem dos numeros é ${numeroB}, ${numeroC} e ${numeroA}`)
+            }
+        }
+        else if (numeroC>=numeroA && numeroC>=numeroB){
+            if (numeroA>=numeroB){
+                console.log(`A ordem dos numeros é ${numeroC}, ${numeroA} e ${numeroB}`)
+            }
+            else if (numeroC>=numeroA){
+                console.log(`A ordem dos numeros é ${numeroC}, ${numeroC} e ${numeroA}`)
+            }
+        }
+
+    18) Para doar sangue é necessário ter entre 18 e 67 anos. Faça um script que pergunte a idade de uma pessoa e diga se ela pode doar sangue ou não. 
+Use o operador lógicos OU (||).
+        *Usar ou??
+
+        let idadePessoa = Number(prompt("Me diga a sua idade."))
+
+        if (idadePessoa>=18 && idadePessoa<=67){
+            console.log(`Você tem ${idadePessoa} anos, logo você pode doar sangue.`)
+        }
+        else{
+            console.log(`Você tem ${idadePessoa} anos, logo você não pode doar sangue.`)
+        }
+
+19) Usando o comando switch, escreva um programa que leia um inteiro entre 1 e 7 e
+imprima o dia da semana correspondente a este numero. Isto é, domingo se for 1, 
+segunda-feira se for 2, e assim por diante.
+
+        let numeroEscolhido = Number(prompt("Me diga um numero entre 1 e 7."))
+        switch(numeroEscolhido){
+            case 1:
+                console.log("Domingo")
+                break
+            case 2:
+                console.log("Segunda")
+                break
+            case 3:
+                console.log("Terça")
+                break
+            case 4:
+                console.log("Quarta")
+                break
+            case 5:
+                console.log("Quinta")
+                break
+            case 6:
+                console.log("Sexta")
+                break
+            case 7:
+                console.log("Sábado")
+                break
+            default:
+                console.log("Seu numero não esta na lista.")
+                break
+        }
+
+20) Usando o comando switch, escreva um programa que leia um inteiro entre 1 e 12 e
+imprima o mês correspondente a este numero. Isto é, Janeiro se for 1, Fevereiro se 2, e
+assim por diante.
+
+        let numeroEscolhido = Number(prompt("Me diga um numero entre 1 e 12."))
+        switch(numeroEscolhido){
+            case 1:
+                console.log("Janeiro")
+                break
+            case 2:
+                console.log("Fevereiro")
+                break
+            case 3:
+                console.log("Março")
+                break
+            case 4:
+                console.log("Abril")
+                break
+            case 5:
+                console.log("Maio")
+                break
+            case 6:
+                console.log("Junho")
+                break
+            case 7:
+                console.log("Julho")
+                break
+            case 8:
+                console.log("Agosto")
+                break
+            case 9:
+                console.log("Setembro")
+                break
+            case 10:
+                console.log("Outubro")
+                break
+            case 11:
+                console.log("Novembro")
+                break
+            case 12:
+                console.log("Dezembro")
+                break
+            default:
+                console.log("Seu numero não esta na lista.")
+                break
+        }
+
+21) Usando o comando switch, faça um script que pergunte em que turno você estuda.
+Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. 
+Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!",
+conforme o caso.
+
+        let turnoEstudante = prompt("Digite em qual turno você estuda:\nDigite 'M' para matutino\nDigite 'V' para vespertino\nDigite 'N' para noturno")
+        switch(turnoEstudante){
+            case "M":
+                console.log("Bom dia!")
+                break
+            case "V":
+                console.log("Boa Tarde!")
+                break
+            case "N":
+                console.log("Boa Noite!")
+                break
+            default:
+                console.log("Valor Inválido!")
+                break
+        }
+
