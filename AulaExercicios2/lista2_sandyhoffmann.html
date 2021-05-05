@@ -108,9 +108,9 @@
 
     // Exercicio 10
 
-        ladoA = Number(prompt("Me dê o lado A"))
-        ladoB = Number(prompt("Me dê o lado B"))
-        ladoC = Number(prompt("Me dê o lado C"))
+        let ladoA = Number(prompt("Me dê o lado A"))
+        let ladoB = Number(prompt("Me dê o lado B"))
+        let ladoC = Number(prompt("Me dê o lado C"))
 
         if ((ladoA === ladoB) && (ladoA === ladoC)){
             console.log("Este é um triangulo Equilátero!")
@@ -126,7 +126,7 @@
 
         let numeroEscolhido = Number(prompt("Me diga um numero."))
         if (numeroEscolhido>0){
-            raizQuadradada = numeroEscolhido**(1/2)
+            let raizQuadradada = Math.sqrt(numeroEscolhido)
             console.log(`Seu numero é positivo\nEntão a raiz quadrada dele é ${raizQuadradada}`)
         }
         else{
@@ -227,15 +227,15 @@
         }
 
     // Exercicio 18
-    //         *Usar ou??
+    //         
 
         let idadePessoa = Number(prompt("Me diga a sua idade."))
 
-        if (idadePessoa>=18 && idadePessoa<=67){
-            console.log(`Você tem ${idadePessoa} anos, logo você pode doar sangue.`)
+        if (idadePessoa<18  || idadePessoa>67){
+            console.log(`Você tem ${idadePessoa} anos, logo você não pode doar sangue.`)
         }
         else{
-            console.log(`Você tem ${idadePessoa} anos, logo você não pode doar sangue.`)
+            console.log(`Você tem ${idadePessoa} anos, logo você pode doar sangue.`)
         }
 
     // Exercicio 19
