@@ -1,0 +1,17 @@
+1 - 
+        for (let i = 0; i < 3; i++) {
+            let numero1 = Number(prompt("Me de um numero para subtrair"))
+            let numero2 = Number(prompt("Me de outro numero para subtrair"))
+            let subtracaoTotal = numero1 - numero2
+            console.log(`A subtração é de ${subtracaoTotal}`)
+        }       
+
+
+2 - 
+
+        let numeroN = Number(prompt("Me de um numero"))
+                for (let i = 0; i<=numeroN;i++){
+                    if (i%2!=0){
+                        console.log(i)
+                    }
+                }

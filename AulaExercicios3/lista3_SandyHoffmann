@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3</title>
+</head>
+<body>
+    <script>
+        let numeroN = Number(prompt("Me de um numero"))
+        for (let i = 0; i<=numeroN;i++){
+            if (i%2!=0){
+                console.log(i)
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

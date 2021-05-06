@@ -169,7 +169,7 @@
         else if (golTime1 > golTime2){
             console.log("O time 1 ganhou! ")
         }
-        else if (golTime2 > golTime1){
+        else{
             console.log("O time 2 ganhou! ")
         }
 
@@ -306,7 +306,7 @@
 
     // Exercicio 21
 
-        let turnoEstudante = prompt("Digite em qual turno você estuda:\nDigite 'M' para matutino\nDigite 'V' para vespertino\nDigite 'N' para noturno")
+        let turnoEstudante = prompt("Digite em qual turno você estuda:\nDigite 'M' para matutino\nDigite 'V' para vespertino\nDigite 'N' para noturno").toUpperCase()
         switch(turnoEstudante){
             case "M":
                 console.log("Bom dia!")
