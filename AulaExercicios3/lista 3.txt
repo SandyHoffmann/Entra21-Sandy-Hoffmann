@@ -1,17 +1,187 @@
-1 - 
-        for (let i = 0; i < 3; i++) {
-            let numero1 = Number(prompt("Me de um numero para subtrair"))
-            let numero2 = Number(prompt("Me de outro numero para subtrair"))
-            let subtracaoTotal = numero1 - numero2
-            console.log(`A subtração é de ${subtracaoTotal}`)
-        }       
+1 -     let contador = 0
+        while(contador<10){
+            console.log("Olá mundo!")
+            contador++
+        }
+
+        contador = 0
+        do{
+            console.log("Olá mundo!")
+            contador++
+        }while(contador<10)
+
+        for(contador=0;contador<10;contador++){
+            console.log("Olá mundo!")
+        }
 
 
 2 - 
+    let contador = 1
+    while(contador<11){
+        console.log(`Estou aparecendo pela ${contador} na tela `)
+        contador++
+    }
 
-        let numeroN = Number(prompt("Me de um numero"))
-                for (let i = 0; i<=numeroN;i++){
-                    if (i%2!=0){
-                        console.log(i)
-                    }
-                }
+    contador = 1
+    do{
+        console.log(`Estou aparecendo pela ${contador} na tela `)
+        contador++
+    }while(contador<11)
+
+    for(contador=1;contador<11;contador++){
+        console.log(`Estou aparecendo pela ${contador} na tela `)
+    }
+
+3 - 
+    for(contador=10;contador>-1;contador--){
+        console.log(contador)
+    }
+    console.log("FIM!")
+4 - 
+    for(let i = 0;i < 3;i++) {
+        let subtracao1 = Number(prompt("Me de um numero para subtrair"))
+        let subtracao2 = Number(prompt("Me de um numero para subtrair"))
+        let subtracaoTotal=subtracao1-subtracao2
+        console.log(`${subtracao1} - ${subtracao2} = ${subtracaoTotal}`)
+    } 
+
+5 - 
+    for(let numero=0;numero<=100000;numero+=1000){
+        console.log(numero)
+    }
+
+6 - 
+    let soma = 0
+    for(let i = 0;i < 5;i++) {
+        let numero = Number(prompt("Me de um numero para verificar"))
+        soma+=numero
+    } 
+    console.log(`A soma é de ${soma}, então a média é de ${(soma/5).toFixed(2)}`)
+
+7 - 
+    let numeroN = Number(prompt("Me de um numero"))
+        for (let i = 0; i<=numeroN;i++) {
+            if (i%2!=0) {
+                console.log(i)
+            }
+        }
+
+8 - let numeroN = Number(prompt("Me de um numero"))
+        for (let i = 1; i<=10;i++) {
+            console.log(`${numeroN} * ${i} = ${numeroN*i}`)
+        }
+
+9 - 
+    totalNumeroNegativo = 0
+    for(let i = 0;i < 5;i++) {
+        let numero = Number(prompt("Me de um numero para verificar"))
+        if (numero<0){
+            totalNumeroNegativo++
+        }
+    } 
+    console.log(`Há ${totalNumeroNegativo} numeros negativos.`)
+
+10 - 
+    let totalPar = 0
+    let totalImpar = 0
+    for(let i = 0;i < 10;i++) {
+        let numero = Number(prompt("Me de um numero para verificar"))
+        if (numero%2===0){
+            totalPar++
+        }
+        else{
+            totalImpar++
+        }
+    }
+    console.log(`O total de numeros pares é de ${totalPar}\nO total de números ímpares é de ${totalImpar}`)
+
+11 - 
+    let totalIntervalo = 0
+    let totalForaIntervalo = 0
+    while (true) {
+        let numero = Number(prompt("Me de um numero para verificar"))
+        
+        if (numero < 0){
+            break
+        }
+        if (numero>10 && numero<20){
+            totalIntervalo++
+        }
+        else{
+            totalForaIntervalo++
+        }
+    }
+    console.log(`${totalIntervalo} números estão no intervalo\n${totalForaIntervalo} números estão fora do intervalo`)
+
+12 - 
+    let soma = 0
+    let contadorNumeros = 0
+    while (true) {
+        let numero = Number(prompt("Me de um numero para fazer a média"))
+        
+        if (numero < 0){
+            break
+        }
+        soma+=numero
+        contadorNumeros++
+    }
+    console.log(`A média total é ${(soma/contadorNumeros).toFixed(2)}.`)
+
+13 - 
+
+    sequenciaNumeros = ""
+    for(let i = 1;i < 16;i++) {
+        sequenciaNumeros+=' '+(7*i)
+    }
+    console.log(sequenciaNumeros)
+
+14 - 
+    let numero = Number(prompt("Me de um numero para fazer fatoração"))
+    let fatoracao = numero
+    for(let i = numero-1;i >0;i--) {
+        fatoracao*=i
+    }
+    console.log(`O fator de ${numero} é: ${fatoracao}`)
+
+15 - 
+    let salario = 0
+    let filhos = 0
+    let maiorSalario = 0
+    let contador = 0
+    while (true) {
+        let salarioPessoa = Number(prompt("Quanto você ganha? "))
+        let filhosPessoa = Number(prompt("Quantos filhos você tem? "))
+        if (salarioPessoa < 0 || filhosPessoa < 0){
+            break
+        }
+        contador++
+        if (salarioPessoa>maiorSalario){
+            maiorSalario = salarioPessoa
+        }
+        salario+=salarioPessoa
+        filhos+=filhosPessoa
+    }
+    console.log(`Média Salarial: ${(salario/contador).toFixed(2)}\nMédia de filhos: ${(filhos/contador).toFixed(2)}\nMaior Salário: ${maiorSalario}`)
+
+16 - 
+    let salario = 0
+    let filhos = 0
+    let maiorSalario = 0
+    let contador = 0
+    while (true) {
+        let salarioPessoa = Number(prompt("Quanto você ganha? "))
+        let filhosPessoa = Number(prompt("Quantos filhos você tem? "))
+        if (salarioPessoa < 0 || filhosPessoa < 0){
+            break
+        }
+        contador++
+        if (salarioPessoa>maiorSalario){
+            maiorSalario = salarioPessoa
+        }
+        salario+=salarioPessoa
+        filhos+=filhosPessoa
+    }
+    console.log(`Média Salarial: ${(salario/contador).toFixed(2)}\nMédia de filhos: ${(filhos/contador).toFixed(2)}\nMaior Salário: ${maiorSalario}`)
+
+17 -
+

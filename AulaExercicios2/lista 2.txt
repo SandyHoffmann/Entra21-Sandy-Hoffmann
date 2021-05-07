@@ -24,37 +24,35 @@
         if (a>10){
             console.log("O valor A é maior que 10, Programa finalizado...")
         }
-        else{
             console.log("Programa finalizado...")
-        }
 
     //Exercicio 4
 
         let numeroRecebido = Number(prompt("Me de um numero "))
         
-        if (numeroRecebido%2==0){
+        if (numeroRecebido%2 === 0){
             let metadenumero = numeroRecebido/2
-            console.log(`${metadenumero}, Programa finalizando...`)
+            console.log(metadenumero)
         }
-        else{
-            console.log("Programa finalizado...")
-        }
+        console.log("Programa finalizado...")
+        
 
     //Exercicio 5
 
         let numeroRecebido1 = Number(prompt("Me de um numero "))
         
-        if (numeroRecebido1%2==0){
+        if (numeroRecebido1%2 == 0){
             console.log("O numero é par")
         }
         else{
             console.log("O numero é impar")
         }
+
     //Exercicio 6
 
         let numeroRecebido01 = Number(prompt("Me de um numero "))
         
-        if (numeroRecebido01>20 && numeroRecebido01<90){
+        if (numeroRecebido01 > 20 && numeroRecebido01 < 90){
             console.log("O número está na faixa entre 20 e 90")
         }
         else{
@@ -62,13 +60,14 @@
         }
 
     //Exercicio 7
+
     // A = 10 e B = 20
 
         // Boolean(A > 10 && B <= 20) // false
         // Boolean(A > 10 || B <= 20) // true
         // Boolean((A === 10 || B > 20) && B === 20) // true
         // console.log(null || 2 || undefined) // 2
-        // Boolean(0 && 1) // 0
+        // Boolean(0 && 1) // false
             
     //Exercicio 8
         let valorA = Number(prompt("Me dê o numero A"))
