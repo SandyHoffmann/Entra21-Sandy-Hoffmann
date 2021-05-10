@@ -59,14 +59,21 @@
     console.log(`A soma é de ${soma}, então a média é de ${(soma/5).toFixed(2)}`)
 
 7 - 
+    let lista = ""
     let resultado = 0
     let numeroN = Number(prompt("Me de um numero"))
         for (let i = 0; i<=numeroN;i++) {
             if (i%2!=0) {
                 resultado = i
-                console.log(resultado)
+                if (i == numeroN){
+                    lista+=resultado
+                }
+            else{
+                lista+=resultado+", "
+            }
             }
         }
+    console.log(lista)
 
 8 - let numeroN = Number(prompt("Me de um numero"))
         for (let i = 1; i<=10;i++) {
