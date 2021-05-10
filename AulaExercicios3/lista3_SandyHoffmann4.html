@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let totalVotosJose = 0
+        let totalVotosMaria = 0
+        let totalVotosJoao = 0
+        let totalNulos = 0
+        let totalBranco = 0
+        while (true){
+        let voto = Number(prompt("Em quem você vota?\n1 - José Bolinha\n2 - Maria Nascimento\n3 - João da Silva\n4 - Voto Nulo\n5 - Voto em branco"))
+        let funcionando = true
+        switch (voto){
+            case 0:
+                funcionando = false
+                break
+            case 1:
+                totalVotosJose++
+                break
+            case 2:
+                totalVotosMaria++
+                break
+            case 3:
+                totalVotosJoao++
+                break
+            case 4: 
+                totalNulos++
+                break
+            case 5:
+                totalBranco++
+                break
+            default:
+                console.log("Não foi possivel entender sua opção.")
+        }
+        if (!funcionando){
+            break
+        }
+        }
+        console.log(`Total de Votos\nJosé Bolinha: ${totalVotosJoao} voto(s)\nMaria Nascimento: ${totalVotosMaria} voto(s)\nJoão da Silva: ${totalVotosJoao} voto(s)\nVotos Nulos: ${totalNulos} voto(s)\nVotos em Branco: ${totalBranco} voto(s)`)
+    </script>
+</body>
+</html>

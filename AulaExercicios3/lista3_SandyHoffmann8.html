@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let contador = 1
+        let verificador = 0
+        while (true) {
+            contador++
+            if (contador%2===0||contador%3===0||contador%5===0||contador%7===0){
+                if (contador/2==1){
+                    console.log(contador)
+                    verificador++
+                    continue
+                }
+                else if (contador/3==1){
+                    console.log(contador)
+                    verificador++
+                    continue
+                }
+                else if (contador/5==1){
+                    console.log(contador)
+                    verificador++
+                    continue
+                }
+                else if (contador/7==1){
+                    console.log(contador)
+                    verificador++
+                    continue
+                }
+                continue
+            }
+            else{
+                console.log(contador)
+                verificador++
+            }
+            if (verificador>=20){
+                break
+            }
+    }
+    </script>
+</body>
+</html>
