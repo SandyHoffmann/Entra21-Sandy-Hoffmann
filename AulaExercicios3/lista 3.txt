@@ -226,7 +226,7 @@
         break
     }
     }
-    console.log(`Total de Votos\nJosé Bolinha: ${totalVotosJoao} voto(s)\nMaria Nascimento: ${totalVotosMaria} voto(s)\nJoão da Silva: ${totalVotosJoao} voto(s)\nVotos Nulos: ${totalNulos} voto(s)\nVotos em Branco: ${totalBranco} voto(s)`)
+    console.log(`Total de Votos\nJosé Bolinha: ${totalVotosJose} voto(s)\nMaria Nascimento: ${totalVotosMaria} voto(s)\nJoão da Silva: ${totalVotosJoao} voto(s)\nVotos Nulos: ${totalNulos} voto(s)\nVotos em Branco: ${totalBranco} voto(s)`)
 
 
 18 - 
@@ -285,6 +285,7 @@
     console.log(`Soma dos pares: ${somaPar}\nMultiplicação dos Ímpares: ${multiImpar}`)
 
 21 - 
+    //refazer pra ficar mais facil
     let contador = 1
     let verificador = 0
     while (true) {
