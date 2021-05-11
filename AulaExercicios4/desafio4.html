@@ -8,14 +8,21 @@
 <body>
     <script>
         let numero = Number(prompt("Me de um numero"))
-        let conta = 0
-        while (true) {
-            for(numero; numero > 0;numero--){
-                Math.floor(numero/100)
-            }   
+        let casaSelecionada = numero
+        let contador = 1
+        let inverter = ""
+        let contadorDecimal = 0
+        while (numero>0) {
+            contador*=10
+            casaSelecionada = numero%contador
+            numero -= casaSelecionada
+            contadorDecimal++
+            if (contadorDecimal>1){
+                casaSelecionada = (casaSelecionada/(10**(contadorDecimal-1)))
+            }
+            inverter+=casaSelecionada
        }
-       Math.floor()
-        console.log(`Quantidade de números no intervalo [0-25]: ${totalIntervalo1}\nQuantidade de números no intervalo [26-50]: ${totalIntervalo2}\nQuantidade de números no intervalo [51-75]: ${totalIntervalo3}`)
+       console.log(inverter)
     </script>
 </body>
 </html>

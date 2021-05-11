@@ -1,0 +1,61 @@
+1 - 
+
+    let base = Number(prompt("Me de a base"))
+    let expoente = Number(prompt("Me de o expoente"))
+    let numeroElevado = 1
+    for(expoente; expoente > 0;expoente--) {
+        numeroElevado*=base
+    } 
+    console.log(numeroElevado)
+
+2 - 
+
+    let n = Number(prompt("Me de até que numero queres da sequencia"))
+    let inicial = 1
+    let anteriorInicial = 0
+    let sequencia = 1
+    for(n; n > 0;n--) {
+        console.log(sequencia)
+        sequencia = inicial + anteriorInicial
+        anteriorInicial = inicial
+        inicial = sequencia
+    }
+
+3 - 
+
+    let totalIntervalo1 = 0
+    let totalIntervalo2 = 0
+    let totalIntervalo3 = 0
+
+    while (true) {
+        let numero = Number(prompt("Me de um numero"))
+        if (numero<0){
+            break;
+        }else if (numero<=25){
+            totalIntervalo1++
+        }else if (numero<=50){
+            totalIntervalo2++
+        }else if (numero<=75){
+            totalIntervalo3++
+        }
+    }
+    console.log(`Quantidade de números no intervalo [0-25]: ${totalIntervalo1}\nQuantidade de números no intervalo [26-50]: ${totalIntervalo2}\nQuantidade de números no intervalo [51-75]: ${totalIntervalo3}`)
+
+4 - 
+
+    let numero = Number(prompt("Me de um numero"))
+    let casaSelecionada = numero
+    let contador = 1
+    let inverter = ""
+    let contadorDecimal = 0
+    while (numero>0) {
+        contador*=10
+        casaSelecionada = numero%contador
+        numero -= casaSelecionada
+        contadorDecimal++
+        if (contadorDecimal>1){
+            casaSelecionada = (casaSelecionada/(10**(contadorDecimal-1)))
+        }
+        inverter+=casaSelecionada
+    }
+    console.log(inverter)

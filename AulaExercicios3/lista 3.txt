@@ -65,12 +65,12 @@
         for (let i = 0; i<=numeroN;i++) {
             if (i%2!=0) {
                 resultado = i
-                if (i == numeroN){
+                if (i == numeroN || i == numeroN - 1){
                     lista+=resultado
                 }
-            else{
-                lista+=resultado+", "
-            }
+                else{
+                    lista+=resultado+", "
+                }
             }
         }
     console.log(lista)
@@ -173,24 +173,23 @@
     console.log(`Média Salarial: ${(salario/contador).toFixed(2)}\nMédia de filhos: ${(filhos/contador).toFixed(2)}\nMaior Salário: ${maiorSalario}`)
 
 16 - 
-    let salario = 0
-    let filhos = 0
-    let maiorSalario = 0
-    let contador = 0
-    while (true) {
-        let salarioPessoa = Number(prompt("Quanto você ganha? "))
-        let filhosPessoa = Number(prompt("Quantos filhos você tem? "))
-        if (salarioPessoa < 0 || filhosPessoa < 0){
-            break
+    let menorNumero = 0
+    let maiorNumero = 0
+    for(let i = 0;i < 5;i++) {
+        let numero = Number(prompt("Me de um numero para verificar"))
+        if (i == 0){
+            maiorNumero = numero
+            menorNumero = numero
         }
-        contador++
-        if (salarioPessoa>maiorSalario){
-            maiorSalario = salarioPessoa
+        else if (numero>maiorNumero){
+            maiorNumero = numero
         }
-        salario+=salarioPessoa
-        filhos+=filhosPessoa
-    }
-    console.log(`Média Salarial: ${(salario/contador).toFixed(2)}\nMédia de filhos: ${(filhos/contador).toFixed(2)}\nMaior Salário: ${maiorSalario}`)
+        else if (numero<menorNumero){
+            menorNumero = numero
+        }
+    } 
+    console.log(`O menor numero digitado foi ${menorNumero}.`)
+    console.log(`O maior numero digitado foi ${maiorNumero}.`)
 
 17 -
     let totalVotosJose = 0
