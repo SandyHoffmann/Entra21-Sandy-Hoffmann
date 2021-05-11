@@ -159,10 +159,10 @@
     let contador = 0
     while (true) {
         let salarioPessoa = Number(prompt("Quanto você ganha? "))
-        let filhosPessoa = Number(prompt("Quantos filhos você tem? "))
-        if (salarioPessoa < 0 || filhosPessoa < 0){
+        if (salarioPessoa < 0){
             break
         }
+        let filhosPessoa = Number(prompt("Quantos filhos você tem? "))
         contador++
         if (salarioPessoa>maiorSalario){
             maiorSalario = salarioPessoa
