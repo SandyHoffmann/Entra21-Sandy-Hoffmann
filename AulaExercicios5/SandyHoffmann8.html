@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vetor = []
+        let contador = 0
+        while(contador<6){
+            let numero = +prompt("Me de um numero: ")
+            if (numero%2==0){
+                vetor[contador]=numero
+                contador++
+            }
+            else{
+                console.log("Numero invalido, digite um PAR.")
+            }
+        }
+        console.log(vetor)
+        let vetorInverso = []
+        let contadorIndInverso = 0
+        for (let x = 5; x>=0 ; x--){
+            vetorInverso[contadorIndInverso] = vetor[x]
+            contadorIndInverso++
+        }
+        console.log(`A lista normal é ${vetor} e a lista invertida é ${vetorInverso}`)
+    </script>
+</body>
+</html>

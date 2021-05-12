@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = []
+        a = [1, 0, 5, -2, -5, 7]
+        let tamanhoA = a.length
+        let soma = 0
+        for (let x = 0; x<tamanhoA ; x++){
+            if (x==0 || x==1 || x==5){
+                soma+=a[x]
+            }
+            if (x==4){
+                a[x] = 100
+            }
+            console.log(a[x])
+        }
+    </script>
+</body>
+</html>

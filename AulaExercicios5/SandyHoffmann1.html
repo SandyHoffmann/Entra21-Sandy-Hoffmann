@@ -7,11 +7,13 @@
 </head>
 <body>
     <script>
-        let vetor = [0,1,2,3,4,5,6,7,8,9]
         let totalPar = 0
-        for (let item of vetor){
-            if (item%2===0){
-                totalPar++
+        let vetor = []
+        for (let x = 0; x<10 ; x++){
+            let elementoVetor = Number(prompt("Me de um numero: "))
+            vetor[x] = elementoVetor
+            if ((vetor[x])%2===0){
+                totalPar+=1
             }
         }
         console.log(`O total de numeros pares é ${totalPar}`)

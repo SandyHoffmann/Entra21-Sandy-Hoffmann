@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vetor = []
+        for (let y = 0; y<9 ; y++){
+            let numero = +prompt("Me de um numero: ")
+            vetor[y]=numero
+        }
+        let tamanho = vetor.length-1
+        let x = 0
+        let y = 0
+        while (true){
+            x = +prompt("Me de o indice para procurar: ")
+            y = +prompt("Me de outro indice para procurar: ")
+            if ((x>tamanho || x<0) || (y>tamanho || y<0)){
+                console.log(`Digite valores válidos! máx ${tamanho} min 0`)
+            }
+            else{
+                break
+            }
+        }
+        let soma = 0
+        for (let z = 0; z<=tamanho ; z++){
+            if (x==z || y==z){
+                if (x==y){
+                    soma=((vetor[z])+(vetor[z]))
+                    break
+                }
+                else{
+                    soma+=parseFloat((vetor[z]))
+                }
+            }
+        }
+        console.log(`A soma é de ${soma}`)
+    </script>
+</body>
+</html>

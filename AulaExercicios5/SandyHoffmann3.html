@@ -7,20 +7,22 @@
 </head>
 <body>
     <script>
-        let vetor = [], maiorElemento, posicao
+        let vetor = [], maiorElemento, menorElemento
         for (let x = 0; x<5 ; x++){
             let numero = +prompt("Me de um numero: ")
             vetor[x] = numero
             if (x === 0){
                 maiorElemento = vetor[x]
-                posicao = x
+                menorElemento = vetor[x]
             }
             else if(vetor[x]>maiorElemento){
                 maiorElemento = vetor[x]
-                posicao = x
+            }
+            else if(vetor[x]<menorElemento){
+                menorElemento = vetor[x]
             }
         }
-        console.log(`O vetor é ${vetor} o maior elemento é ${maiorElemento} e se encontra na posição ${posicao}`)
+        console.log(`No vetor ${vetor} o maior elemento é ${maiorElemento} e o menor elemento é ${menorElemento}`)
     </script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //errado
+        let vetor = []
+        for (let y = 0; y<10 ; y++){
+            let numero = +prompt("Me de um numero: ")
+            vetor[y]=numero
+        }
+        let soma, negativo
+        for (let z = 0; z<=10 ; z++){
+            if (vetor[z]>=0){
+                soma+=parseFloat(vetor[z])
+            }
+            else{
+                negativo++
+            }
+        }
+        console.log(`A soma é de ${soma}, e a quantidade de numeros negativos é de ${negativo}`)
+    </script>
+</body>
+</html>

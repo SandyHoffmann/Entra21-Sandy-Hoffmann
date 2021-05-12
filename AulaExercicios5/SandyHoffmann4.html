@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vetor = [], vetorInverso = []
+        for (let x = 0; x<5 ; x++){
+            let numero = prompt("Me de um elemento ")
+            vetor[x] = numero
+        }
+        let tamanhoVetor = vetor.length-1
+        for (let y = tamanhoVetor; y>=0;y--){
+            vetorInverso[y] = vetor[tamanhoVetor-y]
+        }
+        console.log(`Vetor 1: ${vetor} vetorInverso: ${vetorInverso}`)
+
+    </script>
+</body>
+</html>
