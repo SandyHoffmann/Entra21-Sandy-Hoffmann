@@ -25,18 +25,7 @@
                 break
             }
         }
-        let soma = 0
-        for (let z = 0; z<=tamanho ; z++){
-            if (x==z || y==z){
-                if (x==y){
-                    soma=((vetor[z])+(vetor[z]))
-                    break
-                }
-                else{
-                    soma+=parseFloat((vetor[z]))
-                }
-            }
-        }
+        let soma = vetor[x] + vetor[y]
         console.log(`A soma é de ${soma}`)
     </script>
 </body>

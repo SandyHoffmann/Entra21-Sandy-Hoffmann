@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //errado
+        let vetor = []
+        for (let y = 0; y<5 ; y++){
+            let numero = +prompt("Me de um numero: ")
+            vetor[y]=numero
+        }
+        let posicaoMaior = 0
+        let posicaoMenor = 0
+        for (let z = 0; z<5 ; z++){
+            if (vetor[z] > vetor[posicaoMaior]){
+                posicaoMaior = z
+            }
+            else if(vetor[z] < vetor[posicaoMenor]){
+                posicaoMenor = z
+            }
+        }
+        console.log(`A posicao do maior valor é no indice ${posicaoMaior}, e a posição do menor valor é no indice ${posicaoMenor}`)
+    </script>
+</body>
+</html>

@@ -13,10 +13,11 @@
             let numero = +prompt("Me de um numero: ")
             vetor[y]=numero
         }
-        let soma, negativo
-        for (let z = 0; z<=10 ; z++){
+        let soma = 0
+        let negativo = 0
+        for (let z = 0; z<10 ; z++){
             if (vetor[z]>=0){
-                soma+=parseFloat(vetor[z])
+                soma+=vetor[z]
             }
             else{
                 negativo++

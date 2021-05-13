@@ -11,15 +11,12 @@
         a = [1, 0, 5, -2, -5, 7]
         let tamanhoA = a.length
         let soma = 0
-        for (let x = 0; x<tamanhoA ; x++){
-            if (x==0 || x==1 || x==5){
-                soma+=a[x]
-            }
-            if (x==4){
-                a[x] = 100
-            }
-            console.log(a[x])
+        soma = a[0] + a[1] + a[5]
+        a[4] = 100
+        for (let elemento of a){
+            console.log(elemento)
         }
+        console.log(`A soma é ${soma}`)
     </script>
 </body>
 </html>
