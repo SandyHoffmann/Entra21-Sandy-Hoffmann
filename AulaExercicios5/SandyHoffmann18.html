@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vetor = []
+        for (let x = 0; x<10 ; x++){
+            let numero = Math.floor(Math.random()*(10-1)+1)
+            vetor[x] = numero
+        }
+        let somaPar = 0
+        let multiImpar = 1
+        for (let n of vetor){
+            console.log(n)
+            if (n%2==0){
+                somaPar+=n
+            }
+            else{
+                multiImpar*=n
+            }
+        }
+        console.log(`A soma dos pares é ${somaPar}`)
+        console.log(`A multiplicação dos impares é ${multiImpar}`)
+
+
+        
+    </script>
+</body>
+</html>

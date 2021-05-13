@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let numero1 = +prompt("Diga um numero.")
+        let numero2 = +prompt("Diga um outro numero.")
+        let numeroMaior = 0
+        let numeroMenor = 0
+        if (numero1>numero2){
+            numeroMaior = numero1 
+            numeroMenor = numero2
+        }
+        else{
+            numeroMaior = numero2
+            numeroMenor = numero1
+        }
+        let contador = 0 
+        let vetor = [] 
+        for (let x = numeroMenor; x<=numeroMaior ; x++){
+            if (contador%2==0){
+                vetor.push(x)
+                contador++
+            }
+            else{
+                contador++
+            }
+        }
+        for (let elemento of vetor){
+            console.log(elemento)
+        }
+       
+
+        
+    </script>
+</body>
+</html>

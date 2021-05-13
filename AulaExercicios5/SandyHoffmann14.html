@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        let vetor1 = []
+        let vetor2 = []
+
+        for (let x = 0; x<5 ; x++){
+            let elementoVetor = prompt("Diga um elemento para o vetor 1")
+            vetor1[x] = elementoVetor
+        }
+        for (let y = 0; y<5 ; y++){
+            elementoVetor = prompt("Diga um elemento para o vetor 2")
+            vetor2[y] = elementoVetor
+        }
+        let iguais = true
+        for (let x = 0; x<5 ; x++){
+            if (vetor1[x] !== vetor2[x]){
+                iguais = false
+                break
+            }
+        }
+        iguais ? console.log("Os valores são iguais") : console.log("Os valores são diferentes")
+
+        
+    </script>
+</body>
+</html>

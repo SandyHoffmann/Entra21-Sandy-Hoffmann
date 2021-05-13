@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let texto = "Sem trocar que o espinho é seco.\n Sem trocar que seco é ser sol.\n Sem trocar que algum espinho seco secará."
+        console.log(texto)
+        let vetor = texto.split(" ")
+        let tamanho = vetor.length
+        for (let i=0;i<tamanho;i++){
+            if (vetor[i] == "trocar"){
+                vetor[i] = "sacar"
+            }
+        }
+        console.log(vetor.join(" "))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        let vetor1 = []
+        let vetor2 = []
+
+        for (let x = 0; x<5 ; x++){
+            let elementoVetor = prompt("Diga um elemento para o vetor 1")
+            vetor1[x] = elementoVetor
+        }
+        for (let x = 0; x<5 ; x++){
+            elementoVetor = prompt("Diga um elemento para o vetor 2")
+            vetor2[x] = elementoVetor
+        }
+        let vetor3 = []
+
+        for (let x = 0; x<5 ; x++){
+            for (let y = 0;y<5;y++){
+                if (vetor1[x] == vetor2[y]){
+                    vetor3.push(vetor1[x])
+                    break
+                }
+            }
+        }
+        console.log(`O vetor 1: ${vetor1}`)
+        console.log(`O vetor 2: ${vetor2}`)
+        console.log(`Intersecção1: ${vetor3}`)
+
+        
+    </script>
+</body>
+</html>

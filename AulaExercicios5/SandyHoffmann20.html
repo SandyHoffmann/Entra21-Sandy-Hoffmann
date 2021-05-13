@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vetor = []
+        let soma = 0
+        for (let i = 0;i<10;i++){
+            let nota = +prompt("Me dê uma nota para média")
+            vetor[i] = nota
+        }
+        for (let elemento of vetor){
+            soma+=elemento
+        }
+        let notasAcima = []
+        let media = soma/(vetor.length)
+        for (let i = 0;i<10;i++){
+            if (vetor[i]>media){
+                notasAcima.push(vetor[i])
+            }
+        }
+
+        console.log(`A média da sala é de ${media.toFixed(2)}, e as notas acima da média são é ${notasAcima}`)
+
+    </script>
+</body>
+</html>

@@ -7,17 +7,47 @@
 </head>
 <body>
     <script>
-        //fazer
-        let totalPar = 0
+        
         let vetor = []
-        for (let x = 0; x<10 ; x++){
-            let elementoVetor = Number(prompt("Me de um numero: "))
+        for (let x = 0; x<100 ; x++){
+            let elementoVetor = Math.round((Math.random(1,6)*(6-1))+1)
             vetor[x] = elementoVetor
-            if ((vetor[x])%2===0){
-                totalPar+=1
+        }
+        let quantidade1 = 0
+        let quantidade2 = 0
+        let quantidade3 = 0
+        let quantidade4 = 0
+        let quantidade5 = 0
+        let quantidade6 = 0
+
+        for (let elemento of vetor){
+            switch(elemento){
+                case 1:
+                    quantidade1++
+                    break
+                case 2: 
+                    quantidade2++
+                    break
+                case 3:
+                    quantidade3++
+                    break
+                case 4:
+                    quantidade4++
+                    break
+                case 5:
+                    quantidade5++
+                    break
+                case 6:
+                    quantidade6++
             }
         }
-        console.log(`O total de numeros pares é ${totalPar}`)
+        console.log(`A quantidade de 1 é ${quantidade1}`)
+        console.log(`A quantidade de 2 é ${quantidade2}`)
+        console.log(`A quantidade de 3 é ${quantidade3}`)
+        console.log(`A quantidade de 4 é ${quantidade4}`)
+        console.log(`A quantidade de 5 é ${quantidade5}`)
+        console.log(`A quantidade de 6 é ${quantidade6}`)
+
     </script>
 </body>
 </html>
