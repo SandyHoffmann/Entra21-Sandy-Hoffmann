@@ -14,16 +14,15 @@
                 matriz[linha][coluna] = Number(prompt("Me de um numero: "))
             }
         }
-        for (let linha = 0; linha<5 ; linha++){
-            for (let coluna = 0; coluna<5; coluna++){
-                if (coluna==linha){
-                    matriz[linha][coluna] = 1
-                }
-                else{
-                    matriz[linha][coluna] = 0
+        let soma = 0
+        for (let linha = 0; linha<3 ; linha++){
+            for (let coluna = 0; coluna<3; coluna++){
+                if (linha<coluna){
+                    soma+=matriz[linha][coluna]
                 }
             }
         }
+        console.log(`A soma é ${soma}`)
     </script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let matriz = []
+        for (let linha = 0; linha<3 ; linha++){
+            matriz[linha] = []
+            for (let coluna = 0; coluna<4; coluna++){
+                if (coluna == 0){
+                    matriz[linha][coluna] = prompt("Me de o nome do aluno: ")
+                }
+                else{
+                    matriz[linha][coluna] = Number(prompt("Me de uma nota: "))
+                }
+            }
+        }
+
+        for (let linha = 0; linha<3 ; linha++){
+            let soma = 0
+            for (let coluna = 0; coluna<4; coluna++){
+                if (coluna != 0){
+                    soma+=matriz[linha][coluna]
+                }
+            }
+            let media = soma/3
+            matriz[linha][4] = media.toFixed(2)
+        }
+
+        for (let linha = 0; linha<3 ; linha++){
+            if (matriz[linha][4]>=6){
+                    matriz[linha][5] = "Aprovado"
+                }
+            else{
+                matriz[linha][5] = "Reprovado"
+            }
+        }
+
+        matrizBonita = ""
+        for (let linha = 0; linha<3 ; linha++){
+            for (let coluna = 0; coluna<6; coluna++){
+                matrizBonita+=matriz[linha][coluna] + "\t"
+            }
+            matrizBonita+="\n"
+        }
+        console.log(matrizBonita)
+    </script>
+</body>
+</html>
