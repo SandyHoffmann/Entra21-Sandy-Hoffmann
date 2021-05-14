@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vetorproduto = []
+        let vetorpreco = []
+        for (let i = 0;i<5;i++){
+            let produto = prompt(`Me dê o nome do produto ${i+1}`)
+            let preco = +prompt(`Me dê o preço do produto ${i+1}`)
+            vetorproduto[i] = produto
+            vetorpreco[i] = preco
+        }
+        let quantPrecInferior = 0
+        let nomeProdutosMargem = []
+        let somaPrecSuperior = 0
+        let quantPrecSuperior = 0
+        for (let i = 0;i<5;i++){
+            if (vetorpreco[i] < 50){
+                quantPrecInferior++
+            }
+            else if(vetorpreco[i] <= 100){
+                nomeProdutosMargem.push(vetorproduto[i])
+            }
+            else{
+                somaPrecSuperior+=vetorpreco[i]
+                quantPrecSuperior++
+            }
+        }
+        let mediaSuperior = somaPrecSuperior/quantPrecSuperior
+        console.log(`A quantidade de produtos com preço inferior a R$ 50,00 é ${quantPrecInferior}`)
+        console.log(`Nome dos produtos com preço entre R$50,00 e R$100: ${nomeProdutosMargem}`)
+        console.log(`A média dos produtos com preço superior a R$ 100,00 é ${mediaSuperior.toFixed(2)}`)
+
+    </script>
+</body>
+</html>
