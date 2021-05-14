@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let matriz = []
+        for (let linha = 0; linha<3 ; linha++){
+            matriz[linha] = []
+            for (let coluna = 0; coluna<3; coluna++){
+                matriz[linha][coluna] = Number(prompt("Me de um numero: "))
+            }
+        }
+        let valormaior = 0
+        for (let linha = 0; linha<3 ; linha++){
+            for (let coluna = 0; coluna<3; coluna++){
+                if (matriz[linha][coluna]>10){
+                    valormaior++
+                }
+            }
+        }
+        console.log(`A matriz possui ${valormaior} valores maiores que 10.`)
+    </script>
+</body>
+</html>

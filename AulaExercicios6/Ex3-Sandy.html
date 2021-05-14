@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let matriz = []
+        for (let linha = 0; linha<3 ; linha++){
+            matriz[linha] = []
+            for (let coluna = 0; coluna<3; coluna++){
+                matriz[linha][coluna] = +prompt("Me de um numero: ")
+            }
+        }
+        let x = +prompt("Me de o numero que vc gostaria de procurar: ")
+        let achei = false
+        for (let linha = 0; linha<3 ; linha++){
+            for (let coluna = 0; coluna<3; coluna++){
+                if (matriz[linha][coluna] == x){
+                    achei = `A localização do elemento é linha ${linha} e coluna ${coluna}`
+                }
+            }
+        }
+        achei ? console.log(achei) : console.log("Não encontrado")
+    </script>
+</body>
+</html>

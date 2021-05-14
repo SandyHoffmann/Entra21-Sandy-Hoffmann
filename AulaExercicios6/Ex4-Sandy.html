@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let matriz1 = []
+        for (let linha = 0; linha<3 ; linha++){
+            matriz1[linha] = []
+            for (let coluna = 0; coluna<3; coluna++){
+                matriz1[linha][coluna] = +prompt("Me de um numero (matriz 1): ")
+            }
+        }
+        
+        let matriz2 = []
+        for (let linha = 0; linha<3 ; linha++){
+            matriz2[linha] = []
+            for (let coluna = 0; coluna<3; coluna++){
+                matriz2[linha][coluna] = +prompt("Me de um numero (matriz 2): ")
+            }
+        }
+
+        matriz3 = []
+
+        for (let linha = 0; linha<3 ; linha++){
+            matriz3[linha] = []
+            for (let coluna = 0; coluna<3; coluna++){
+                if (matriz1[linha][coluna] > matriz2[linha][coluna]){
+                    matriz3[linha][coluna] = matriz1[linha][coluna]
+                }
+                else{
+                    matriz3[linha][coluna] = matriz2[linha][coluna]
+                }
+            }
+        }
+        matrizBonita = ""
+        for (let linha = 0; linha<3 ; linha++){
+            for (let coluna = 0; coluna<3; coluna++){
+                matrizBonita+=matriz3[linha][coluna] + "\t"
+            }
+            matrizBonita+="\n"
+        }
+        console.log(matrizBonita)
+    </script>
+</body>
+</html>
