@@ -13,40 +13,35 @@
             vetor[x] = elementoVetor
         }
         console.log(vetor)
-        let quantidade1 = 0
-        let quantidade2 = 0
-        let quantidade3 = 0
-        let quantidade4 = 0
-        let quantidade5 = 0
-        let quantidade6 = 0
+        vetorcontador = [0,0,0,0,0,0,0]
 
         for (let elemento of vetor){
             switch(elemento){
                 case 1:
-                    quantidade1++
+                    vetorcontador[0]+=1
                     break
                 case 2: 
-                    quantidade2++
+                    vetorcontador[1]+=1
                     break
                 case 3:
-                    quantidade3++
+                    vetorcontador[2]+=1
                     break
                 case 4:
-                    quantidade4++
+                    vetorcontador[3]+=1
                     break
                 case 5:
-                    quantidade5++
+                    vetorcontador[4]+=1
                     break
                 case 6:
-                    quantidade6++
+                    vetorcontador[5]+=1
             }
         }
-        console.log(`A quantidade de 1 é ${quantidade1}`)
-        console.log(`A quantidade de 2 é ${quantidade2}`)
-        console.log(`A quantidade de 3 é ${quantidade3}`)
-        console.log(`A quantidade de 4 é ${quantidade4}`)
-        console.log(`A quantidade de 5 é ${quantidade5}`)
-        console.log(`A quantidade de 6 é ${quantidade6}`)
+        console.log(`A quantidade de 1 é ${vetorcontador[0]}`)
+        console.log(`A quantidade de 2 é ${vetorcontador[1]}`)
+        console.log(`A quantidade de 3 é ${vetorcontador[2]}`)
+        console.log(`A quantidade de 4 é ${vetorcontador[3]}`)
+        console.log(`A quantidade de 5 é ${vetorcontador[4]}`)
+        console.log(`A quantidade de 6 é ${vetorcontador[5]}`)
 
     </script>
 </body>
