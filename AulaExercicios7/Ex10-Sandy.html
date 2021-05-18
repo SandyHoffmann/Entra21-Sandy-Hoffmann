@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcularFatorial(numero){
+            let fatorial=1
+            for (let i = numero; i >= 1; i--){
+                fatorial*=i
+            }
+            return(fatorial)
+        }
+
+        let numero = +prompt("Me dê um numero: ")
+        let fatorialNumero = calcularFatorial(numero)
+        fatorialNumero == 1 && numero != 1 ? console.log("Digite um valor válido!") : console.log(`O numero ${numero} tem resultado fatorial = ${fatorialNumero}`) 
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function retornaDivisores(numero){
+            let totalDivisores = 0
+            for (let i = 1; i <=numero; i++){
+                if (numero%i==0){
+                    totalDivisores++
+                }
+            }
+            return(totalDivisores)
+        }
+        let numero = +prompt("Me dê um numero: ")
+
+        let divisoresNumero = retornaDivisores(numero)
+        divisoresNumero ? console.log(`O numero ${numero} tem ${divisoresNumero} divisores`) : console.log("Digite um valor válido")
+
+</script>
+</body>
+</html>

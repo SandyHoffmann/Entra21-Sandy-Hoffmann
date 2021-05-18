@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function verificarMedia(media) {
+                if (media<5){
+                    return("D")
+                } else if(media<7){
+                    return("C")
+                } else if(media<9){
+                    return("B")
+                } return ("A")
+        }
+        let media = +prompt("Me dê a média: ")
+        console.log(`A sua média é conceito ${verificarMedia(media)}`)
+    </script>
+</body>
+</html>

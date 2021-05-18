@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("Me de o valor de A")
+        let b = +prompt("Me de o valor de B")
+        let c = +prompt("Me de o valor de C")
+
+        function calcularDelta(a,b,c){
+            let delta = b**2 - 4*a*c
+            return(delta)
+        }
+        delta = calcularDelta(a,b,c)
+        delta < 0 ? console.log("A equação n possui numeros reais") : calcularBhaskara(a,b,c,delta)
+
+        function calcularBhaskara(a,b,c,delta){
+            let bhaskarapositivo = (-b + (delta)**(1/2))/2*a
+            let bhaskaranegativo = (-b - (delta)**(1/2))/2*a
+            return(bhaskarapositivo,bhaskaranegativo)
+        }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function calcularTotalDias(anos,meses,dias){
+            return(anos*365)+(meses*30)+dias
+        }
+        let anos = +prompt("Quantos anos vc tem?")
+        let meses = +prompt("Quantos meses vc tem a mais?")
+        let dias = +prompt("Quantos dias vc tem a mais?")
+
+        let totalDias = calcularTotalDias(anos,meses,dias)
+        console.log(`O total de dias de vida que vc tem é ${totalDias}`)
+    </script>
+</body>
+</html>

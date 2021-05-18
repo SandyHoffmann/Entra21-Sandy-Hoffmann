@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ehPerfeito(numero){
+            let perfeito = 0
+            for (let i = 1; i <=numero-1; i++){
+                if (numero%i==0){
+                    perfeito+=i
+                }
+            }
+            if (perfeito == numero){
+                return(true)
+            }
+        }
+
+        let numero = +prompt("Me dê um numero: ")
+        ehPerfeito(numero) ? console.log("é perfeito") : console.log("não é perfeito")
+
+</script>
+</body>
+</html>
