@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vetorRepetido = []
+        function repetirElemento(palavra,quantidade,vetorRepetido){
+            for (i = 0 ; i < quantidade; i++){
+                vetorRepetido[i] = palavra
+            }
+            return vetorRepetido
+        }
+        let palavra = prompt("Qual a palavra?")
+        let quantidade = +prompt("Quantas vezes?")
+
+        console.log(repetirElemento(palavra,quantidade,vetorRepetido))
+
+</script>
+</body>
+</html>

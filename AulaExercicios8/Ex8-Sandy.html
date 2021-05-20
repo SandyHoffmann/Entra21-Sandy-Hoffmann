@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let ano = +prompt("Qual o ano? ")
+
+        function verificarBissexto(ano){
+            if (ano % 4 == 0 && (ano % 100 != 0 || ano % 400 == 0)){
+                return true
+            } return false
+        }
+
+        verificarBissexto(ano) ? console.log(`${ano} É ano bissexto!`) : console.log(`${ano} NÃO É ano bissexto!`)
+
+</script>
+</body>
+</html>

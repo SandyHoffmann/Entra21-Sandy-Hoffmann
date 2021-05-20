@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vetor = []
+        function preencheVetor(vetor,numero){
+            for (let i = 0; i < numero; i++){
+                vetor[i] = +prompt("Me diga um numero")
+            }
+            return(vetor)
+        }
+        let numero = +prompt("Quantas vezes vc quer repetir? ")
+        console.log(preencheVetor(vetor,numero))
+
+        function retornarPares(vetor, numero){
+            let vetorModificado = []
+            for (let i = 0; i<numero; i++){
+                if (i%2==0 && vetor[i]%2==0){
+                    vetorModificado.push(vetor[i])
+                }
+            }
+            return(vetorModificado)
+        }
+
+        console.log(retornarPares(vetor,numero))
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = []
+
+        function fazerArray(array, numero){
+            for (i = 0 ; i < numero; i++){
+                array[i] = +prompt("me diga um numero")
+            }
+        }
+
+        let numero = +prompt("me diga o tamanho do array")
+
+        fazerArray(array, numero)
+        let arrayElementos = []
+        function receberArray(array,arrayElementos){
+            arrayElementos[0] = array[0]
+            arrayElementos[1] = array[numero-1]
+            return(arrayElementos)
+        }
+        
+        console.log(`O primeiro e o ultimo elemento do seu array são ${receberArray(array,arrayElementos)}`)
+
+</script>
+</body>
+</html>
