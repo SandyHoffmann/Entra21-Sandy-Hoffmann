@@ -10,7 +10,7 @@
 
         let numero = +prompt("Escolha um numero de 1 a 10 ")
 
-        numero >= 1 && numero <=10 ? console.log(gerarNumAleatorio(numero)) : console.log("digite num valido")
+        numero >= 1 && numero <=10 ? console.log(gerarNumAleatorio(numero)) : console.log("digite numero valido")
         function gerarNumAleatorio(numero){
             let numRandom = Math.floor((Math.random()*11-1)+1)
             if (numero == numRandom){
