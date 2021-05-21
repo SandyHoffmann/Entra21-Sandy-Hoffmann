@@ -66,15 +66,22 @@ git merge bug/1 (pra dar merge, ele mostra os erros)
 
 git push origin bug/1 (push em outra branch n principal)
 
-fork
+fork (no botao)
 
 git remote -v (mostra as coisas fetch push)
 
 git remote add upstream https://github.com/william-cirico/trabalhando-git.git (colaborar com o codigo sem necessariamente ser colaborador)
+(primeiro atualizar no github)
 
 (lembrar de ir no git ver se n há mudanças, dps disso fazer o push.)
 
 git push upstream 
+
+git push (muda fork nosso)
+
+no git abrir contribute , git pull request
+
+
 
 
 
