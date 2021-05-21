@@ -38,4 +38,47 @@ pull request
 cria e entra na branch
 git checkout -b Feature1
 
+-----------------
+
+git clone url
+
+git log (pra sair q)
+
+git reset hash --hard
+
+git branch bug/1
+
+git status
+
+git checkout (muda a branch q vc ta)
+
+git branch -d bug/1 (deleta a branch)
+
+git branch -D features/1 (deleta branch forçada)
+
+git branch (mostra as branchs)
+
+git branch -m master(muda nome da branch q vc ta)
+
+git push origin features/1 (manda das branch q n é main)
+
+git merge bug/1 (pra dar merge, ele mostra os erros)
+
+git push origin bug/1 (push em outra branch n principal)
+
+fork
+
+git remote -v (mostra as coisas fetch push)
+
+git remote add upstream https://github.com/william-cirico/trabalhando-git.git (colaborar com o codigo sem necessariamente ser colaborador)
+
+(lembrar de ir no git ver se n há mudanças, dps disso fazer o push.)
+
+git push upstream 
+
+
+
+
+
+
 
