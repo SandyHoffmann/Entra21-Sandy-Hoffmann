@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function capitilize(string){
+            let letraAnterior = " "
+            string = string.trim()
+            let vetorStr = []
+            for (let j of string){
+                vetorStr.push(j)
+            }
+            for (let i = 0; i < vetorStr.length;i++){
+                if (letraAnterior==" "){
+                    vetorStr[i] = vetorStr[i].toUpperCase()
+                }
+                letraAnterior = vetorStr[i]
+                }            
+           let stringNova = ""
+            for (let i = 0; i < vetorStr.length;i++){
+                stringNova+=vetorStr[i]
+            }
+            console.log(stringNova)
+        }
+        //let string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        //capitilize(string)
+
+    function checaSpam(string){
+        if (string.includes("jequiti") || string.includes("day trading")){
+            return 1
+        }  return 0
+    }
+    let string = "this is amazing, checkout JEQUITI"
+    // console.log(checaSpam(string.toLowerCase()))
+
+    function truncar(string, tamanhoMaximo){
+        let tamanhoString = string.length
+        if (tamanhoString>tamanhoMaximo){
+            string = string.substr(0, tamanhoMaximo)
+            console.log(string.padEnd(tamanhoMaximo+3, "."))
+        }
+    }
+    truncar("alo alo alo alo alo laoaoalla", 15)
+    </script>
+</body>
+</html>

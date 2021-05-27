@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function LerNumero(){
+            flag = 1
+            while (flag==1){
+            let numero = prompt("Me dê um numero")
+            if (isFinite(numero)) flag = 0
+            }
+        }
+        //LerNumero()
+
+        function NumAleatorio(min,max){
+            let numero = Math.floor(Math.random()*(max-min+1)+min)
+            console.log(numero)
+        }
+        NumAleatorio(5,10)
+
+        // 3)
+        //     let i = 0;
+        //     while (i != 10) {
+        //         i += 0.2;
+        //     }
+        //Nunca parou pois o js n faz a conta de exatos mto bem, entao ele considera
+        //como se desse 9.99999999999 ao inves de 10. poderiamos consertar isso com Math.floor
+    
+    </script>
+</body>
+</html>
