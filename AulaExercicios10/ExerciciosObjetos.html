@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        function estaVazio(objeto){
+            return(!!Object.values(objeto).length)
+        }
+        // let objeto = {nome:"Carlos"}
+        // console.log(estaVazio(objeto))
+        //2
+        function somarObj(objeto){
+            let soma = 0
+            let valores = Object.values(objeto)
+            for (let elemento of valores){
+                if (isFinite(elemento)){
+                    soma+=elemento
+                }
+            }
+            return(soma)
+        }
+        // let objeto = {
+        //     p1: 20,
+        //     p2: 50,
+        //     p3: 85,
+        //     p4: "Olá",
+        //     p5: "Teste",
+        //     p6: "string",
+        //     p7: 10 
+        // }
+        // console.log(somarObj(objeto))
+        
+        let contador = {
+            contadorNum : 0,
+            incrementa(){
+                this.contadorNum+=1
+            },
+            decrementa(){
+                this.contadorNum-=1
+            },
+            incrementaEm(quantidade){
+                this.contadorNum+=quantidade
+            },
+            decrementaEm(quantidade){
+                this.contadorNum-=quantidade
+            },
+            mostraContador(){
+                console.log(this.contadorNum)
+            }
+        }
+        // contador.mostraContador()
+        // contador.incrementa()
+        // contador.decrementa()
+        // contador.incrementaEm(5)
+        // contador.decrementaEm(2)
+        // contador.mostraContador()
+
+        let calculadora = {
+            lerValores(){
+                this.prop1 = +(prompt("Me de o primeiro numero: "))
+                this.prop2 = +(prompt("Me de o segundo numero: "))
+            },
+            soma(){
+                this.soma = this.prop1+this.prop2
+            },
+            multiplicacao(){
+                this.multiplicacao = this.prop1*this.prop2
+            }
+        }
+        //calculadora.lerValores()
+
+        function ArmazenarInfo(nome,telefone,email){
+            return{
+                nome,
+                telefone,
+                email
+            }
+        }
+        objeto = ArmazenarInfo(nome = "sergio",telefone = 4445555,email = "aaq@r7.com")
+        console.log(objeto)
+    </script>
+</body>
+</html>

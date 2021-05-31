@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function embaralhar(vetor){
+            let indicesPossiveis = []
+            let listaEmbaralhada = []
+            indicesPossiveis = [0,1,2,3,4,5]
+            for (let index = 0; index<(vetor.length);index++){
+                alert("a")
+                let max = vetor.lenght - index
+                let vetorsortido = Math.floor(Math.random()*indicesPossiveis.length)
+                listaEmbaralhada[index] = vetor[indicesPossiveis[vetorsortido]]
+                indicesPossiveis.remove(vetorsortido)
+            }
+            console.log(listaEmbaralhada)
+        }
+        embaralhar([0,1,2,3,4,5])
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let lista = [] 
+        function mostrarMenu(){
+            let continua
+            do {
+                let lista = {
+                    "+1": "Cadastrar aluno",
+                    "+2": "Editar informações do aluno",
+                    "+3": "Cadastrar notas de um aluno",
+                    "+4": "Listar alunos",
+                    "+0": "Sair",
+                }
+                function visualizar(){
+                    for (let chave in lista) {
+                        console.log(`${+chave} : ${lista[chave]}`)
+                    }
+                }
+                let opcao = prompt(visualizar())
+                continua = executarFuncoes(opcao)
+
+            } while (continua == true)
+        }
+        function executarFuncoes(opcao){
+            menu = {
+                "1":pedirDados,
+                "2":editarInformacao,
+                "3":pedirNotaAluno,
+                "4":listarAlunos,
+                "0":false
+            }
+            funcao = menu[opcao]
+            if (funcao){
+                funcao()
+            } else{
+                return funcao
+            }
+            return true
+        }
+           function pedirDados(){
+            let matricula = prompt("Digite o número da sua matrícula")
+            let nome = prompt("Digite o nome do aluno(a)")
+            return cadastrarAluno(matricula,nome)
+        }
+          
+        function cadastrarAluno(matricula,nome){
+            let aluno = [matricula,nome]
+            for ( let i of lista){
+                 if (i["matricula"] == matricula){
+                    return alert("A matrícula digitada já está cadastrada")
+                } 
+            }
+            objNovoAluno = {}     
+            lista.push({matricula : matricula, nome : nome})
+        }
+          
+
+        function pedirNotaAluno (){
+         let matricula = +prompt("Digite o número da sua matricula")
+         for (let i of lista){
+             if (matricula == i [0]) {
+                 let notas = []
+                     for (let i = 0; i < 3; i++) {
+                     notas[i] = +prompt("Digite suas notas")
+                     }
+                cadastrarNotas(notas, matricula)
+                return efetuarMedia(notas,matricula)
+             }
+         }
+          alert("Não foi possivel encontrar a matrícula")
+        }
+          
+         function cadastrarNotas (notas, matricula){
+             for ( let i of lista){
+                 if (matricula == i [0]) {
+                     i[2] = notas[0]
+                     i[3] = notas[1]
+                     i[4] = notas[2]
+
+                 }
+             }
+         }
+
+        function efetuarMedia(notas,matricula) {
+            let soma = 0
+            for (let i = 0; i < notas.length; i++) {
+                soma += notas[i]
+            }
+            let media = soma / notas.length
+            cadastrarMedia(media,matricula)
+        } 
+          
+        function cadastrarMedia(media,matricula){ 
+           for ( let i of lista){
+                 if (matricula == i[0]){
+                      media = media.toFixed(2);
+                      i[5]=media
+                 }
+        }
+        }
+        function editarInformacao(){
+            let matriculaUsuario = prompt("Qual a matricula do aluno que você quer editar? ")
+            let mudou = 0
+            for (let i of lista){
+                if (i[0] == matriculaUsuario){
+                    i[1] = prompt("Qual a alteração no nome desse aluno? ")
+                    mudou = 1
+                    break
+                }
+            }
+            if (!mudou) alert('Matricula não encontrada no sistema! ')
+        }
+
+        function listarAlunos(){
+            let matrizFormatada = []
+            for (let e = 0; e < lista.length;e++){
+                matrizFormatada.push({})
+                matrizFormatada[e].matricula = lista[e][0]
+                matrizFormatada[e].nome = lista[e][1]
+                if (lista[e][2] == undefined){
+                    matrizFormatada[e].nota_1 = "--"
+                    matrizFormatada[e].nota_2 = "--"
+                    matrizFormatada[e].nota_3 = "--"
+                    matrizFormatada[e].media = "--"
+
+                } else{
+                    matrizFormatada[e].nota_1 = lista[e][2]
+                    matrizFormatada[e].nota_2 = lista[e][3]
+                    matrizFormatada[e].nota_3 = lista[e][4]
+                    matrizFormatada[e].media = lista[e][5]
+                }
+            }
+            console.table(matrizFormatada)
+        }
+        mostrarMenu()
+    </script>
+</body>
+</html>
