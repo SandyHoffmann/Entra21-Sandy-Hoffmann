@@ -1,0 +1,35 @@
+.italico{
+    font-style: italic;
+}
+.sublinhado{
+    font-style: unset;
+}
+/*Questão 3*/
+.citacaoverde{
+    color: green;
+}
+.citacaovermelhaazul{
+    font-size: 20px;
+}
+.citacaovermelhaazul .vermelho{
+    color: red;
+}
+.citacaovermelhaazul .azul{
+    color: blue;
+}
+/*Questão 4*/
+.bodycentralizado{
+    text-align: center;
+    background-color: rgb(190, 189, 189);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.tituloazul{
+    color: blue;
+}
+.autor{
+    font-weight: bolder;
+    font-style: italic;
+}
+.linhapreta{
+    border: 1px solid black;
+}

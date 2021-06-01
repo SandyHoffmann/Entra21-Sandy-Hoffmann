@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(147, 164, 218);
+    animation-name: example2;
+    animation-duration: 4s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-delay: 2;
+    animation-timing-function: linear;
+}
+#titulo1{
+    text-align: center;
+    font-style: italic;
+    font-family: 'Odibee Sans', cursive;    border-style: dashed;
+    border-color: rebeccapurple;
+    text-shadow: 2px 4px 2px slateblue,8px 8px 4px rgb(205, 90, 90);;
+}
+#titulo4 {
+    background-image: linear-gradient(rgb(255, 50, 101), yellow);
+    color: rgb(0, 255, 149);
+    text-align: center;
+}
+
+div {
+    width: 100%;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-delay: 2;
+    animation-timing-function: linear;
+
+    }
+
+.gifheman{
+    float: right;
+    width: 40%;
+    height: auto;
+}
+@keyframes example {
+    0%   {background-color: red;}
+    15%  {background-color: orange;}
+    30%  {background-color: yellow;}
+    45% {background-color: green;}
+    60%  {background-color: blue;}
+    75%  {background-color: purple;}
+    100%  {background-color: rgb(255, 58, 91);}
+
+
+}
+
+@keyframes example2 {
+    0%   {background-color: rgb(0, 255, 191);}
+    25%  {background-color: rgb(0, 102, 255);}
+    50%  {background-color: rgb(17, 14, 175);;}
+    75% {background-color: rgb(0, 102, 255);;}
+    100%  {background-color: rgb(0, 255, 191);;}
+
+
+
+}
+
+.titulos{
+    color: salmon;
+    text-align: center;
+}
