@@ -1,0 +1,31 @@
+.tabela1,th,td{
+    border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    padding-right:150px;
+    padding-left:150px;
+    padding-top:5px;
+    padding-bottom:5px;
+
+}
+.titulo{
+    background-color: rgb(19, 158, 151);
+    color: white;
+    font-size: 18px;
+}
+.subtitulo{
+    background-color: rgb(146, 209, 206);
+}
+table{
+    border-spacing: 0px;
+}
+
+.corpo{
+    background-color: rgb(203, 255, 252);
+}
+.italico{
+    font-style: italic;
+}
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

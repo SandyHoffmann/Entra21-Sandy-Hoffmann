@@ -1,0 +1,40 @@
+/*ex1*/
+.negrito{
+    font-weight: bold;
+}
+.negritoitalico{
+    font-weight: bold;
+    font-style: italic;
+}
+/*ex2*/
+.cambria{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*ex4*/
+.tabela2{
+    border: 1px inset rgb(202, 202, 202);
+}
+.tabela2 th{
+    border: 1px inset rgb(202, 202, 202);
+}
+.tabela2 td{
+    border: 1px inset rgb(202, 202, 202);
+}
+.tabela2 thead{
+    background-color: rgb(65, 255, 182);
+    font-size: 23px;
+}
+.nacionais{
+    background-color: rgb(11, 145, 155);
+}
+.cinza{
+    background-color:rgb(196, 196, 196);
+    font-weight: normal;
+}
+.tempo{
+    text-align: center;
+}
+.valor{
+    text-align: right;
+}
