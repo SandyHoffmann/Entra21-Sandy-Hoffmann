@@ -1,0 +1,66 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(27deg, rgba(2,0,36,1) 0%, rgba(255,111,159,1) 0%, rgba(124,72,181,1) 60%);
+}
+
+header{
+    text-align: center;
+    color: white;
+}
+
+header a{
+    color: white;
+    text-decoration:none;
+}
+
+nav{
+    background-color: white;
+    text-align: center;
+    padding: 2%;
+    border-radius:0.5%;
+
+}
+
+nav ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav ul li a{
+    padding: 3%;
+    text-decoration: none;
+    color: black;
+}
+
+main{
+    background-color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius:0.5%;
+    
+}
+
+.conteudoinicial{
+    margin: 5%;
+    display: flex;
+
+}
+
+.paragrafoconteudo{
+    flex-wrap: row wrap;
+    width: 50%;
+  }
+
+.imgconteudo{
+    flex-wrap: row wrap;
+
+}
