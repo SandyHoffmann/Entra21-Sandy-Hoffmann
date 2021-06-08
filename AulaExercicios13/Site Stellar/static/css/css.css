@@ -1,5 +1,6 @@
 *{
     font-family: 'Source Sans Pro', sans-serif;
+    border-spacing: 0px;
 }
 
 body{
@@ -10,6 +11,9 @@ body{
 header{
     text-align: center;
     color: white;
+    padding-top: 10%;
+    padding-bottom: 7%;
+    font-size: 170%;
 }
 
 header a{
@@ -17,6 +21,9 @@ header a{
     text-decoration:none;
 }
 
+header h1{
+    font-size: 250%;
+}
 nav{
     background-color: white;
     text-align: center;
@@ -39,28 +46,178 @@ nav ul li a{
     padding: 3%;
     text-decoration: none;
     color: black;
+    font-size: 140%;
 }
 
 main{
     background-color: white;
-    margin-left: 2%;
-    margin-right: 2%;
     border-radius:0.5%;
     
 }
 
+main>hr{
+    background-color: rgb(190, 190, 190);
+    height: 1px;
+    border: 0; 
+}
 .conteudoinicial{
-    margin: 5%;
-    display: flex;
-
+    margin: 6% 0% 15% 10%;
+    position: relative;
+}
+.imgconteudo img{
+    border-radius: 50%;
+    margin-right: 10%;
+    float: right;
+}
+.titulolinha{
+    width: 60%;
+    display: inline-block;
+    text-align: left;
+    font-size: 150%;
 }
 
-.paragrafoconteudo{
-    flex-wrap: row wrap;
-    width: 50%;
+.titulolinha h1{
+    font-size: 190%;
+    font-weight: normal;
+}
+.titulolinha hr{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.conteudoinicial::after {
+    content: "";
+    clear: both;
+    display: table;
   }
 
-.imgconteudo{
-    flex-wrap: row wrap;
+.botao{
+    text-decoration: none;
+    padding: 2%;
+    border:1px solid rgb(192, 191, 191);
+    border-radius: 2%;
+    color: gray;
+}
+
+.listaicones{
+    margin: 10%;
+}
+
+.listaicones>h1{
+    text-align: center;
+    font-size: 250%;
+    font-weight: normal;
 
 }
+.listaicones>ul{
+    padding: 0%;
+    padding-top: 10%;
+    text-align: center;
+    font-size: 130%;
+
+
+}
+.listaicones>ul>li{
+    list-style: none;
+    padding: 2% 0% 2% 3%;
+    display: inline-block;
+    width: 30%;
+}
+
+.listaicones>ul>li>i{
+    font-size: 400%;
+}
+
+#simb1{
+    color: rgb(235, 137, 153);
+}
+
+#simb2{
+    color: rgb(155, 125, 238);
+}
+
+#simb3{
+    color: rgb(131, 204, 204);
+}
+
+.wrapper{
+    width: 80%;
+    margin: auto;
+}
+
+.grafico{
+    text-align: center;
+    margin: 10%;
+    font-size: 120%;
+
+}
+
+.grafico h1{
+    text-align: center;
+    font-size: 250%;
+    font-weight: normal;
+
+}
+
+.grafico p{
+    font-size: 150%;
+
+}
+.listagrafico{
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+.grafico ul{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    color: white;
+}
+
+.grafico li{
+    list-style: none;
+    float: left;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    width: 20%;
+}
+
+.listagrafico>ul>li>h2{
+    margin: 0%;
+}
+
+.listagrafico>ul>li>p{
+    margin: 0%;
+}
+
+.listagrafico>ul>li>i{
+    font-size: 250%;
+    color: white;
+}
+
+.conteudo{
+    display: inline-block;
+}
+
+#primeiro{
+    background-color: rgb(235, 137, 153);
+}
+
+#segundo{
+    background-color: rgb(169, 145, 235);
+}
+
+#terceiro{
+    background-color: rgb(146, 148, 240);
+}
+
+#quarto{
+    background-color: rgb(142, 175, 212);
+}
+
+#quinto{
+    background-color: rgb(142, 201, 212);
+}
+
