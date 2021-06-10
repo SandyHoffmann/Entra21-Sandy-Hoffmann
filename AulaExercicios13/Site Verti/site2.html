@@ -4,43 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verti</title>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="../Site Verti/static/css.css">
     <script src="https://kit.fontawesome.com/88fa2f8a87.js" crossorigin="anonymous"></script>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
         <section class="menulogo">
-            <div class="logo">
-                <h1>Verti</h1>
-            </div>
-            <span>by HTML5 UP</span>
+            <h1 class="logo">Verti</h1>
+            <p>by HTML5 UP</p>
         </section>
-        <ul>
-            <li>Welcome</li>
+        <ul class="menu">
+            <li><a href="#">Welcome</a></li>
             <ul class="dropdown">
-                <li>dropdown</li>
+                <li><a href="#">dropdown</a></li>
                 <span class="dropdown-conteudo">
-                    <li>aa</li>
-                    <li>aa</li>
-                    <li>aa</li>
-                    <li>aa</li>
-
+                    <li><a href="#">Maybe here</a></li>
+                    <li><a href="#">Maybe here</a></li>
+                    <span class="dropdown-conteudo2"><a href="#">Maybe here</a></span>
+                        <li><a href="#">Maybe here</a></li>
+                        <li><a href="#">Maybe here</a></li>
+                        <li><a href="#">Maybe here</a></li>
+                        <li><a href="#">Maybe here</a></li>
+                    </li>
+                    <li><a href="#">Maybe here</a></li>
                 </span>
             </ul>
-            <li>Left Sidebar</li>
-            <li>Right Sidebar</li>
-            <li>No Sidebar</li>
+            <li><a href="#">Left Sidebar</a></li>
+            <li><a href="#">Right Sidebar</a></li>
+            <li><a href="#">No Sidebar</a></li>
         </ul>
     </nav>
+    <div class="wrap">
     <header>
         <section class="textheader">
             <h1>Hi. This is Verti.</h1>
-            <h2>It's a free responsive site template by HTML5 UP</h2>
+            <h2>It's a free responsive site<hr>template by HTML5 UP</h2>
         </section>
         <section class="botoes">
-            <button type="button">Ok let's go! <i class="fas fa-arrow-circle-right"></i></button>
-            <button type="button">More info <i class="fas fa-question-circle"></i></button>
+            <button type="button" class="botaovisual">Ok let's go!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-arrow-circle-right"></i></button>
+            <button type="button" class="botaovisual">More info &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-question-circle"></i></button>
         </section>
     </header>
     <main>
@@ -135,5 +141,6 @@
         </div>
 
     </footer>
+</div>
 </body>
 </html>

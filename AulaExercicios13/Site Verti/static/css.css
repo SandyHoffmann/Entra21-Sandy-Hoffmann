@@ -1,0 +1,171 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.logo{
+    font-family: 'Oleo Script', cursive;
+    font-size: 280%;
+    display: inline;
+    background-color: rgb(241, 77, 104);
+    padding-right: 10%;
+    padding-left: 10%;
+    border-radius: 10px;
+    color: white;
+}
+
+.menulogo{
+    display: flex;
+    flex-flow: row;
+    flex-grow: 0.2;
+}
+
+.menulogo p{
+    font-weight: bolder;
+    font-size: 90%;
+    padding-left: 2%;
+    align-self: center;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    font-size: 120%;
+    background-color: lightblue;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 3%;
+    flex-grow: 0.2;
+    align-self: center;
+
+}
+
+ul>li>a{
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+    font-weight: bolder;
+}
+
+.wrap{
+    margin-right: 15%;
+    margin-left: 10%;
+    padding: 0%;
+}
+
+.dropdown{
+    position: relative;
+    margin: 0%;
+    display: flex;
+    flex-grow: 0.2;
+}
+
+.dropdown li{
+    padding: 0%;
+
+}
+
+.dropdown-conteudo{
+    display: none;
+    position: absolute;
+    margin-top: 25%;
+
+}
+
+.dropdown:hover .dropdown-conteudo {
+    display: block;
+    background-color: lightcoral;
+    font-size: 80%;
+    width: 120%;
+    padding: 3%;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    border-radius: 5px;
+    z-index: 1;
+
+  }
+
+.dropdown-conteudo li{
+    display: block;
+    padding: 2%;
+    flex-grow: 2;
+
+}
+
+.dropdown a{
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+}
+
+.dropdown-conteudo2{
+    display: none;
+    position: absolute;
+    margin-top: 25%;
+}
+
+
+.dropdown:hover .dropdown-conteudo {
+    display: block;
+    background-color: lightcoral;
+    font-size: 80%;
+    width: 120%;
+    padding: 3%;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    border-radius: 5px;
+    z-index: 1;
+
+  }
+
+.dropdown-conteudo li{
+    display: block;
+    padding: 2%;
+    flex-grow: 2;
+
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    font-size: 200%;
+    justify-content: space-around;
+    padding-top: 10%;
+}
+
+header h2{
+    font-weight: bolder;
+}
+
+header h2{
+    font-weight: normal;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+}
+.botaovisual{
+    font-size: 120%;
+    font-weight: bolder;
+    margin-bottom: 15%;
+    padding:4%;
+    padding-top:8%;
+    padding-bottom:8%;
+}
+
+.botaovisual:nth-child(1){
+    background-color: rgb(75, 149, 219);
+}
+
