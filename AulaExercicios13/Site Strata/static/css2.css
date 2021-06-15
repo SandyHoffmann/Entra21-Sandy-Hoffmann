@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.wrap{
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+
+aside{
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: cover;
+    text-align: center;
+}
+main{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 80%);
+
+}
+
+
+header h1{
+    font-size: 150%;
+}
+
+header p{
+    line-height: 125%;
+    padding-top: 5%;
+}
+
+
+.pheader{
+    font-size: 135%;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 5%;
+
+}
+
+.card div{
+    padding-bottom: 10%;
+
+}
+
+.fotos div p{
+    line-height: 150%;
+
+}
+
+.fotos div img{
+    border-radius: 10px;
+
+}
+
+footer{
+    padding-top: 10%;
+
+}
+
+.botao{
+    text-decoration: none;
+    padding-top: 10%;
+    display: inline;
+    padding: 2%;
+    border: 2px;
+    font-size: 135%;
+
+}
+.botao:hover{
+    border: 2px solid rgb(58, 218, 58);
+}
+
+
+.informacao{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap:2%;
+    font-size: 115%;
+
+}
+
+#textarea{
+    width: 100%;
+    height: 150px;
+}
+input{
+    padding: 12px 20px;
+
+}
+
+.nometexto{
+    width: 100%;
+}
+.nometexto input{
+    width: 40%;
+
+}
+.cabecalhofooter{
+    font-size: 125%;
+}
+
+input::-webkit-input-placeholder  {
+    font-size:125%;
+  }
+
+#textarea::-webkit-input-placeholder{
+    font-size:125%;
+
+}
+
+address{    
+    line-height: 180%;
+}
+
