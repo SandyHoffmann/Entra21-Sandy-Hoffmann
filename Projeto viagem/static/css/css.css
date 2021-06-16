@@ -1,0 +1,115 @@
+header{
+    text-align: center;
+    background-color: slategrey;
+}
+
+header h1{
+    margin-top: 0%;
+    padding-top: 2%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    background-color: sandybrown;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0%;
+}
+
+nav ul li{
+
+    list-style: none;
+    margin-right: 5rem;
+}
+
+nav ul li:last-child{
+
+    margin-right: 0%;
+}
+
+main{
+    background-color: cadetblue;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.introducao{
+    grid-auto-flow: column;
+}
+.introducao h1{
+    margin-top: 0%;
+}
+
+@media only screen and (max-width: 900px) {
+
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+
+    }
+    nav ul li{
+        margin-right: 0%;
+        margin-bottom: 3%;
+    }
+    main{
+        display: grid;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+.slider {
+    width: 80vw;
+    height: 50vh;
+    display: flex;
+    max-width: 80%;    
+  }
+  .slide {
+    position: relative;
+    flex: 1 0 auto;
+    transition: all 0.5s ease-in-out;
+  }
+  .slide:hover {
+    flex: 5;
+  }
+  .slide1 {
+    background-image: url("../images/imagem_holanda.jpg");
+    background-position: center center;
+    background-size: cover;
+
+  }
+  .slide2 {
+    background-image: url('../images/imagem_holanda.jpg');
+    background-position: center center;
+    background-size: cover;
+  }
+  .slide3 {
+    background-image: url('../images/imagem_holanda.jpg');
+    background-position: center center;
+    background-size: cover;
+  }
+  
