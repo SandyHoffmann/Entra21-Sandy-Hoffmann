@@ -1,0 +1,112 @@
+header{
+    text-align: center;
+    background-image: url("https://www.transparenttextures.com/patterns/inflicted.png");
+    background-repeat: repeat;
+}
+.logo{
+    font-family: 'Dancing Script', cursive;
+    font-size: 150%;
+}
+
+header h1{
+    margin-top: 0%;
+    padding-top: 2%;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    box-shadow:0 0 1em rgb(5, 5, 5);
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0%;
+    color: white;
+}
+
+nav ul li{
+    list-style: none;
+    margin-right: 5rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:last-child{
+
+    margin-right: 0%;
+}
+
+.mobile{
+    display: none;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+    body{
+        display: grid;
+    }
+    nav{
+        flex-wrap: wrap;
+        text-align: center;
+
+
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+    nav ul li{
+        margin-right: 0%;
+        margin-bottom: 3%;
+        display: block;
+
+    }
+    .menupadrao{
+        display: none;
+        visibility: hidden;
+    }
+    .mobile{
+        display: flex;
+        visibility: visible;
+    }
+    .listainit{
+        display: flex;
+        flex-direction: row;
+        margin: 5%;
+
+    }
+    .listainit li{
+        margin: 5%;
+
+    }
+    .paises{
+        display: flex;
+        flex-direction: row;
+    }
+    .mobile img{
+        width: 40%;
+    }
+}
+img{
+    max-width: 100%;
+}
+footer{
+    background-color: #05090f;
+    background-image: url("https://www.transparenttextures.com/patterns/inflicted.png");
+    display: flex;
+    justify-content: center;
+    color: white;
+  }

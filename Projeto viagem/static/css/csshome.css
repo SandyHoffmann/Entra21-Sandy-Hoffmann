@@ -1,0 +1,266 @@
+body {
+    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../imageshome/walpaper.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    }
+
+header{
+        background-color: rgb(103, 130, 218);
+    }
+
+nav{
+    background-color: cadetblue;
+}
+
+main{
+    background: rgba(0, 0, 0, 0.5);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    color: white;
+    font-size: 125%;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 23px 11px 7px 1px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 23px 11px 7px 1px rgba(0,0,0,0);
+}
+section{
+    margin-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.introducao{
+    text-align: center;
+}
+.mapaconteudo{
+    display: flex;
+    justify-self: center;
+    margin-bottom: 0%;
+
+}
+
+.mapa{
+    background-image:url("../imageshome/mapa.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50vw;
+    height: 25vw;
+    display: flex;
+    flex-direction: row;
+}
+.p1{
+    flex-grow: 1;
+}
+.p2{
+    flex-grow: 1;
+}
+.p3{
+    flex-grow: 1;
+}
+.pais{
+    width: 4vw;
+    height: 4vw;
+}
+#brasil{
+    background-image:url("../images/brasil.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 30%;
+    margin-left: 80%;
+}
+
+#estados-unidos{
+    background-image:url("../images/estados-unidos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 20%;
+    margin-left: 45%;
+}
+
+#suica{
+    background-image:url("../images/suica.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 30%;
+}
+#franca{
+    background-image:url("../images/paises-baixos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 23%;
+}
+#japao{
+    background-image:url("../images/japao.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 40%;
+    margin-top: 20%;
+
+
+}
+@media only screen and (max-width: 900px) {
+    body{
+        display: grid;
+    }
+    main{
+        margin-left: 0%;
+        margin-right: 0%;
+
+    }
+    .mapa{
+        width: 80vw;
+        height: 40vw;
+    }
+    .pais{
+        width: 6vw;
+        height: 6vw;
+    }
+    .cidade{
+        font-size: 25%;
+        margin-top:40% !important;
+    }
+}
+
+.pais:hover{
+    transform:rotate(-5deg);
+    transition: all 0.5s ease-out;
+
+}
+
+.sobre{
+        background-color: rgb(24, 24, 24);
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-bottom: 0%;
+
+}
+.conteudo{
+    text-align: center;
+}
+.imgconteudo{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    transition: all 0.5s ease-in-out;
+}
+
+.imgcidade{
+    height: 40vw;
+    flex: 1 0 auto;
+    justify-items: center;
+
+}
+.cidade{
+    display: none;
+    visibility: hidden;
+    text-align: center;
+    margin-top: 50%;
+}
+#img1:hover{
+    flex: 5;
+    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../imageshome/rio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#img2:hover{
+    flex: 5;
+    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../imageshome/tokyo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#img3:hover{
+    flex: 5;
+    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../imageshome/zermatt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#img4:hover{
+    flex: 5;
+    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../imageshome/paris.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#img5:hover{
+    flex: 5;
+    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../imageshome/lasvegas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imgcidade:hover .cidade{
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+}
+
+
+#img1{
+    background-image:url("../imageshome/rio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+#img2{
+    background-image:url("../imageshome/tokyo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+
+}
+#img3{
+    background-image:url("../imageshome/zermatt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+
+}
+#img4{
+    background-image:url("../imageshome/paris.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+
+}
+#img5{
+    background-image:url("../imageshome/lasvegas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.itemslevar{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+
+
+}
+.escrita{
+    text-align: center;
+    flex-grow: 1;
+    align-self: center;
+
+}
+.elemento{
+    width: 20vw;
+    height: 20vw;
+}
+
+#desodorante{
+    background-image:url("../imageshome/desodorante.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+    transform: translateZ(-.4px) scale(.6) translateX(-5%) translateY(33%) rotate(-5deg);
+}
+
+#sapato{
+    background-image:url("../imageshome/tenis.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+    transform: translateZ(.25px) translateX(50%) scale(.75) rotate(2deg);
+}
