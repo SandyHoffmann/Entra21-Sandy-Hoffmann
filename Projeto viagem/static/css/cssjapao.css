@@ -31,8 +31,6 @@ main{
     font-size: 125%;
     box-shadow:
 
-    inset -20px 0 80px #0ff,  /* inner right cyan short */
-    inset 20px 0 300px #f0f,  /* inner left magenta broad */
     inset -20px 0 300px #0ff, /* inner right cyan broad */
     -10px 0 80px #f0f,        /* outer left magenta */
     10px 0 80px #0ff;         /* outer right cyan */

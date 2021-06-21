@@ -1,6 +1,6 @@
 
 body {
-    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../imagesvegas/giffundo.gif");
+    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../images/imagem_holanda.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,15 +8,15 @@ body {
     }
 
     header{
-        background-color: rgb(180, 34, 34);
+        background-color: rgb(78, 37, 68);
         z-index: 2;
     }
     nav{
         background-color: rgb(65, 32, 141);
     }
 
-    .logo h1{
-        color: black;
+    a{
+        color: wheat;
     }
 section{
     margin-bottom: 5%;
@@ -32,13 +32,6 @@ main{
     grid-template-columns: repeat(1, 1fr);
     color: white;
     font-size: 125%;
-    box-shadow:
-
-    inset -20px 0 30px white,  /* inner right cyan short */
-    inset 20px 0 300px rgb(180, 34, 34),  /* inner left magenta broad */
-    inset -20px 0 300px rgb(65, 32, 141), /* inner right cyan broad */
-    -10px 0 80px white,        /* outer left magenta */
-    10px 0 80px rgb(180, 34, 34);         /* outer right cyan */
 }
 
 .sobre{
@@ -65,32 +58,6 @@ main{
     margin-top: 2%;
 }
 
-.img1{
-    width: 20vw;
-    height: 20vw;
-    background-image: url("../imagesvegas/neon.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left;
-    transform: rotate(2deg);
-    border: 20px solid white;
-    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 23px 11px 7px 1px rgba(0,0,0,0); 
-    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 23px 11px 7px 1px rgba(0,0,0,0);
-}
-
-.img2{
-    width: 20vw;
-    height: 20vw;
-    background-image: url("../imagesvegas/cassino.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: rotate(2deg);
-    border: 20px solid white;
-    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 23px 11px 7px 1px rgba(0,0,0,0); 
-    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 23px 11px 7px 1px rgba(0,0,0,0);
-}
 .introducao{
     grid-auto-flow: column;
     text-align: center;
@@ -147,6 +114,14 @@ main{
         font-size: 80%;
         margin-top:0% !important;
     }
+
+    .sumario{
+        margin: 0px;
+        flex-direction: column;
+        padding: 2%;
+        row-gap: 5px;
+        flex-grow: 2fr;
+    }
     
 }
 
@@ -164,66 +139,6 @@ img{
     margin-right: 5%;
     transition: all 0.5s ease-in-out;
 }
-
-.imgcidade{
-    height: 40vw;
-    flex: 1 0 auto;
-    justify-items: center;
-}
-.cidade{
-    display: none;
-    visibility: hidden;
-    text-align: center;
-    margin-top: 50%;
-}
-#img1:hover{
-    flex: 5;
-    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../imagesvegas/cassino.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#img2:hover{
-    flex: 5;
-    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../imagesvegas/red.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#img3:hover{
-    flex: 5;
-    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../imagesvegas/neon.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.imgcidade:hover .cidade{
-    display: flex;
-    flex-direction: column;
-    visibility: visible;
-}
-
-
-#img1{
-    background-image:url("../imagesvegas/cassino.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.5s ease-in-out;
-}
-
-#img2{
-    background-image:url("../imagesvegas/red.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.5s ease-in-out;
-
-}
-#img3{
-    background-image:url("../imagesvegas/neon.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 0.5s ease-in-out;
-
-}
-
 
   
 .curiosidades{
@@ -257,37 +172,37 @@ img{
 }
 
 #img1c{
-    background-image: url('../imgtenis/tenis.jpg');
+    background-image: url('../imgitens/tenis.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #img2c{
-    background-image: url('../imgtenis/escova.jpg');
+    background-image: url('../imgitens/escova.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #img3c{
-    background-image: url('../imgtenis/repelente.jpg');
+    background-image: url('../imgitens/repelente.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #img4c{
-    background-image: url('../imgtenis/agua.jpg');
+    background-image: url('../imgitens/agua.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #img5c{
-    background-image: url('../imgtenis/desodorante.jpg');
+    background-image: url('../imgitens/desodorante.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #img6c{
-    background-image: url('../imgtenis/casaco.jpg');
+    background-image: url('../imgitens/casaco.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -326,4 +241,40 @@ img{
 
 #semumaborda{
     border-bottom: 0px;
+}
+
+.precos{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    background: rgba(24, 24, 24,0.8);
+    margin: 0px;
+    column-gap: 15px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    padding-left: 0%; 
+    padding-right: 0%;
+
+}
+
+.sumario{
+    display: flex;
+
+}
+
+summary::-webkit-details-marker {
+    background: red;
+
+}
+summary::-webkit-details-marker {
+    display: none
+    }
+    
+
+details{
+    margin-right: 5%;
+}
+
+.precos:last-child{
+    margin-left: 0%;
 }

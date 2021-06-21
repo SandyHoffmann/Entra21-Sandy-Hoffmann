@@ -110,3 +110,9 @@ footer{
     justify-content: center;
     color: white;
   }
+
+a:hover{
+    color: rgb(200, 255, 0);
+    font-weight: bold;
+}
+
