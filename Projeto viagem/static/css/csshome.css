@@ -134,10 +134,12 @@ section{
         margin-left: 0%;
         margin-right: 0%;
         margin-bottom: 0%;
+        padding-bottom: 5%;
 
 }
 .conteudo{
     text-align: center;
+
 }
 .imgconteudo{
     display: flex;
@@ -232,29 +234,41 @@ section{
 }
 
 .itemslevar{
+    margin-top: 5%;
     display: flex;
     flex-direction: row;
-    overflow: auto;
-
+    justify-content: center;
 
 }
 .escrita{
     text-align: center;
-    flex-grow: 1;
     align-self: center;
-
 }
+
 .elemento{
-    width: 20vw;
-    height: 20vw;
+    width: 15vw;
+    height: 15vw;
+    animation-name: mexendo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: all 0.5s ease-in-out;
 }
 
+@keyframes mexendo {
+    from{
+        transform:rotate(-5deg);
+    }
+    to{
+        transform:rotate(-25deg);
+    }
+}
 #desodorante{
     background-image:url("../imageshome/desodorante.png");
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 0.5s ease-in-out;
-    transform: translateZ(-.4px) scale(.6) translateX(-5%) translateY(33%) rotate(-5deg);
+    top: 0px;
 }
 
 #sapato{
@@ -262,5 +276,28 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 0.5s ease-in-out;
-    transform: translateZ(.25px) translateX(50%) scale(.75) rotate(2deg);
+}
+.palavras{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+}
+.fileiracima{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.fileirabaixo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.moldura{
+    background-color: rgb(26, 26, 26);
+    padding: 5%;
+    position: relative;
 }
