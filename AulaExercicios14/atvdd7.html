@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+
+        function funcao () {
+            let div1 = document.createElement("div")
+            div1.className = "notificacao"
+            let estilo = getComputedStyle(div1)
+            estilo.top = "10px"
+            estilo.align.right = "10px"
+            estilo.text = "Ola"
+        }
+
+    </script>
+</body>
+</html>

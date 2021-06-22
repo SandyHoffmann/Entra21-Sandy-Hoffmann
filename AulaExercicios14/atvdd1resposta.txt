@@ -1,0 +1,11 @@
+Acessa div
+console.log(document.body.firstElementChild)
+
+Acessa ul
+console.log(document.body.getElementsByTagName("ul"))
+
+acessa li
+
+console.log(document.body.getElementsByTagName("li"))
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Animais
+            <ul>
+                <li>Mamíferos
+                    <ul>
+                        <li>Vacas</li>
+                        <li>Macacos</li>
+                        <li>Cachorros</li>
+                        <li>Tigres</li>
+                    </ul>
+                </li>
+                <li>Outros
+                    <ul>
+                        <li>Cobras</li>
+                        <li>Pássaros</li>
+                        <li>Lagartos</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        let tudo = document.body.querySelectorAll("li")
+        let tamanho = tudo.length
+        for (let elemento of tudo){
+            elemento1 = elemento.querySelectorAll("li").length
+            if (elemento1){
+                elemento.firstChild.data+=`[${elemento1}]`
+            }
+        }
+    </script>
+</body>
+</html>

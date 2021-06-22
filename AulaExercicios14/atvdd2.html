@@ -1,0 +1,59 @@
+<html>
+    <body>
+        <form name="search">
+            <label>Search the site:
+                <input type="text" name="search">
+            </label>
+            <input type="submit" value="Search!">
+        </form>
+
+        <hr>
+
+        <form name="search-person">
+            Search the visitors:
+            <table id="age-table">
+                <tr>
+                    <td>Age:</td>
+                    <td id="age-list">
+                    <label>
+                        <input type="radio" name="age" value="young">less than 18</label>
+                    <label>
+                        <input type="radio" name="age" value="mature">18-50</label>
+                    <label>
+                        <input type="radio" name="age" value="senior">more than 50</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Additionally:</td>
+                    <td>
+                    <input type="text" name="info[0]">
+                    <input type="text" name="info[1]">
+                    <input type="text" name="info[2]">
+                    </td>
+                </tr>
+            </table>
+
+            <input type="submit" value="Search!">
+        </form>
+    </body>
+</html>
+<!--
+    Diga como acessar:
+    1. A <table> com o id="age-table".
+        document.getElementById("age-table")
+    2. Todos os elementos <label> dentro da <table> (3 elementos).
+        document.querySelectorAll("table label")
+    3. O primeiro <td> na tabela (com a palavra "Age").
+        document.querySelectorAll("table tr:first-child td:first-child")
+    4. O <form> com name="search".
+        document.querySelector('form''      [name="search"]')
+        document.getElementsByName("search")[0]
+    5. O primeiro <input> nesse form.
+        let forms = document.querySelectorAll("input")
+        ultimo = forms[0]
+    6. O último <input> nesse form.
+        let forms = document.querySelectorAll("input")
+        let tamanho = forms.lenght
+        ultimo = forms[tamanho-1]
+-->

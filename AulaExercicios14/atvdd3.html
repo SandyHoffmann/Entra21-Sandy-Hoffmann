@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a name="list">the list</a>
+    <ul>
+        <li><a href="http://google.com">http://google.com</a></li>
+        <li><a href="/tutorial">/tutorial.html</a></li>
+        <li><a href="local/path">local/path</a></li>
+        <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+        <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+        <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+    </ul>
+
+    <!--Torne a cor dos links externos em laranja.
+    Um link é considerado externo quando:
+    1. O atributo href tem ://
+    2. Não começa com http://internal.com
+
+    // Selecionando um link
+    let link = document.querySelector('a');
+
+    // Aplicando a cor laranja
+    link.style.color = 'orange';
+
+    let elementos = document.querySelectorAll("ul li a")
+    let palavra = ""
+    for (let elemento of elementos){
+        palavra = elemento.getAttribute("href")
+        if (palavra.includes('://') && !palavra.startsWith('http://internal.com')){
+                elemento.style.color = "orange"}
+        }
+-->
+</body>
+</html>
