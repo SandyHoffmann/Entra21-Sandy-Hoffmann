@@ -1,0 +1,51 @@
+<head>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #div-legenda {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>            
+    <div id="div-legenda">Adicione uma legenda nesse elemento</div>
+    <script>
+        div = document.querySelector("#div-legenda")
+        body = document.querySelector("body")
+
+        function mostraLegenda(elemento, posicao, texto){
+            let coordenadas = div.getBoundingClientRect()
+            let msg = document.createElement("div")
+            msg.innerText = texto
+
+            if (posicao == 'esquerda'){      
+                msg.style.position = "absolute"
+                msg.style.left = coordenadas.x+ "px" 
+                document.body.append(msg)
+            }
+            else if (posicao == 'direita'){
+                msg.style.position = "absolute"
+                msg.style.right = coordenadas.x+ "px" 
+                document.body.prepend(msg)            
+                }   
+            else if (posicao == 'acima'){
+                msg.style.position = "absolute"
+                msg.style.top = coordenadas.y+ "px" 
+                document.body.prepend(msg)  
+            }   
+            else{
+                msg.style.position = "absolute"
+                msg.style.bottom = coordenadas.y+ "px" 
+                document.body.append(msg)  
+            }   
+
+        }
+    </script>
+</body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .campo {
+                position: relative;
+                width: 600px;
+                height: 300px;
+                background-color: green;
+                border: 10px solid black;
+            }
+
+            .bola {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                border-radius: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="campo">
+            <div class="bola"></div>
+        </div>
+        <script>
+            let div = document.querySelector(".campo")
+            let bola = document.querySelector(".bola")
+            let centrobolalar = bola.clientWidth/2 
+            let centrobolaalt = bola.clientHeight/2 
+            let centrocampolar = div.clientWidth/2 - centrobolalar
+            let centrocampoalt = div.clientHeight/2 - centrobolaalt
+            bola.style.top=centrocampoalt + "px"
+            bola.style.right=centrocampolar + "px"
+
+
+        </script>
+    </body>
+</html>

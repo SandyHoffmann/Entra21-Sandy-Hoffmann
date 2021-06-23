@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <input type="button" id="esconder" value="Click para esconder/mostrar o texto" />            
+        <div id="text">Texto</div>
+
+        <script>
+            let botao = document.querySelector("#esconder")
+            let p = document.querySelector("#text")
+            let estilo = getComputedStyle(p)
+            let handlerButton = {
+            handleEvent(event) {
+                switch (event.type) {
+                    case 'mousedown':
+                        if (estilo.display == "none"){
+                            p.style.display == "block"
+                            break
+                        }
+                        else{
+                            p.style.display == "none"
+                            break
+
+                        }
+                }
+            }
+        }        
+        botao.addEventListener("mousedown", handlerButton)
+        </script>
+    </body>
+</html>

@@ -7,15 +7,26 @@
 </head>
 <body>
     <script>
-        let div1 = document.createElement("div")
-        div1.className = "notificacao"
-        document.body.innerHTML(div1)
-        let div2 = document.querySelector('div')
-        let estilo = getComputedStyle(div2)
-        estilo.top.replace("auto","10px")
-        estilo.top.replace("auto","10px")
-        estilo.cssText.replace("","Ola")
 
+    function mostraNotificacao({top = 10, right = 10, html = "Olá"}) {
+            let notificacao = document.createElement("div")
+            notificacao.className = "notificacao"
+            notificacao.innerHTML = html
+            notificacao.style.top = top + "px"
+            notificacao.style.right = right + "px"
+            document.body.append(notificacao)
+        }
+        //  let div1 = document.createElement("div")
+        //  div1.className = "notificacao"
+        //  document.body.append(div1)
+        //  let div2 = document.querySelector('div')
+        //  function funcao(){
+        //      let estilo = getComputedStyle(div2)
+        //      estilo.top.replace("auto","10px")
+        //      estilo.height.replace("auto","10px")
+        //      estilo.right.replace("auto","10px")
+        //      estilo.cssText.replace("","Ola")
+        //  }
     </script>
 </body>
 </html>
