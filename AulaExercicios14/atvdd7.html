@@ -6,17 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div></div>
     <script>
-
-        function funcao () {
-            let div1 = document.createElement("div")
-            div1.className = "notificacao"
-            let estilo = getComputedStyle(div1)
-            estilo.top = "10px"
-            estilo.align.right = "10px"
-            estilo.text = "Ola"
-        }
+        let div1 = document.createElement("div")
+        div1.className = "notificacao"
+        document.body.innerHTML(div1)
+        let div2 = document.querySelector('div')
+        let estilo = getComputedStyle(div2)
+        estilo.top.replace("auto","10px")
+        estilo.top.replace("auto","10px")
+        estilo.cssText.replace("","Ola")
 
     </script>
 </body>
