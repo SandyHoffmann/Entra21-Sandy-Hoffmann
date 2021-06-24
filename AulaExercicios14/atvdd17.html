@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let evento
+        // let keys = ""
+        // document.addEventListener("keyup", (event,tecla1="a",tecla2="b") => {
+
+        //     keys += event.code 
+        //     if (keys.includes("KeyA") && keys.includes("KeyB")){
+        //         keys = ""
+        //         alert("bbbbbbbbb")
+        //     }
+        // })
+
+
+        
+        // let evento
+        // let a 
+        // let b
+        // document.addEventListener("keydown", (event,tecla1="a") => {
+        //     console.log(event.code)
+        //     if (event.code == "KeyA"){
+        //         a = true
+        //     }
+        // })
+    
+        // document.addEventListener("keydown", (event,teclab="b") => {
+        //     console.log(event.code)
+        //     if (event.code == "KeyB"){
+        //         b = true
+        //     }
+        // })
+
+        // document.addEventListener("keyup", (event) => {
+        //     if (a == true && b == true){
+        //         console.log("aaaaaa")
+        //         a = false
+        //         b = false
+        //     }
+        // })
+
+
+        let lista = [],
+            a = "KeyA",
+            b = "KeyB"
+
+        function definirTecla(){
+            a = prompt("Qual a tecla 1? ")
+            b = prompt("Qual a tecla 2? ")
+        }
+
+        document.addEventListener("keydown", (event,a="KeyA", b="KeyB") => {
+            lista.push(event.code)
+            if (lista.includes(a) && lista.includes(b)){
+                dizOi()
+                lista = []
+            }
+        })
+        document.addEventListener("keyup", (event) => {
+            lista = []
+        })
+
+        function dizOi(){
+            alert("Ola")
+        }
+        
+
+
+    </script>
+</body>
+</html>

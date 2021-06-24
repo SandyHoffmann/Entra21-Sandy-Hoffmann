@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="tree" id="tree">
+        <li>Animals
+            <ul>
+                <li>Mammals
+                    <ul>
+                        <li>Cows</li>
+                        <li>Donkeys</li>
+                        <li>Dogs</li>
+                        <li>Tigers</li>
+                    </ul>
+                </li>
+                <li>Other
+                    <ul>
+                        <li>Snakes</li>
+                        <li>Birds</li>
+                        <li>Lizards</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Fishes
+            <ul>
+                <li>Aquarium
+                    <ul>
+                        <li>Guppy</li>
+                        <li>Angelfish</li>
+                    </ul>
+                </li>
+                <li>Sea
+                    <ul>
+                        <li>Sea trout</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    
+    <script>
+        let lista = document.querySelector("#tree")
+        
+        for (let li of lista.querySelectorAll('li')) {
+        let span = document.createElement('span');
+        li.prepend(span);
+        span.append(span.nextSibling);
+        }
+            
+        lista.addEventListener("click", () => {
+            if (event.target.tagName != 'SPAN') {
+            return;
+        }})
+
+        let childrenContainer = event.target.parentNode.querySelector('ul');
+        if (!childrenContainer) return;
+        childrenContainer.hidden = !childrenContainer.hidden;
+
+</script>
+</body>
+</html>

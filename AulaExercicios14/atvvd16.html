@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Primeiro Item</li>
+        <li>Segundo Item</li>
+        <li>Terceiro Item</li>
+        <li>Quarto Item</li>
+        <li>Quinto Item</li>
+    </ul>
+    <script>
+        let lista = document.querySelector("ul")
+        let alvo
+        let alvoAnt
+        lista.addEventListener("click", (event) => {
+            alvo = event.target
+            if (event){
+            alvo.style.backgroundColor = "red"
+            }
+            if (event.ctrlKey) {
+            }
+            else{
+            if (alvoAnt) {alvoAnt.style.backgroundColor = "transparent"}
+            }
+            alvoAnt = event.target
+        })
+    </script>
+</body>
+</html>

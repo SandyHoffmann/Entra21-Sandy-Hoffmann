@@ -28,6 +28,7 @@
     <script>
     let evento
     let tabela = document.querySelector("#grid")
+    let celulas2
     function handlerButton(event){
         if (event.type == 'mousedown'){
             let target = event.target
@@ -40,16 +41,18 @@
             if (target.dataset.type == "number"){
                 let celulas1 = conferir.cells[0]
                 let celulas2 = el2.cells[0]
-                console.log(celulas1.outerText)
-                console.log(celulas2.outerText)
+                let guardar = celulas1.outerText
+                let guardar2 = celulas2.outerText
+                celulas1.innerHTML  = `<td>${guardar2}</td>`
+                celulas2.innerHTML  = `<td>${guardar}</td>`
             }
             else{
                 let celulas1 = conferir.cells[1]
-                let celulas2 = el2.cells[1]
+                celulas2 = el2.cells[1]
                 let guardar = celulas1.outerText
-                console.log(guardar)
-                celulas1.outerText = celulas2.outerText
-                celulas2.outerText = guardar
+                let guardar2 = celulas2.outerText
+                celulas1.innerHTML  = `<td>${guardar2}</td>`
+                celulas2.innerHTML  = `<td>${guardar}</td>`
 
             }
             // for (let i of lista){
