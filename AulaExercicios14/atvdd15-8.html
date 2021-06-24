@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="grid">
+        <thead>
+            <tr>
+                <th data-type="number">Age</th>
+                <th data-type="string">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>5</td>
+                <td>John</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Ann</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+    let evento
+    let tabela = document.querySelector("#grid")
+    function handlerButton(event){
+        if (event.type == 'mousedown'){
+            let target = event.target
+            evento = event.target
+            if (!target.dataset.type) return;
+            let elementostbody = document.querySelector("tbody").children
+            let conferir = elementostbody[0]
+            let el2 = elementostbody[1]
+            let lista = []
+            if (target.dataset.type == "number"){
+                let celulas1 = conferir.cells[0]
+                let celulas2 = el2.cells[0]
+                console.log(celulas1.outerText)
+                console.log(celulas2.outerText)
+            }
+            else{
+                let celulas1 = conferir.cells[1]
+                let celulas2 = el2.cells[1]
+                let guardar = celulas1.outerText
+                console.log(guardar)
+                celulas1.outerText = celulas2.outerText
+                celulas2.outerText = guardar
+
+            }
+            // for (let i of lista){
+            //     i.hidden = !i.hidden
+            // }
+        }
+    }
+    tabela.addEventListener("mousedown", handlerButton)
+    </script>
+</body>
+</html>
