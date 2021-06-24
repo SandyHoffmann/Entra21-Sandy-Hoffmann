@@ -46,10 +46,15 @@
     <script>
         tabela = document.querySelector("table")
         let linhas = tabela.rows
+        let celula = linhas[0].cells[0]
+        alert(celula)
         for (let elemento of linhas){
             let celulas = elemento.cells
             for (let celula of celulas){
-                console.log(celula)
+                let conteudo = celula.textContent
+                if (conteudo[0]==conteudo[2]){
+                    celula.style.backgroundColor = "red"
+                }
             }
         }
     </script>

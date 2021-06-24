@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .campo {
+                position: relative;
+                width: 600px;
+                height: 300px;
+                background-color: green;
+                border: 10px solid black;
+            }
+
+            .bola {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                border-radius: 100%;
+                transition: all 0.5s ease-out;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="campo">
+            <div class="bola"></div>
+        </div>
+        <script>
+            let campo = document.querySelector(".campo")
+            let bola = document.querySelector(".bola")
+            let bola2 = document.getElementsByClassName("bola")
+            function handlerButton(event){
+                if (event.type == 'mousedown'){
+                    bolax = getComputedStyle(bola) 
+                    borda = getComputedStyle(campo) 
+                    altcamp = Number(borda.width.substring(0,3))
+                    larcamp = Number(borda.height.substring(0,3))
+
+                    tamborda=borda.borderWidth.substring(0,2)
+                    x = Number(bolax.width.substring(0,2))
+                    y = Number(bolax.height.substring(0,2))
+                    if ((event.clientX>altcamp || event.clientY>larcamp)){
+                        bola.style.cssText = `position:absolute; transform:translate(${event.clientX-x + "px"},${event.clientY-y + "px"});`
+                    } else{
+                    bola.style.cssText = `position:absolute; transform:translate(${event.clientX-x/2 + "px"},${event.clientY-y/2 + "px"});`
+                }}
+            }
+
+        campo.addEventListener("mousedown", handlerButton)
+        // bola.style.position = "absolute"
+        // bola.style.x = event.clientX + "px"
+        // bola.style.y = event.clientY + "px"
+        //transform: translate(${event.clientX},${event.clientY});
+        </script>
+    </body>
+</html>
