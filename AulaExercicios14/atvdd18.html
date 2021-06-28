@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .voltar{
+            position: fixed;
+            top: 600px;
+
+        }
+    </style>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nesciunt ab at doloremque molestiae ratione fugit, itaque, quae voluptatem magnam dolor odio vitae laborum? Dolore unde inventore excepturi perferendis deleniti?</p>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi nesciunt ab at doloremque molestiae ratione fugit, itaque, quae voluptatem magnam dolor odio vitae laborum? Dolore unde inventore excepturi perferendis deleniti?</p>
+<a href="#" class="voltar">Clique</a>
+    <script>
+        let botao = document.querySelector(".voltar")
+        botao.hidden = true
+        botao.addEventListener("click", () => {
+            window.scrollTo(pageXOffset, 0)
+        })
+
+        window.addEventListener('scroll', function() {
+            botao.hidden = (pageYOffset   < document.documentElement.clientHeight)
+        })
+    </script>
+</body>
+</html>
