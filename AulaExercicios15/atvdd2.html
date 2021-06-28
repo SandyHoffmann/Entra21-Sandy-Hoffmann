@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+        }
+        :focus{
+            background-color: aquamarine;
+        }
+
+        pre{
+            position: absolute;
+            left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <pre>        
+         _   _
+        (q\_/p)
+         /. .\
+        =\_t_/=   __
+         /   \   (
+        ((   ))   )
+        /\) (/\  /
+        \  Y  /-'
+         nn^nn</pre>
+    <script>
+        // clicaselecionavel
+        // parseInt
+        pre = document.querySelector("pre")
+        pre.tabIndex = 0
+
+        pre.addEventListener("click", () => {
+            pre.style.top = "0px"
+            pre.style.left = "0px"
+        })
+
+
+        pre.addEventListener("focus", (event) => {      
+            pre.addEventListener("keydown", (event) => {
+                if (event.code == "ArrowRight"){
+                    pre.style.left =  parseInt(pre.style.left) + pre.clientWidth/2 + "px"
+                }
+                if (event.code == "ArrowLeft"){
+                    pre.style.left =  parseInt(pre.style.left) - pre.clientWidth/2 + "px"
+                }
+                if (event.code == "ArrowDown"){
+                    pre.style.top =  parseInt(pre.style.top) + pre.clientWidth/2 + "px"
+                }
+                if (event.code == "ArrowUp"){
+                    pre.style.top =  parseInt(pre.style.top) - pre.clientWidth/2 + "px"
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
+

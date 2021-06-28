@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+        }
+        .modal{
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100vh;
+            background-color:  rgba(0, 0, 0, 0.63);
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-y: hidden;
+            overflow-x: hidden;
+
+        }
+        
+        .modalmodo{
+            overflow: hidden;
+        }
+
+
+        .caixinha{
+            background-color: white;
+            width: 250px;
+            height: 250px;
+            padding: 2%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <button type="button" class="botao">
+        lançar
+      </button>
+      <div class="callback"></div>
+<div class="esconde">
+    <div class="modal">
+        <div class="caixinha">
+            <p class="msg"></p>
+            <input type="text">
+            <br>
+            <br>
+            <br>
+
+            <button class="ok">Ok</button>
+            <button class="delete">Delete</button>
+        </div>
+    </div>
+</div>
+<p>ccccccccc</p>
+
+    <script>
+        let modal = document.querySelector(".modal")
+        let botao = document.querySelector(".botao")
+        let msg = document.querySelector(".msg")
+        let body = document.querySelector("body")
+        let esconde = document.querySelector(".esconde")
+        let input = document.querySelector("input")
+        let botaook= document.querySelector(".ok")
+        let botaodel = document.querySelector(".delete")
+        let callbackdiv = document.querySelector(".callback")
+
+        modal.hidden = true
+        esconde.hidden = true
+
+        botao.addEventListener("click", (event) => {
+            let html = prompt("Oque vc quer no modal? ")
+            mostrarModal(html)
+        })
+        function mostrarModal(html, callback=false){
+            modal.hidden = false
+            msg.textContent = html
+            body.className = "modalmodo"
+            esconde.hidden = false
+            botao.hidden = true
+        }
+        
+        botaook.addEventListener("click", (event) => {
+            callback = input.value
+            esconde.hidden = true
+            botao.hidden = false
+            modal.hidden = true
+            input.value = ""
+            callbackdiv.textContent = callback
+
+        })
+        
+        botaodel.addEventListener("click", (event) => {
+            esconde.hidden = true
+            botao.hidden = false
+            modal.hidden = true
+            input.value = ""
+            callbackdiv.textContent = ''
+
+        })
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <input type="number" name="valorinit" id="valorinit">
+        <input type="number" name="meses" id="meses">
+        <input type="number" name="porcentagem" id="porcentagem">
+        <br>
+        <br>
+        <br>
+        <div class="mostraResult"></div>
+    </form>
+    <script>
+        
+
+        let valorinit = document.querySelector("#valorinit")
+        let meses = document.querySelector("#meses")
+        let porcentagem = document.querySelector("#porcentagem")
+
+        valorinit.addEventListener("change", (e) => calculopreco())
+        meses.addEventListener("change", (e) => calculopreco())
+        porcentagem.addEventListener("change", (e) => calculopreco())
+
+        function calculopreco(){
+            let inicial = valorinit.value
+            let tempo = meses.value
+            let porcento = porcentagem.value
+
+            let resultado = Math.round(inicial * (1 + porcento * tempo))
+            printa(resultado)
+        }
+
+        function printa(resultado){
+            let div = document.querySelector(".mostraResult")
+            div.textContent = resultado
+        }
+
+    </script>
+</body>
+</html>
+

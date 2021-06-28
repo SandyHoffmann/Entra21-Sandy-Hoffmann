@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="muda">Clique em mim</div>
+    <textarea class="text"></textarea> 
+    <script>
+        let div = document.querySelector(".muda")
+        let textarea = document.querySelector(".text")
+        let bd = document.querySelector("body")
+        textarea.hidden = true
+        div.addEventListener("click", (event) => {
+            textarea.hidden = false
+            div.hidden = true
+            div.textContent = textarea.value
+            event.preventDefault();
+            div.focus()
+        })
+        
+        textarea.addEventListener("focusout", (event) => {
+            textarea.hidden = true
+            div.hidden = false
+        })
+
+        textarea.addEventListener("input", () => {
+            div.textContent = textarea.value
+
+        })
+    </script>
+</body>
+</html>
