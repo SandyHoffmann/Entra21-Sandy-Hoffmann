@@ -23,7 +23,7 @@
         <ul>
             <li>
                 <label for="uname">Nome de usuário</label>
-                <input type="text" name="uname" id="uname" required>
+                <input type="text" name="uname" id="uname" required maxlength="20" minlength="5">
             </li>
             <li>
                 <label for="email">Email:</label>
@@ -31,11 +31,11 @@
             </li>
             <li>
                 <label for="phone">Telefone:</label>
-                <input type="tel" name="phone" id="phone" required pattern="[0-9]{4}-[0-9]{4}" placeholder="1234-5678">
+                <input type="tel" name="phone" id="phone" required pattern="[0-9]{4}-[0-9]{4}" placeholder="1234-5678" maxlength="15">
             </li>
             <li>
                 <label for="comment">Comentário:</label>
-                <textarea name="comment" id="comment" required>
+                <textarea name="comment" id="comment" required maxlength="200">
                 </textarea>
             </li>
             <li>
@@ -45,6 +45,37 @@
     </form>
 
     <script>
+        email = document.querySelector("#email")
+        botao = document.querySelector("button")
+
+        email.addEventListener("invalid", (event) => {
+            console.log(email.value.includes('@'))
+            if (!email.value.includes('@')){
+                email.setCustomValidity("Email inválido")
+            } 
+        })
+        email.oninput = event =>{
+            email.setCustomValidity('')
+        }
+
+        // email.onchange = event =>{
+        //     if (email.checkValidity() == false){
+        //         email.setCustomValidity('E-mail inválido.')
+        //     } else{
+        //         email.setCustomValidity('')
+
+        //     }
+        // }
+
+        // email.oninvalid = event =>{
+        //     email.setCustomValidity('E-mail inválido.')
+
+        // }
+
+        // email.oninput = event =>{
+        //     email.setCustomValidity('')
+
+        // }
         /*
         Adicione alguns recursos de validação ao formulário:
 
