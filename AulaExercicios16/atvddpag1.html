@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Atividade 1
+            let data = new Date(2012, 1, 20, 3, 12, 0)
+            console.log(data)
+        //Atividade 2
+            function obtemDiaSemana(data){
+                dia = data.getDay()
+                switch(dia){
+                    case 0:
+                        console.log("Domingo")
+                    case 1:
+                        console.log("Segunda-Feira")
+                    case 2:
+                        console.log("Terça-Feira")
+                    case 3:
+                        console.log("Quarta-Feira")
+                    case 4:
+                        console.log("Quinta-Feira")
+                    case 5:
+                        console.log("Sexta-Feira")    
+                    case 6:
+                        console.log("Sábado")      
+                }
+            }
+        //Atividade 3
+            function obtemUltimoDiaMes(ano,mes){
+                let novaData = new Date(ano, mes, 28,0,0,0)
+                let dia = 27
+                let mesAtual = novaData.getMonth()
+                while (novaData.getMonth() == mesAtual){//mai mai mai mai mai
+                    dia+=1//28 29 30 31 32
+                    novaData.setDate(dia)//mai mai mai mai abr
+                }
+                console.log(dia-1)
+            }
+        
+        //Atividade 4
+            let diaAtual = new Date()
+            //diaAtual.setHours(23,0,0,0)
+            function obtemSegundos(){
+                let segundosTot = (diaAtual.getMilliseconds()*1000)+(diaAtual.getSeconds())+(diaAtual.getMinutes()*60)+(diaAtual.getHours()*3600)
+                return(segundosTot)
+            }
+        //Atividade 5
+            function segundosParaAmanha(){
+                let total = 60*60*24
+                let valorAbs = total - obtemSegundos()
+                return(valorAbs)
+            }
+        //Atividade 6
+            lista = []
+            function formataData(data){
+                let dataAtual = new Date()
+                console.log(dataAtual)
+                console.log(data)
+                if ((data.getMinutes() == dataAtual.getMinutes())&&((data.getHours() == dataAtual.getHours()))){
+                    if (data.getSeconds()==dataAtual.getSeconds()){
+                        return("agora")
+                    } else{
+                        return(`${Math.abs(data.getSeconds()-dataAtual.getSeconds())} segundos atrás`)
+                    }
+                } else if (data.getHours() == dataAtual.getHours()){
+                    return((`${Math.abs(data.getMinutes()-dataAtual.getMinutes())} minutos atrás`))
+                } 
+                let dia = data.getDay().toString()
+                let mes = data.getMonth().toString()
+                let ano = data.getFullYear().toString()
+                let hora = data.getHours().toString()
+                let minutos = data.getMinutes().toString()
+
+                lista = []
+                lista.push(dia,mes,ano,hora,minutos)
+
+                for (let x = 0; x<lista.length;x++){
+                    if (lista[x].length<2){
+                        lista[x] = "0" + lista[x]
+                    }
+                }
+
+                return (`${lista[0]}.${lista[1]}.${lista[2].slice(-2)} ${lista[3]}:${lista[4]}`)
+            }
+        
+    </script>
+</body>
+</html>

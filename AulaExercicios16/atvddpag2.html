@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="time">
+    <button class="cron">Enviar</button>
+    <script>
+        //questao 1 a
+        function imprimeNumeros(comeco, fim){
+            let x = comeco-1
+            let intervalo = setInterval(() => {console.log(x+=1); if (x>=fim){clearInterval(intervalo)}}, 1000)
+            
+        }
+        //questao 1 b
+        let x = 0
+        function imprimeNumeros2(comeco, fim){
+            let det = comeco + x
+            x+=1
+            if (det<=fim){
+                console.log(det)
+                return(timeOut(comeco, fim))
+            } else{
+                x = 0
+                return}}
+
+        function timeOut(comeco, fim){
+            let contador = setTimeout(imprimeNumeros2, 1000, comeco, fim)
+        }
+
+        //questão 2
+        data = new Date()
+        //setInterval(() => {data = new Date();formatarData(data)},1000)
+        function formatarData(data){
+            let horas = data.getHours().toString().padStart(2,"0")
+            let minutos = data.getMinutes().toString().padStart(2,"0")
+            let segundos = data.getSeconds().toString().padStart(2,"0")
+            console.log(`${horas}:${minutos}:${segundos}`)
+        }
+        //questao 3
+        let botao = document.querySelector(".cron")
+        let input = document.querySelector("input")
+
+        botao.addEventListener("click", (event) => {
+            criaCronometro(input.value)
+        })
+        function criaCronometro(tempo, callback=false){
+            setInterval(() => {data = new Date();formatarData(data);checarData(data,tempo)},1000)
+            
+        }
+        function checarData(data,tempo){
+            dataAtual = new Date()
+            tempo.split
+            if (data<dataAtual){
+
+            }
+        }
+    </script>
+</body>
+</html>
