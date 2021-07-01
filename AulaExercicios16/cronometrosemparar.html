@@ -10,37 +10,7 @@
     <button class="cron">Enviar</button>
     <p class="tempo"></p>
     <script>
-        //questao 1 a
-        function imprimeNumeros(comeco, fim){
-            let x = comeco-1
-            let intervalo = setInterval(() => {console.log(x+=1); if (x>=fim){clearInterval(intervalo)}}, 1000)
-            
-        }
-        //questao 1 b
-        let x = 0
-        function imprimeNumeros2(comeco, fim){
-            let det = comeco + x
-            x+=1
-            if (det<=fim){
-                console.log(det)
-                return(timeOut(comeco, fim))
-            } else{
-                x = 0
-                return}}
 
-        function timeOut(comeco, fim){
-            let contador = setTimeout(imprimeNumeros2, 1000, comeco, fim)
-        }
-
-        //questão 2
-        data = new Date()
-        //setInterval(() => {data = new Date();formatarData(data)},1000)
-        function formatarData(data){
-            let horas = data.getHours().toString().padStart(2,"0")
-            let minutos = data.getMinutes().toString().padStart(2,"0")
-            let segundos = data.getSeconds().toString().padStart(2,"0")
-            console.log(`${horas}:${minutos}:${segundos}`)
-        }
         //questao 3
         let botao = document.querySelector(".cron")
         let input = document.querySelector("input")
@@ -49,7 +19,7 @@
         botao.addEventListener("click", (event) => {
             criaCronometro(input.value)
         })
-        let totalmm
+        let totalmm = 0
         let evento
         input.value = "00:00"
         function criaCronometro(tempo, callback=false){
@@ -63,9 +33,6 @@
             let mminutos = minutos*1000
             let mhoras = horas*60*1000
             totalmm = mminutos+mhoras
-            console.log(minutos)
-            console.log(horas)
-            console.log(totalmm)
             evento = setInterval(() => {data = new Date();checarData(data,totalmm)},1000)
             
         }
@@ -90,6 +57,41 @@
         function dizOi(){
             alert("Olaaaa")
         }
+
+        window.addEventListener("beforeunload", (e) => {
+            if (tempoP.value!=localStorage.getItem("conteudoCron")){
+                armazenarValores()
+            }
+        });
+
+        window.addEventListener("load", () => {
+            if (!localStorage.getItem("conteudoCron")){            
+                armazenarValores()
+                } 
+            else {
+                dataAtual = new Date()
+                let pCont = localStorage.getItem("conteudoCron")
+                let difMin = (dataAtual.getMinutes()*1000 - pCont.getMinutes()*1000)
+                let difSeg = (dataAtual.getSeconds()*1000 - pCont.getSeconds()*1000)*60000
+                totalmm = difMin+difSeg
+                console.log(difMin)
+                totalmm = difSeg
+
+                evento = setInterval(() => {data = new Date();checarData(data,totalmm)},1000)
+                modificarValor()
+                }
+            })
+        
+        function armazenarValores(){
+            localStorage.setItem("conteudoCron", new Date(totalmm))
+            modificarValor()
+        }
+
+        function modificarValor(){
+            let data = localStorage.getItem("conteudoCron")
+            tempoP.textContent = `${formatarData(data.getMinutes(),data.getSeconds())}`
+        }
+        
     </script>
 </body>
 </html>

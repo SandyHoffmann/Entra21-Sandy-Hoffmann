@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea class="area"></textarea>
+    <script>
+        //Exercicio 1
+        function unicos(vetor){
+            tirarIguais = new Set(vetor) 
+            vetorDnv = Array.from(tirarIguais)
+            return vetorDnv
+        }
+        //Exercicio 2
+        text = document.querySelector(".area")
+
+        if (!localStorage.getItem("texto")){            
+            armazenarValores()
+        } else {
+            modificarValor()
+        }
+
+        function armazenarValores(){
+            localStorage.setItem("texto", text.value)
+            modificarValor()
+        }
+
+        function modificarValor(){
+            let valortexto = localStorage.getItem("texto")
+            text.value = valortexto
+        }
+        
+        function checar(){
+        if (text.value!=localStorage.getItem("texto")){
+            armazenarValores()
+        }}
+
+        
+        window.addEventListener("beforeunload", (e) => {
+            checar()   
+        })
+
+    </script>
+</body>
+</html>
