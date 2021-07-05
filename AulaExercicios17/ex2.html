@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Pessoa{
+            constructor(nome,telefone){
+                this.nome = nome
+                this.telefone = telefone
+            }
+        }
+
+        class Agenda{
+            lista = []
+            
+            armazenaPessoa(pessoa){
+                if (this.lista.length<=10){
+                    this.lista.push(pessoa)
+                }
+                else{
+                    throw "Passou o limite"
+                }
+            }
+            removePessoa(nome){
+                for (let x = 0; x<(this.lista.length); x+=1){
+                    alert(x)
+                    if (nome == this.lista[x].nome){
+                        this.lista.splice(x,1)
+                        return
+                    }
+                }
+            }
+            buscaPessoa(nome){
+                for (let pessoa of this.lista){
+                    if (nome == pessoa.nome){
+                        console.log(`${pessoa.nome} : ${pessoa.telefone}`)
+                    }
+                }
+            }
+            imprimeAgenda(){
+                for (let pessoa of this.lista){
+                    console.log(`${pessoa.nome} : ${pessoa.telefone}`)
+                }
+            }
+            imprimePessoa(indice){
+                console.log(`${this.lista[indice].nome} : ${this.lista[indice].telefone}`)
+            }
+
+        }
+
+        // novapessoa = new Pessoa("alexia",3222334360
+        // novapessoa2 = new Pessoa("alexia2",3222334360)
+        // novapessoa3 = new Pessoa("alexia3",3222334360)
+        // agenda = new Agenda()
+        // agenda.armazenaPessoa(novapessoa)
+        // agenda.imprimeAgenda()
+        // agenda.removePessoa("alexia")
+
+        
+    </script>
+</body>
+</html>

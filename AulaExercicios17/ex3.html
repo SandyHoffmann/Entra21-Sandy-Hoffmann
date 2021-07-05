@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Voo{
+            constructor(numVoo,data){
+                this.numVoo = numVoo
+                this.data = data
+                this.listaPassageiros = []
+            }
+
+            ocupa(numero){
+                if (!this.verifica(numero)){
+                    return ("Não é possivel ocupar essa cadeira!")
+                } else{
+                    this.listaPassageiros[numero] = numero
+                }
+            }
+
+            verifica(numero){
+                if (this.listaPassageiros[numero] == undefined && numero<=100){
+                    return true
+                } else {
+                    return false
+                }
+            }
+
+            proximoLivre(){
+                for (let x = 0; x<(this.listaPassageiros.length); x+=1){
+                    if (this.listaPassageiros[x] == undefined){
+                        return (`Cadeira Número ${x} esta livre`)
+                    }
+                }
+                if (this.listaPassageiros.length<100){
+                    return (`Cadeira Número ${this.listaPassageiros.length} esta livre`)
+                }
+            }
+            vagas(){
+                let livres = 100
+                for (let cadeira of this.listaPassageiros){
+                    if (cadeira != undefined){
+                        livres-=1
+                    }
+                }
+                return (livres)
+            }
+
+            getVoo(){
+                console.log(`Voo numero ${this.numVoo}`)
+            }
+        }
+
+        // voo2 = new Voo(120,2002)
+        // voo2.vagas()
+        // voo2.ocupa(1)
+        // voo2.ocupa(2)
+        // voo2.ocupa(6)
+        // voo2.vagas()
+        // voo2.getVoo()
+        // voo2.proximoLivre()
+
+
+    </script>
+</body>
+</html>

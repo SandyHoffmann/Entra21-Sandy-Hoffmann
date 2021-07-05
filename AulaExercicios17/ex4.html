@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Funcionario{
+            #nome
+            #matricula
+            #salario
+
+
+            constructor(matricula,nome,salario){
+
+                if (!this.validaMat(matricula)){
+                    throw "Matrícula inválida"
+                }
+                this.#matricula = matricula
+
+                if (!this.validaNome(nome)){
+                    throw "Nome inválido"
+                }
+                this.#nome = nome
+
+                if (!this.validaSal(salario)){
+                    throw "Salário inválido"
+                }
+                this.#salario = salario
+
+            }
+            get nome(){
+                return this.#nome
+            }
+
+            get matricula(){
+                return this.#matricula
+            }
+
+            get salario(){
+                return this.#salario
+            }
+
+            set matricula(matricula){
+                if (!this.validaMat(matricula)){
+                    throw "Matrícula inválida"
+                }
+                this.#matricula = matricula
+            }
+
+            set nome(nome){
+                if (!this.validaNome(nome)){
+                    throw "Nome inválido"
+                }
+                this.#nome = nome
+
+            }
+
+            set salario(salario){
+                if (!this.validaSal(salario)){
+                    throw "Salário inválido"
+                }
+                this.#salario = salario
+
+            }
+
+
+            validaMat(matricula){
+                alert(matricula)
+                if (Number.isInteger(matricula) && matricula>=0){
+                    return true
+                } else{
+                    alert("a")
+
+                    return false
+                }
+            }
+
+            validaNome(nome){
+                if (nome.length<4 || nome.length>50){
+                    return false
+                } else{
+                    return true
+                }
+            }
+            validaSal(salario){
+                if (salario<465){
+                    return false
+                } else{
+                    return true
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Aluno{
+            constructor(matricula,nome,nota1,nota2,trabalho){
+                this.matricula = matricula
+                this.nome = nome
+                this.nota1 = nota1
+                this.nota2 = nota2
+                this.trabalho = trabalho
+            }
+            media(){
+                let media1 = (this.nota1*3+this.nota2*3+this.trabalho*2)/8
+                return media1
+            }
+            final(){
+                if (this.media()<6){
+                    let calculo = 6 - this.media()
+                    return(calculo)
+                }
+                if (this.media()>6){
+                    return(0)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
