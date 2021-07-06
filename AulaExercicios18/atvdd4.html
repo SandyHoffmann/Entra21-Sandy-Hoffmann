@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Ponto2D{
+            constructor(x,y){
+                this.x = x
+                this.y = y
+            }
+
+            static temEixoComum(pontoA, pontoB){
+                if (pontoB.x == pontoA.x || pontoA.y == pontoB.y){
+                    return true
+                } return false
+            }
+        }
+
+        //pontoa = new Ponto2D(2,3)
+        //pontob = new Ponto2D(5,3)
+        //Ponto2D.temEixoComum(pontoa,pontob)
+
+        class Calc{
+            static soma(n1, n2){
+                return(n1+n2)
+            }
+            static subtracao(n1, n2){
+                return(n1-n2)
+
+            }
+            static multiplicacao(n1, n2){
+                return(n1*n2)
+            }
+            static divisao(n1, n2){
+                return(n1/n2)
+            }
+        }
+    </script>
+</body>
+</html>

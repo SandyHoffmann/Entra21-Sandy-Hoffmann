@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        Exercícios
+        
+        1) Analise o código abaixo e informe quais valores serão apresentados no processo
+
+        let animal = {
+            pula: null
+        }
+
+        let coelho = {
+            __proto__: animal,
+            pula: true
+        }
+
+        console.log(coelho.pula) // true
+
+        delete coelho.pula
+
+        console.log(coelho.pula) // null
+
+        delete animal.pula
+
+        console.log(coelho.pula) // true
+
+        2) Dado os seguintes objetos:
+
+        let cabeca = {
+            oculos: 1
+        }
+
+        let mesa = {
+            caneta: 3
+        }
+
+        let cama = {
+            lenco: 1,
+            travesseiro: 2
+        }
+
+        let bolso = {
+            dinheiro: 200
+        }
+
+        bolso.__proto__ = cama
+        cama.__proto__ = mesa
+        mesa.__proto__ = cabeca
+
+
+        - Use __proto__ para atribuir prototypes na seguinte ordem: bolso -> cama -> mesa -> cabeca.
+        Testes:
+        console.log(bolso.caneta) // 3
+        console.log(cama.oculos) // 1
+        console.log(mesa.dinheiro) // undefined
+
+        3) Nesse problema temos dois hamster: Hamtaro e Fofuxo. Os dois herdam do objeto hamster.
+        Quando alimentamos um deles, o outro também fica cheio. Por que? Como consertar isso?
+        let hamster = {
+            estomago = [],
+
+            comer(comida) {
+                this.estomago.push(comida)
+            }
+        }
+
+        let hamtaro = {
+            __proto__ = hamster
+        }
+
+        let fofuxo = {
+            __proto__ = hamster
+        }
+
+        hamtaro.comer("Maçã")
+        console.log(hamtaro.estomago) // Maçã
+
+        console.log(fofuxo.estomago) // Maçã
+
+
+        Porque como esta escrito, ambos teriam a mesma barriga, uma maneira de se arrumar isso é:
+        
+
+        let hamster = {
+            comer(comida) {
+                this.estomago.push(comida)
+            }
+        }
+
+        let hamtaro = {
+            estomago : [],
+            __proto__ : hamster
+        }
+
+        let fofuxo = {
+            estomago : [],
+            __proto__ : hamster
+        }
+        
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        Exercícios
+
+        1) Corrija o script a seguir para que ele funcione (corrigi)
+        class Animal {
+            constructor(nome) {
+                this.nome = nome
+            }            
+        }
+
+        class Coelho extends Animal {
+            constructor(nome) {
+                super(nome)
+                this.criadoEm = Date.now()
+            }
+        }
+
+        let coelho = new Coelho("Coelho Branco")
+        alert(coelho.nome)
+
+    2) Crie uma subclasse de Relogio que adiciona o parametro de precisao 
+        (O numero em ms entre os ticks). 
+        FAZER
+
+*/
+
+        class Relogio {
+            constructor(formato) {
+                this.formato = formato
+            }
+
+            renderizar() {
+                let data = new Date()
+
+                let horas = data.getHours()
+                if (horas < 10) horas = "0" + horas
+
+                let minutos = data.getMinutes()
+                if (minutos < 10) minutos = "0" + minutos
+
+                let segundos = data.getSeconds()
+                if (segundos < 10) segundos = "0" + segundos
+
+                let resultado = this.formato
+                    .replace("h", horas)
+                    .replace("m", minutos)
+                    .replace("s", segundos)
+                
+                console.log(resultado)
+            }
+
+            parar() {
+                clearInterval(this.timer)
+            }
+
+            comecar() {
+                this.renderizar()
+                this.timer = setInterval(() => this.renderizar(), 1000)
+            }
+        }
+
+        class RelogioCompleto extends Relogio{
+            constructor(formato){
+                super(formato)
+            }
+            comecar(duracao) {
+                super.renderizar()
+                this.timer = setInterval(() => super.renderizar(), duracao)
+            }
+        }
+
+
+
+    /*
+        3) Crie a classe Imovel, que possui um endereço e um preço.
+            a. crie uma classe Novo, que herda Imovel e possui um adicional no preço. Crie
+            métodos de acesso e impressão deste valor adicional.        
+            b. crie uma classe Velho, que herda Imovel e possui um desconto no preço. Crie
+            métodos de acesso e impressão para este desconto.
+            
+            Ambas as classes Novo e Velho devem implementar um método calculaTotal() que informa
+            o valor com o adicional ou com o desconto.
+
+        */
+
+        class Imovel{
+            constructor() {
+                this.endereco = "1222";
+                this.preco = 100;
+            }
+
+        }
+
+        class Novo extends Imovel{
+            #adicional
+            constructor(adicional) {
+                super()
+                this.#adicional = adicional
+            }
+            get adicional(){
+                return this.#adicional
+            }
+
+            set adicional(adicional){
+                this.#adicional = adicional
+            }
+            calculaTotal(){
+                let novo_preco = this.preco*parseFloat(`1.${this.adicional}`)
+                console.log(novo_preco)
+            }
+        }
+
+        class Velho extends Imovel{
+            #desconto
+            constructor(desconto) {
+                super()
+                this.#desconto = desconto
+            }
+            get desconto(){
+                return this.#desconto
+            }
+
+            set desconto(desconto){
+                this.#desconto = desconto
+            }
+            calculaTotal(){
+                let novo_preco = this.preco - this.preco*parseFloat(`0.${this.desconto}`)
+                console.log(novo_preco)
+            }
+        }
+
+         /*
+
+         */
+
+         class Animal{
+            constructor(nome,comprimento,numeroPatas,cor,ambiente,velocidadeMedia) {
+                this.nome = nome
+                this.comprimento = comprimento
+                this.numeroPatas = numeroPatas
+                this.cor = cor
+                this.ambiente = ambiente
+                this.velocidadeMedia = velocidadeMedia
+            }
+            mostrarDados(){
+                console.log(`${this.nome} - ${this.comprimento}\n${this.numeroPatas} - ${this.cor}\n${this.ambiente} - ${this.velocidadeMedia}`)
+            }
+        }
+
+        class Peixe extends Animal{
+            constructor(nome,comprimento,numeroPatas,cor,ambiente,velocidadeMedia,caracteristica){
+                super(nome,comprimento,numeroPatas,cor,ambiente,velocidadeMedia)
+                this.caracteristica = caracteristica
+            }
+
+            mostrarDadoPeixe(){
+                super.mostrarDados()
+                console.log(this.caracteristica)
+            }
+        }
+
+        class Mamifero extends Animal{
+            constructor(nome,comprimento,numeroPatas,cor,ambiente,velocidadeMedia,alimento){
+                super(nome,comprimento,numeroPatas,cor,ambiente,velocidadeMedia)
+                this.alimento = alimento
+            }
+
+            mostrarDadoMamifero(){
+                super.mostrarDados()
+                console.log(this.alimento)
+            }
+        }
+    </script>
+</body>
+</html>

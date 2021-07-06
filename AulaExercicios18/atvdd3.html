@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Produto{
+            constructor(nomeLoja,preco) {
+                this.nomeLoja = nomeLoja
+                this.preco = preco
+            }
+            getDescricao(){
+                return("Produto de informática")
+            }
+        }
+
+        class Mouse extends Produto{
+            constructor(nomeLoja,preco,descricao,tipo){
+                super(nomeLoja,preco)
+                this.descricao = descricao
+                this.tipo = tipo
+            }
+            getDescricao(){
+                return(`${this.descricao}-${this.tipo}`)
+            }
+        }
+
+        class Livro extends Produto{
+            constructor(nomeLoja,preco,descricao,autor){
+                super(nomeLoja,preco)
+                this.autor = autor
+                this.descricao = descricao
+            }
+            getDescricao(){
+                return(`${this.descricao}-${this.autor}`)
+            }
+        }
+
+        let carrinho = [new Mouse("Kabum", 50, "Mouse ótico, Saída USB. 1.600 dpi", "Gamer"),
+                        new Livro("AAAAAA", 50, "Livro mto bom", "Machado de Assis"),
+                        new Livro("bbbbbbbb", 50, "Livro ruim", "Astholf Kwaudh"),
+                        new Mouse("Pichau", 250, "Mouse rgb, Saída USB. 8.600 dpi", "MTO GAMER"),
+                        new Mouse("Casas Bahia", 10, "Mouse, Saída U2. 5 dpi", "NADA GAMER")
+                        ]   
+
+        for (let i of carrinho){
+            console.log(i.getDescricao())
+        }
+
+    </script>
+</body>
+</html>
