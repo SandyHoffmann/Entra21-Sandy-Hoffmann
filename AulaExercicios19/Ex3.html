@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Exercício
+
+        1) Transforme o seguinte trecho de código utilizando async/await:
+
+        const delay = () => new Promise(resolve => setTimeout(resolve, 1000));
+
+        function umPorSegundo() {
+            delay().then(() => {
+                console.log('1s');
+                delay().then(() => {
+                    console.log('2s');
+                    delay().then(() => {
+                        console.log('3s');
+                    });
+                });
+            });
+        }
+        umPorSegundo();
+        */
+
+        function criaPromise() {
+            return new Promise(resolve => setTimeout(() => resolve(true), 1000))
+        }
+
+        async function umPorSegundo() {
+            for (let x = 1 ; x<4; x+=1){
+                let delay = await criaPromise()
+                if (delay){
+                    console.log(`${x}s`)
+                }
+            }
+        }
+        umPorSegundo()
+
+    </script>
+</body>
+</html>

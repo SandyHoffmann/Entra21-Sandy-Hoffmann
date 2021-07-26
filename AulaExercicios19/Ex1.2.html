@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function somar(n1, n2){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    let soma = n1+n2
+                    if (soma%2==0){
+                        resolve(soma)
+                    } 
+                    reject(new Error("O valor é ímpar"))
+                }, 2000)
+            })
+        }
+        somar(Number(prompt("n1: ")),Number(prompt("n2: ")))
+            .then(mensagem => {
+                console.log(`A operação foi bem sucedida! O número ${mensagem} é par`)
+            })
+            .catch(erro => console.log(`A operação falhou! ${erro.message}`))
+
+    </script>
+</body>
+</html>

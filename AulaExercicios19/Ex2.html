@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        dobrarEm5Segundos(prompt("n1: "), callback)
+
+        function dobrarEm5Segundos(numero, cb) {
+            setTimeout(() => {
+                if (isNaN(numero) == true) {
+                    let erro = new Error("O valor não é um numero!")
+                    return cb(erro)
+                }
+                novoNumero = parseFloat(numero * 2)
+                cb(null, novoNumero)
+            }, 5000)
+        }
+
+        function callback(error, result) {
+            if (error) {
+                return console.log(`A operação falhou! ${error.message}`)
+            }
+            console.log(`A operação foi bem sucedida! O resultado é ${result}`)
+        }
+    </script>
+</body>
+
+</html>
