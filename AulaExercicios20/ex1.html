@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="cars">Escolha um gato:</label>
+
+        <select id="gatos">
+        </select>
+
+    <script>
+        let select = document.querySelector("#gatos")
+
+        async function getCat() {
+            let response = await fetch("https://api.thecatapi.com/v1/breeds", {
+                headers: {
+                    "x-api-key": "bc0a4411-c0d9-4226-a254-b8fbdadf164c"
+                }
+            });
+            let raca = response.data
+            if (!response.ok) {
+                return console.log("A requisição falhou!")
+            }
+            let body = await response.json();
+            for (let e of body){
+                let option = document.createElement("option")
+                option.value = e.id
+                option.textContent = e.name
+                select.appendChild(option)
+                console.log(e.id)
+            }
+        }
+        select.addEventListener('change', (event) => {
+            let id = event.target.options[event.target.options.selectedIndex].value
+           console.log(id)
+           setCat(id)
+        });
+        async function setCat(nome_gato){
+            
+            let response = await fetch(`https://api.thecatapi.com/v1/images/search?breed_id=${nome_gato} `, {
+                headers: {
+                    "x-api-key": "bc0a4411-c0d9-4226-a254-b8fbdadf164c"
+                }
+            });
+
+            if (!response.ok) {
+                return console.log("A requisição falhou!")
+            }
+
+            let body = await response.json();
+
+            createCatImage(body[0].url);
+        }
+        function createCatImage(url) {
+            const img = document.createElement("img");
+            img.src = url;
+            document.body.append(img);
+        }
+        getCat()
+    </script>
+</body>
+</html>
