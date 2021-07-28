@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        .container{
+            display: flex;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+
+        async function rick() {
+            lista_num = []
+            for (let x = 0; x<9 ;x++){
+                let num_rand = Math.floor(Math.random() * (671 - 0 + 1))
+                lista_num.push(num_rand.toString())
+            }
+            let response = await fetch(`https://rickandmortyapi.com/api/character/${lista_num}`,{
+                method: "GET",
+                headers: {
+                    contentType: 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                return console.log("A requisição falhou!")
+            }
+
+            let body = await response.json();
+            console.log(body)
+            createRMImage(body);
+        }
+        let caixa = document.querySelector(".container")
+        function createRMImage(url) {
+            for (e of url){
+                caixa.innerHTML += `<div class="card" style="width: 18rem;">`+
+                                `<img class="card-img-top" src="${e.image}" alt="Card image cap">`+
+                                `<div class="card-body">`+
+                                    `<p class="card-text">${e.name}</p>`+
+                                `</div>`+
+                            `</div>`
+            }
+        }
+        rick()
+    </script>
+</body>
+</html>

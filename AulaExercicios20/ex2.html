@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .rounded{
+            width: 500px;
+            height: 500px;
+            border: 3px;
+            border-style: dotted;
+            animation: changeColor 5s infinite;
+
+        }
+        .caixa{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
+        @keyframes changeColor {
+            0%   {border-color: red;}
+            25%  {border-color: yellow;}
+            50%  {border-color: rgb(43, 255, 0);}
+            100% {border-color: rgb(0, 77, 128);}
+            }
+    </style>
+</head>
+<body>
+    <div class="caixa">
+
+    </div>
+    <script>
+        async function getCat() {
+            let response = await fetch("https://api.thecatapi.com/v1/images/search?mime_types=gif&limit=10", {
+                headers: {
+                    "x-api-key": "bc0a4411-c0d9-4226-a254-b8fbdadf164c"
+                }
+            });
+
+            if (!response.ok) {
+                return console.log("A requisição falhou!")
+            }
+
+            let body = await response.json();
+            console.log(body)
+            createCatImage(body);
+        }
+
+        let caixa = document.querySelector(".caixa")
+
+        function createCatImage(url) {
+            for (let x = 0; x < 10; x++){
+                const img = document.createElement("img");
+                img.className += "rounded"
+                img.src = url[x].url;
+                caixa.append(img);
+            }
+        }
+
+        getCat()
+    </script>
+</body>
+</html>

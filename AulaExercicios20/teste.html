@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1</title>
+</head>
+<body>
+    <select id="cat-breeds">
+    </select>
+    <script>
+        /*
+        1) Implemente um script que consuma a api: https://thecatapi.com/.
+
+        * Crie uma página que carregue 10 imagens de um gato com base na sua raça.
+        */
+        const catBreeds = document.querySelector("#cat-breeds");
+
+        async function getCatBreeds() {
+            const response = await fetch("https://api.thecatapi.com/v1/breeds");
+
+            if (response.ok) {
+                const body = await response.json();
+                
+                for (let breed of body) {
+                    const { id, name } = breed;
+
+                    insertBreedInSelect(id, name);
+                }
+            } else {
+                console.log("Falha na requisição");
+            }
+        }
+
+        function insertBreedInSelect(id, name) {
+            const newOption = new Option(name, id);
+
+            catBreeds.append(newOption);
+        }     
+
+        catBreeds.addEventListener("change", e => getCatsByBreed(e.target.value)); 
+
+        async function getCatsByBreed(id) {
+            const response = await fetch(`https://api.thecatapi.com/v1/images/search?breed_id=${id}&limit=10`);
+
+            if (response.ok) {
+                const body = await response.json();
+                console.log(body);
+                for (let cat of body) {
+                    createCatImage(cat.url);
+                }                                               
+            } else {
+                console.log("Falha na requisição");
+            }        
+        }
+
+        function createCatImage(url) {
+            const img = document.createElement("img");
+
+            img.src = url;
+
+            document.body.append(img);
+        }
+        
+        getCatBreeds();
+    </script>
+</body>
+</html>
