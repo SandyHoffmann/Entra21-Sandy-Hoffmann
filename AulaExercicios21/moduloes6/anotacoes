@@ -1,0 +1,19 @@
+Cria package
+npm init -y
+
+ npm start 
+ ou 
+ npm run inicio
+
+ npm install  
+ (pra criar pastinha)
+
+ cowsay
+
+ npx cowsay oi
+(pra falar no terminal)
+
+ npm i -D nodemon
+(pra instalar como flag de deenvolvimento)
+
+move com rename
