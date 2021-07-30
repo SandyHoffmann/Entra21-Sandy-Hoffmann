@@ -1,0 +1,21 @@
+
+"total_memory"8071 MB, "free_memory":3294 MB, "usage":40 %
+"total_memory"8071 MB, "free_memory":3280 MB, "usage":40 %
+"total_memory"8071 MB, "free_memory":3251 MB, "usage":40 %
+"total_memory"8071 MB, "free_memory":3255 MB, "usage":40 %
+"total_memory"8071 MB, "free_memory":3237 MB, "usage":40 %
+"total_memory"8071 MB, "free_memory":3243 MB, "usage":40 %
+"total_memory"8071 MB, "free_memory":3248 MB, "usage":40 %
+"total_memory"8071 MB, "free_memory":3478 MB, "usage":43 %
+"total_memory"8071 MB, "free_memory":3479 MB, "usage":43 %
+"total_memory"8071 MB, "free_memory":3457 MB, "usage":42 %
+"total_memory"8071 MB, "free_memory":3436 MB, "usage":42 %
+"total_memory"8071 MB, "free_memory":3454 MB, "usage":42 %
+"total_memory"8071 MB, "free_memory":3464 MB, "usage":42 %
+"total_memory"8071 MB, "free_memory":3447 MB, "usage":42 %
+"total_memory"8071 MB, "free_memory":3453 MB, "usage":42 %
+"total_memory"8071 MB, "free_memory":3449 MB, "usage":42 %
+"total_memory"8071 MB, "free_memory":3441 MB, "usage":42 %
+"total_memory"8071 MB, "free_memory":3438 MB, "usage":42 %
+"total_memory"8071 MB, "free_memory":3435 MB, "usage":42 %
+"total_memory"8071 MB, "free_memory":3488 MB, "usage":43 %

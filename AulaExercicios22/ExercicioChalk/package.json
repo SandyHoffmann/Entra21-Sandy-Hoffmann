@@ -1,0 +1,16 @@
+{
+  "name": "ExercicioChalk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ex7.js",
+  "scripts": {
+    "start" : "node ex7.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}
