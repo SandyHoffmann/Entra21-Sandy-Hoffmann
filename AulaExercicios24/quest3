@@ -1,0 +1,85 @@
+-- DROP SCHEMA public CASCADE;
+-- CREATE SCHEMA public;
+-- GRANT ALL PRIVILEGES TO postgres;
+
+CREATE TABLE IF NOT EXISTS projeto(
+	id SERIAL PRIMARY KEY,
+	nome_proj text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS gerente(
+	id SERIAL PRIMARY KEY,
+	nome_ger text NOT NULL,
+	cpf_ger text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS departamento(
+	id SERIAL PRIMARY KEY,
+	nome_depar text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS colaborador(
+	id SERIAL PRIMARY KEY,
+	id_dep integer NOT NULL,
+	id_ger integer NOT NULL,
+	tipo_col text NOT NULL,
+	valor_hora numeric NOT NULL,
+	salario numeric NOT NULL,
+	total_vendas numeric NOT NULL,
+	perc_comiss numeric NOT NULL,
+	FOREIGN KEY (id_dep) REFERENCES departamento,
+	FOREIGN KEY (id_ger) REFERENCES gerente
+);
+
+CREATE TABLE IF NOT EXISTS dependente(
+	id SERIAL PRIMARY KEY,
+	id_col integer NOT NULL,
+	nome_depend text NOT NULL,
+	FOREIGN KEY (id_col) REFERENCES colaborador
+);
+
+CREATE TABLE IF NOT EXISTS projeto_colaborador(
+	proj_id integer NOT NULL,
+	col_id integer NOT NULL,
+	PRIMARY KEY(proj_id,col_id),
+	FOREIGN KEY (proj_id) REFERENCES projeto,
+	FOREIGN KEY (col_id) REFERENCES colaborador
+);
+
+
+-- INSERT INTO projeto(nome_proj) VALUES 
+-- 	('Projeto A'),
+-- 	('Projeto B'),
+-- 	('Projeto C');
+
+-- INSERT INTO gerente(nome_ger,cpf_ger) VALUES 
+-- 	('Gerente A','123.345.432.01'),
+-- 	('Gerente B','333.333.432.05'),
+-- 	('Gerente C','444.445.432.04');
+	
+-- INSERT INTO departamento(nome_depar) VALUES 
+-- 	('Departamento A'),
+-- 	('Departamento B'),
+-- 	('Departamento C');
+	
+-- INSERT INTO colaborador(id_dep,id_ger,tipo_col,valor_hora,salario,total_vendas,perc_comiss) VALUES 
+-- 	(4,4,'Tipo A',12.90,1.000,100,0.50),
+-- 	(5,5,'Tipo B',20.80,2.500,200,0.20),
+-- 	(6,6,'Tipo C',50.99,3.800,300,0.12);
+	
+-- INSERT INTO dependente(id_col,nome_depend) VALUES 
+-- 	(10,'Tiago'),
+-- 	(11,'Amelia'),
+-- 	(12,'Ana');
+
+-- INSERT INTO projeto_colaborador(proj_id,col_id) VALUES 
+-- 	(7,10),
+-- 	(8,11),
+-- 	(9,12);
+
+-- DELETE FROM projeto;
+-- DELETE FROM gerente;
+-- DELETE FROM departamento;
+-- DELETE FROM colaborador;
+-- DELETE FROM dependente;
+-- DELETE FROM projeto_colaborador;

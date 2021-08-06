@@ -1,0 +1,60 @@
+
+CREATE TABLE IF NOT EXISTS cliente(
+	id SERIAL PRIMARY KEY,
+	rua_cl text NOT NULL,
+	bairro_cl text NOT NULL,
+	cidade_cl text NOT NULL,
+	uf_cl character(2) NOT NULL,
+	cpf_cnpj_cl text NOT NULL,
+	nome_cl text NOT NULL,
+	tel_cl text NOT NULL,
+	pontos_cl integer DEFAULT 0,
+	tipo_pessoa boolean NOT NULL DEFAULT FALSE
+);
+
+CREATE TABLE IF NOT EXISTS editora(
+	id SERIAL PRIMARY KEY,
+	rua_cl text NOT NULL,
+	bairro_cl text NOT NULL,
+	cidade_cl text NOT NULL,
+	uf_cl character(2) NOT NULL,
+	nom_ger text NOT NULL,
+	telefone text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS livro(
+	id SERIAL PRIMARY KEY,
+	id_edit integer NOT NULL,
+	nome_autor text NOT NULL,
+	assunto text NOT NULL,
+	quant text NOT NULL,
+	FOREIGN KEY (id_edit) REFERENCES editora
+);
+
+CREATE TABLE IF NOT EXISTS livro_cliente(
+	id_livro integer NOT NULL,
+	id_cliente integer NOT NULL,
+	PRIMARY KEY(id_livro,id_cliente),
+	FOREIGN KEY (id_livro) REFERENCES livro,
+	FOREIGN KEY (id_cliente) REFERENCES cliente
+);
+
+-- INSERT INTO livro_cliente(id_livro,id_cliente) VALUES 
+-- 	(1,2),
+-- 	(2,3),
+-- 	(3,1);
+
+-- INSERT INTO livro(id_edit,nome_autor,assunto,quant) VALUES 
+-- 	(1,'Livro 1','Autor 1','aaaaaaaaaaa'),
+-- 	(2,'Livro 2','Autor 2','bbbbbbbbbb'),
+-- 	(3,'Livro 3','Autor 3','ccccccccccc');
+
+-- INSERT INTO editora(nom_ger,telefone,rua_cl,bairro_cl,cidade_cl,uf_cl) VALUES 
+-- 	('Gerente 1','04799988877','Rua G','Bairro G','Cidade G','HH'),
+-- 	('Gerente 2','04799988877','Rua H','Bairro H','Cidade H','HH'),
+-- 	('Gerente 3','047123456','Rua I','Bairro I','Cidade I','II');
+
+-- INSERT INTO cliente(nome_cl,cpf_cnpj_cl,tel_cl,rua_cl,bairro_cl,cidade_cl,uf_cl,pontos_cl,tipo_pessoa) VALUES 
+-- 	('Aldir','777.775.908-57','047447777577','Rua D','Bairro D','Cidade D','DD',4,TRUE),
+-- 	('Helena','998.999.999-98','04799988877','Rua E','Bairro E','Cidade E','EE',100,TRUE),
+-- 	('Yanna','321.123.122-32','047123456','Rua F','Bairro F','Cidade F','FF',410,FALSE);

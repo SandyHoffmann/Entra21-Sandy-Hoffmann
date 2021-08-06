@@ -1,0 +1,105 @@
+--DROP SCHEMA public CASCADE;
+--CREATE SCHEMA public;
+--GRANT ALL PRIVILEGES TO postgres;
+
+CREATE TABLE IF NOT EXISTS proprietario(
+	id SERIAL PRIMARY KEY,
+	rua_prop text NOT NULL,
+	bairro_prop text NOT NULL,
+	cidade_prop text NOT NULL,
+	uf_prop character(2) NOT NULL,
+	cpf_prop text NOT NULL,
+	nome_prop text NOT NULL,
+	tel_prop text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS imovel(
+	id SERIAL PRIMARY KEY,
+	id_prop integer NOT NULL,
+	num_quart integer NOT NULL,
+	num_banh integer NOT NULL,
+	area numeric NOT NULL,
+	piscina boolean NOT NULL DEFAULT FALSE,
+	churrasq boolean NOT NULL DEFAULT FALSE,
+	FOREIGN KEY (id_prop) REFERENCES proprietario
+);
+
+CREATE TABLE IF NOT EXISTS locatario(
+	id SERIAL PRIMARY KEY,
+	rua_loc text NOT NULL,
+	bairro_loc text NOT NULL,
+	cidade_loc text NOT NULL,
+	uf_loc character(2) NOT NULL,
+	cpf_loc text NOT NULL,
+	nome_loc text NOT NULL,
+	tel_loc text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS contrato(
+	id SERIAL PRIMARY KEY,
+	id_imv integer,
+	id_prop integer,
+	id_loc integer,
+	data_inic date NOT NULL,
+	data_ter date NOT NULL,
+	data_venc date NOT NULL,
+	obs text,
+	FOREIGN KEY (id_imv) REFERENCES imovel,
+	FOREIGN KEY (id_prop) REFERENCES proprietario,
+	FOREIGN KEY (id_loc) REFERENCES locatario
+);
+
+INSERT INTO proprietario(nome_prop,cpf_prop,tel_prop,rua_prop,bairro_prop,cidade_prop,uf_prop) VALUES 
+	('Paulinho','098.678.908-90','04744336677','Rua A','Bairro A','Cidade A','AA'),
+	('Aninha','088.888.888-88','04744888877','Rua B','Bairro B','Cidade B','BB'),
+	('Beto','666.666.666-66','04766667777','Rua C','Bairro C','Cidade C','CC');
+
+INSERT INTO locatario(nome_loc,cpf_loc,tel_loc,rua_loc,bairro_loc,cidade_loc,uf_loc) VALUES 
+	('Aldir','777.775.908-57','047447777577','Rua D','Bairro D','Cidade D','DD'),
+	('Helena','998.999.999-98','04799988877','Rua E','Bairro E','Cidade E','EE'),
+	('Yanna','321.123.122-32','047123456','Rua F','Bairro F','Cidade F','FF');
+
+INSERT INTO imovel(id_prop,num_quart,num_banh,area) VALUES 
+	(1,4,2,200),
+	(2,5,1,400),
+	(3,8,6,1000);
+	
+INSERT INTO imovel(id_prop,num_quart,num_banh,area,piscina,churrasq) VALUES (3,6,6,666,TRUE,TRUE);
+
+INSERT INTO contrato(id_imv,id_prop,id_loc,data_inic,data_ter,data_venc,obs) VALUES 
+	(1,1,2,'January 8, 1999','January 10, 2021','January 2, 2022','imv1'),
+	(1,2,2,'January 8, 1999','January 10, 2021','January 2, 2022','imv2'),
+	(2,3,3,'January 8, 1999','January 10, 2021','January 2, 2022','imv3');
+
+INSERT INTO contrato(id_imv,id_prop,id_loc,data_inic,data_ter,data_venc,obs) VALUES 
+	(1,1,2,'January 8, 1999','January 10, 2021','January 2, 2022','imv1'),
+	(1,2,2,'January 8, 1999','January 10, 2021','January 2, 2022','imv2'),
+	(2,3,3,'January 8, 1999','January 10, 2021','January 2, 2022','imv3');
+
+INSERT INTO locatario(nome_loc,cpf_loc,tel_loc,rua_loc,bairro_loc,cidade_loc,uf_loc) VALUES 
+	('Aldir','777.775.908-57','047447777577','Rua D','Bairro D','Cidade D','DD'),
+	('Helena','998.999.999-98','04799988877','Rua E','Bairro E','Cidade E','EE'),
+	('Yanna','321.123.122-32','047123456','Rua F','Bairro F','Cidade F','FF');
+
+
+-- INSERT INTO proprietario(nome_prop,cpf_prop,tel_prop,rua_prop,bairro_prop,cidade_prop,uf_prop) VALUES 
+-- 	('Paulinho','098.678.908-90','04744336677','Rua A','Bairro A','Cidade A','AA'),
+-- 	('Aninha','088.888.888-88','04744888877','Rua B','Bairro B','Cidade B','BB'),
+-- 	('Beto','666.666.666-66','04766667777','Rua C','Bairro C','Cidade C','CC');
+	
+
+-- INSERT INTO imovel(id_prop,num_quart,num_banh,area) VALUES 
+-- 	(1,4,2,200),
+-- 	(2,5,1,400),
+-- 	(3,8,6,1000);
+	
+--INSERT INTO imovel(id_prop,num_quart,num_banh,area,piscina,churrasq) VALUES (3,6,6,666,TRUE,TRUE);
+
+
+-- DELETE FROM contrato;
+-- DELETE FROM locatario;
+-- DELETE FROM imovel;
+-- DELETE FROM proprietario;
+
+
+
