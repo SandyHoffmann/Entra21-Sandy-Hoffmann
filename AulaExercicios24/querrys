@@ -1,0 +1,110 @@
+-- INSERT INTO produtos (nome_text,preco) VALUES
+-- ('lapis',1),
+-- ('caneta',2.50),
+-- ('regua',3);
+
+-- SELECT * FROM produtos ORDER BY nome_text DESC;
+
+-- SELECT * FROM produtos LIMIT 2;
+
+-- CREATE TABLE IF NOT EXISTS marca(
+-- 	id SERIAL PRIMARY KEY,
+-- 	nome text NOT NULL UNIQUE
+-- );
+
+
+-- CREATE TABLE IF NOT EXISTS produto(
+-- 	id SERIAL PRIMARY KEY,
+-- 	nome text NOT NULL UNIQUE,
+-- 	id_marca integer NOT NULL REFERENCES marca
+-- );
+
+-- INSERT INTO marca (nome) VALUES
+-- ('Apple'),('Samsung'),('Xiomi');
+
+-- INSERT INTO produto (nome, id_marca) VALUES
+-- ('Galaxy A32',2),
+-- ('Galaxy A12',2),
+-- ('Iphone 11',1);
+
+-- SELECT * FROM marca;
+-- SELECT * FROM produto;
+
+-- SELECT produto.nome AS nome_produto, marca.nome AS produto
+-- FROM marca
+-- INNER JOIN produto ON produto.id_marca = marca.id;
+
+-- SELECT produto.nome AS nome_produto, m.nome AS produto
+-- FROM marca AS m
+-- INNER JOIN produto ON produto.id_marca = m.id;
+-- INSERT INTO pedidos (total_pedido) VALUES
+-- (10),(10),(30),(5);
+
+-- INSERT INTO pedidos_produtos VALUES
+-- (1,1,10),
+-- (2,2,4),
+-- (3,3,10),
+-- (3,2,2);
+
+SELECT * from produtos WHERE nome_text ILIKE '%a';
+SELECT * from produtos;
+
+-- SELECT produtos.nome_text AS nome_produto, pedidos.total_pedido AS total
+-- FROM pedidos_produtos
+-- INNER JOIN produtos ON produtos.id = pedidos_produtos.id_produto
+-- INNER JOIN pedidos ON pedidos.id = pedidos_produtos.id_pedido;
+
+-- SELECT pedidos.id, (produtos.preco*pedidos_produtos.quantidade) AS total_prod
+-- FROM pedidos_produtos
+-- INNER JOIN produtos ON produtos.id = pedidos_produtos.id_produto
+-- INNER JOIN pedidos ON pedidos.id = pedidos_produtos.id_pedido;
+
+-- SELECT pedidos.id, sum (produtos.preco*pedidos_produtos.quantidade) AS total_prod
+-- FROM pedidos_produtos
+-- INNER JOIN produtos ON produtos.id = pedidos_produtos.id_produto
+-- INNER JOIN pedidos ON pedidos.id = pedidos_produtos.id_pedido
+-- GROUP BY pedidos.id;
+
+-- SELECT * FROM pedidos WHERE total_pedido BETWEEN 5 AND 16;
+-- SELECT * FROM pedidos WHERE total_pedido IN (10, 5, 25);
+-- SELECT * from produtos WHERE nome_text ILIKE '%l%';
+-- SELECT * from produtos WHERE nome_text ILIKE 'l____';
+
+-- SELECT COUNT (id) quantidade_pedidos FROM pedidos;
+
+-- SELECT MAX (total_pedido) FROM pedidos;
+-- SELECT MIN (total_pedido) FROM pedidos;
+-- SELECT ROUND (AVG (total_pedido),2) FROM pedidos;
+
+-- CREATE TABLE IF NOT EXISTS vendas(
+-- 	id SERIAL PRIMARY KEY,
+-- 	nome_vend text NOT NULL,
+-- 	quant integer NOT NULL,
+-- 	produto text NOT NULL,
+-- 	cidade text NOT NULL
+-- );
+
+-- INSERT INTO vendas(nome_vend,quant,produto,cidade) VALUES
+-- 	('Jorge',10,'Mouse','São Paulo'),
+-- 	('Ana',6,'Teclado','Rio de Janeiro'),
+-- 	('Mario',23,'Mouse','Blumenau'),
+-- 	('Felipe',25,'Webcam','Blumenau'),
+-- 	('João',2,'Teclado','Recife'),
+-- 	('Pedro',3,'Monitor','São Paulo'),
+-- 	('João',5,'Monitor','Rio de Janeiro');
+
+SELECT cidade, sum(quant)
+FROM vendas
+GROUP BY cidade;
+
+SELECT produto, sum(quant)
+FROM vendas
+GROUP BY produto;
+
+SELECT nome_vend, sum(quant) quantidade
+FROM vendas
+GROUP BY nome_vend
+ORDER BY quantidade ASC;
+
+
+

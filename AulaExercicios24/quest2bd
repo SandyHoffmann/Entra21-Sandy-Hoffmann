@@ -1,3 +1,4 @@
+CREATE TYPE tipo_pessoa AS ENUM ('PF','PJ');
 
 CREATE TABLE IF NOT EXISTS cliente(
 	id SERIAL PRIMARY KEY,
@@ -9,7 +10,7 @@ CREATE TABLE IF NOT EXISTS cliente(
 	nome_cl text NOT NULL,
 	tel_cl text NOT NULL,
 	pontos_cl integer DEFAULT 0,
-	tipo_pessoa boolean NOT NULL DEFAULT FALSE
+	tipo_pessoa tipo_pessoa NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS editora(
@@ -34,15 +35,16 @@ CREATE TABLE IF NOT EXISTS livro(
 CREATE TABLE IF NOT EXISTS livro_cliente(
 	id_livro integer NOT NULL,
 	id_cliente integer NOT NULL,
-	PRIMARY KEY(id_livro,id_cliente),
+	data_ timestamp with time zone NOT NULL,
+	PRIMARY KEY(id_livro,id_cliente,data_),
 	FOREIGN KEY (id_livro) REFERENCES livro,
 	FOREIGN KEY (id_cliente) REFERENCES cliente
 );
 
--- INSERT INTO livro_cliente(id_livro,id_cliente) VALUES 
--- 	(1,2),
--- 	(2,3),
--- 	(3,1);
+-- INSERT INTO livro_cliente(id_livro,id_cliente,data_) VALUES 
+-- 	(1,2,'294276 AD'),
+-- 	(2,3,'294276 AD'),
+-- 	(3,1,'4713 BC');
 
 -- INSERT INTO livro(id_edit,nome_autor,assunto,quant) VALUES 
 -- 	(1,'Livro 1','Autor 1','aaaaaaaaaaa'),
@@ -55,6 +57,6 @@ CREATE TABLE IF NOT EXISTS livro_cliente(
 -- 	('Gerente 3','047123456','Rua I','Bairro I','Cidade I','II');
 
 -- INSERT INTO cliente(nome_cl,cpf_cnpj_cl,tel_cl,rua_cl,bairro_cl,cidade_cl,uf_cl,pontos_cl,tipo_pessoa) VALUES 
--- 	('Aldir','777.775.908-57','047447777577','Rua D','Bairro D','Cidade D','DD',4,TRUE),
--- 	('Helena','998.999.999-98','04799988877','Rua E','Bairro E','Cidade E','EE',100,TRUE),
--- 	('Yanna','321.123.122-32','047123456','Rua F','Bairro F','Cidade F','FF',410,FALSE);
+-- 	('Aldir','777.775.908-57','047447777577','Rua D','Bairro D','Cidade D','DD',4,'PF'),
+-- 	('Helena','998.999.999-98','04799988877','Rua E','Bairro E','Cidade E','EE',100,'PJ'),
+-- 	('Yanna','321.123.122-32','047123456','Rua F','Bairro F','Cidade F','FF',410,'PF');
