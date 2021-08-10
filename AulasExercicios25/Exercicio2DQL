@@ -1,0 +1,96 @@
+CREATE TABLE IF NOT EXISTS departamento(
+	id SERIAL PRIMARY KEY,
+	nome text NOT NULL,
+	localizacao text NOT NULL,
+	id_gerente integer
+);
+
+CREATE TABLE IF NOT EXISTS funcionarios(
+	id SERIAL PRIMARY KEY,
+	nome text NOT NULL,
+	sobrenome text NOT NULL,
+	data_nascimento date NOT NULL,
+	cpf text NOT NULL,
+	rg text NOT NULL,
+	logradouro text NOT NULL,
+	cep text NOT NULL,
+	cidade text NOT NULL,
+	telefone text,
+	funcao text NOT NULL,
+	salario numeric NOT NULL,
+	id_departamento integer NOT NULL,
+	FOREIGN KEY(id_departamento) REFERENCES departamento 
+);
+
+-- ALTER TABLE departamento ADD CONSTRAINT id_gerente
+-- FOREIGN KEY (id_gerente) REFERENCES funcionarios;
+
+-- SELECT * FROM departamento;
+
+-- INSERT INTO departamento (nome, localizacao) VALUES
+-- 	('Dep1','RUA 1'),
+-- 	('Dep2','RUA 2'),
+-- 	('Dep3','RUA 3'),
+-- 	('Dep4','RUA 4'),
+-- 	('Dep5','RUA 5');
+	
+-- INSERT INTO funcionarios (nome, sobrenome, data_nascimento, cpf, rg, logradouro, cep, cidade, telefone, funcao, salario, id_departamento) VALUES
+-- 	('Ana Clara','Rodriguez','1/8/1999','098.123.223-92','89.876.987','casa','098.789.928','cidade A','22234-3223','Caixa',1900.87,1),
+-- 	('Bianca','Kursth','1/8/2002','222.123.233-33','33.3333.33','apartamento','343.7829.5534','cidade B','25354-3223','Faxineira',890.55,4),
+-- 	('Cleide','Martel','1/8/1980','888.8888.888-88','88.888.888','casa','088.888.888','cidade C','23432-2332','Chefe',6700.00,2),
+-- 	('Daiane','dos Santos','3/5/1949','044.1443.423-44','99.996.999','casa','099.999.999','cidade D','234344-33423','Gestora',2900.87,3),
+-- 	('Elena','Ezzaela','7/7/1977','077.777.777-77','77.777.777','apartamento','344.344.434','cidade E','4334-3434','Operadora de Máquina',950.87,5);
+-- UPDATE vendas SET DESCONTO = 0 WHERE DESCONTO IS NULL;
+
+-- UPDATE departamento SET id_gerente = 3 WHERE id = 5;
+
+-- INSERT INTO funcionarios (nome, sobrenome, data_nascimento, cpf, rg, logradouro, cep, cidade, telefone, funcao, salario, id_departamento) VALUES
+-- 	('Eliza','Andrade','1/8/2000','098.123.223-92','89.876.987','casa','098.789.928','cidade A','22234-3223','Caixa',1900.87,1),
+-- 	('Fabiola','Kirk','1/8/2003','222.123.233-33','33.3333.33','apartamento','343.7829.5534','cidade B','25354-3223','Faxineira',890.55,4),
+-- 	('Gabriela','Amabily','1/8/1933','888.8888.888-88','88.888.888','casa','088.888.888','cidade C','23432-2332','Chefe',6700.00,2),
+-- 	('Helena','Ambers','3/5/1988','044.1443.423-44','99.996.999','casa','099.999.999','cidade D','234344-33423','Gestora',2900.87,3),
+-- 	('Ivo','Estrada','7/7/1911','077.777.777-77','77.777.777','apartamento','344.344.434','cidade E','4334-3434','Operadora de Máquina',950.87,5);
+
+
+SELECT nome ||' '|| sobrenome as nome, salario
+FROM funcionarios WHERE salario>1000;
+
+SELECT nome, sobrenome,data_nascimento
+FROM funcionarios
+ORDER BY data_nascimento DESC;
+
+SELECT SUM(salario) AS salario
+FROM funcionarios;
+
+SELECT funcionarios.nome, departamento.nome, funcionarios.funcao
+FROM funcionarios
+INNER JOIN departamento ON departamento.id = funcionarios.id_departamento;
+
+SELECT departamento.nome, funcionarios.nome
+FROM departamento
+INNER JOIN funcionarios ON funcionarios.id = departamento.id_gerente;
+
+SELECT departamento.nome, SUM(funcionarios.salario) AS total_salario 
+FROM departamento
+INNER JOIN funcionarios ON funcionarios.id_departamento = departamento.id
+GROUP BY departamento.nome
+ORDER BY departamento.nome;
+
+SELECT COUNT(id) AS total_funcionarios
+FROM funcionarios;
+
+SELECT ROUND(AVG(salario),2) AS salario_medio
+FROM funcionarios;
+
+SELECT departamento.nome, ROUND(AVG(funcionarios.salario),2) AS Media_Salario 
+FROM departamento
+INNER JOIN funcionarios ON funcionarios.id_departamento = departamento.id
+GROUP BY departamento.nome
+ORDER BY departamento.nome;
+
+SELECT departamento.nome, max(funcionarios.salario) AS maior_Salario 
+FROM departamento
+INNER JOIN funcionarios ON funcionarios.id_departamento = departamento.id
+GROUP BY departamento.nome
+ORDER BY departamento.nome;
+
