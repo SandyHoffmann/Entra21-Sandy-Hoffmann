@@ -1,0 +1,67 @@
+SELECT salesman.name, customer.cust_name, customer.city
+FROM salesman
+INNER JOIN customer ON customer.city= salesman.city;
+
+SELECT orders.ord_no, orders.purch_amt as am, customer.cust_name,customer.city
+FROM orders 
+INNER JOIN customer ON customer.customer_id= orders.customer_id
+WHERE orders.purch_amt BETWEEN 500 AND 2000;
+
+SELECT salesman.name as Salesman, salesman.commission,customer.cust_name, customer.city
+FROM salesman
+INNER JOIN customer ON customer.salesman_id= salesman.salesman_id;
+
+SELECT salesman.name as Salesman, salesman.commission,customer.cust_name, customer.city
+FROM salesman
+INNER JOIN customer ON customer.salesman_id= salesman.salesman_id
+WHERE salesman.commission>0.12;
+
+SELECT salesman.name as Salesman, salesman.commission,salesman.city as cid_s,customer.cust_name, customer.city
+FROM salesman
+INNER JOIN customer ON customer.salesman_id= salesman.salesman_id
+WHERE salesman.commission>0.12 AND 
+salesman.city != customer.city;
+
+SELECT orders.ord_no, orders.ord_date, orders.purch_amt,customer.cust_name as c_name,customer.grade,salesman.name as s_name, salesman.commission 
+FROM orders
+INNER JOIN customer ON customer.customer_id= orders.customer_id
+INNER JOIN salesman ON salesman.salesman_id= orders.salesman_id;
+
+-- n sei 
+SELECT * 
+FROM orders
+INNER JOIN customer ON customer.customer_id= orders.customer_id
+INNER JOIN salesman ON salesman.salesman_id= orders.salesman_id;
+
+SELECT customer.cust_name, customer.city,customer.grade,salesman.name as Salesman, salesman.city
+FROM salesman
+INNER JOIN customer ON customer.salesman_id= salesman.salesman_id
+ORDER BY customer_id asc;
+
+SELECT customer.cust_name, customer.city,customer.grade,salesman.name as Salesman, salesman.city
+FROM salesman
+INNER JOIN customer ON customer.salesman_id= salesman.salesman_id
+WHERE customer.grade < 300;
+
+SELECT customer.cust_name, customer.city,orders.ord_date,orders.purch_amt
+FROM orders
+INNER JOIN customer ON customer.customer_id= orders.customer_id  
+ORDER BY orders.ord_date;
+
+SELECT customer.cust_name, customer.city,customer.grade,salesman.name as Salesman, salesman.city
+FROM salesman
+INNER JOIN customer ON customer.salesman_id= salesman.salesman_id
+ORDER BY customer.salesman_id, salesman.salesman_id;
+
+SELECT salesman.name as s_name, orders.ord_no, 
+customer.cust_name as c_name, customer.city, customer.grade, orders.ord_no, orders.ord_date, orders.purch_amt
+FROM salesman
+INNER JOIN customer ON customer.salesman_id= salesman.salesman_id 
+INNER JOIN orders ON orders.salesman_id= salesman.salesman_id and customer.customer_id = customer.customer_id;
+
+
+
+
+
+
+
