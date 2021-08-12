@@ -1,15 +1,8 @@
-const { Pool } = require("pg");
 const format = require("pg-format");
-const pool = new Pool({
-    host: "localhost",
-    user: "postgres",
-    password: "123456",
-    database: "node"
-});
-
+const db = require("./db");
 (async () => {
     // try{
-    //     const res = await pool.query("SELECT NOW()")
+    //     const res = await db.query("SELECT NOW()")
     //     let r = res.rows[0].now
     //     console.log(r)
     //     let str = String(r)
@@ -19,10 +12,10 @@ const pool = new Pool({
     //     console.log(error.message)
     // }
     // finally{
-    //     pool.end();
+    //     db.end();
     // }
     // try{
-    //     await pool.query(`
+    //     await db.query(`
     //     CREATE TABLE IF NOT EXISTS funcionarios (
     //         id SERIAL PRIMARY KEY,
     //         nome text NOT NULL,
@@ -44,10 +37,10 @@ const pool = new Pool({
         
     // }
     // finally{
-    //     pool.end();
+    //     db.end();
     // }
     // try{
-    //     const res = await pool.query(`
+    //     const res = await db.query(`
     //     INSERT INTO funcionarios(nome,email,telefone) VALUES
     //         ($1,$2,$3)
     //     RETURNING *;
@@ -57,7 +50,7 @@ const pool = new Pool({
     //     console.log(error.message)
     // }
     // finally{
-    //     pool.end();
+    //     db.end();
     // }
 
     // try{
@@ -67,22 +60,22 @@ const pool = new Pool({
     //         ["Ana", "aaa@aaa","54345346"]
     //     ];
     //     const query = format("INSERT INTO funcionarios (nome,email,telefone) VALUES %L RETURNING *",funcionarios)
-    //     const res = await pool.query(query)
+    //     const res = await db.query(query)
     //     console.log(res.rows)
     // } catch (error){
     //     console.log(error.message)
     // }
     // finally{
-    //     pool.end();
+    //     db.end();
     // }
     try{
-        const {rows} = await pool.query(`SELECT * FROM funcionarios WHERE nome ILIKE $1`,['%a'])
+        const {rows} = await db.query(`SELECT * FROM funcionarios WHERE nome ILIKE $1`,['%a'])
         console.log(rows)
     } catch (error){
         console.log(error.message)
     }
     finally{
-        pool.end();
+        db.end();
     }
 
 })();
