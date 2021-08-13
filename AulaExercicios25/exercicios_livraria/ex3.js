@@ -34,6 +34,7 @@ async function mostraCliente(){
 
 async function deletarTodos(){
     try{
+        await db.query('DELETE FROM enderecos')
         await db.query('DELETE FROM clientes')
 
     }
