@@ -3,6 +3,7 @@ const format = require("pg-format");
 let dados_compra = {id_cliente:'29156eb3-3f6e-4c93-94cf-03b9f43ef4ee',isbn:'b456179c-7ea5-4f1e-8487-b450c9348b2d',data:'now()'}
 async function comprar(dados_compra){
     try{
+        await db.query("BEGIN;")
         console.log(dados_compra.isbn)
         let id_livro = [dados_compra.isbn]
         let valor = format("SELECT preco FROM livros WHERE isbn in (%L);",id_livro);
@@ -17,7 +18,9 @@ async function comprar(dados_compra){
         let update = format("UPDATE clientes SET pontos = pontos + cast(%L AS INTEGER) WHERE id in (%L)",pontos,id_cliente);
         const {rows3} = await db.query(update)
         console.log(update)
+        await db.query("COMMIT;")
     } catch (error){
+        await db.query("ROLLBACK;")
         console.log(error.message)
     }
     finally{
