@@ -21,15 +21,3 @@ Endereco.associate(sequelize.models);
 
 module.exports = sequelize;
 
-// (async () => {
-//     try {
-//         await sequelize.authenticate();
-//         console.log('Conexão deu certo!');
-//       } catch (error) {
-//         console.error('Não foi possivel conectar:', error);
-//       } finally{
-//           sequelize.close();
-//       }
-// })();
-
-// node .\database\index.js
