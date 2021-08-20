@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumindo a api</title>
+</head>
+
+<body>
+    <script>
+        // (async () => {
+        //     try {
+        //         const usuario = JSON.stringify({
+        //             nome: "Mateus",
+        //             email: "mateuss@email.com",
+        //             senha: "asdasd@asdasCSa2323"
+        //         });
+
+        //         const res = await fetch(
+        //             "http://localhost:3000/usuarios", {
+        //             method: "POST",
+        //             headers: {
+        //                 "Content-Type": "application/json"
+        //             },
+        //             body: usuario
+        //         });
+
+        //         const body = await res.json();
+
+        //         console.log(body);
+        //     } catch (err) {
+        //         console.log(err);
+        //     }
+        // })();
+
+        (async () => {
+            try {
+
+                const res = await fetch(
+                    "http://localhost:3000/usuarios", {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                  });
+
+                const body = await res.json();
+
+                console.log(body);
+            } catch (err) {
+                console.log(err);
+            }
+        })();
+    </script>
+</body>
+
+</html>

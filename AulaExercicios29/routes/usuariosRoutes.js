@@ -1,70 +1,17 @@
 const express = require('express');
 const router = express.Router();
+const usuariosControllers = require("../controllers/usuariosControllers")
+const usuariosValidations = require("../validators/usuariosValidations");
 
-router.get('/:id', async (req, res) => {
-    try {
-       
-    } catch (error) {
-        res.status(400).json({message :"deu ruim"});
-    }
-  });
+//importando getOne do controller
+router.get('/', usuariosControllers.getAll);
 
+router.get('/:id', usuariosValidations.get, usuariosControllers.getOne);
 
-router.get('/', async (req, res) => {
-    try {
-       
-    } catch (error) {
-        res.status(400).json({message :"deu ruim"});
-    }
-  });
+router.post('/', usuariosValidations.post, usuariosControllers.create);
 
-router.post('/', async (req, res) => {
-    // validar se usuario já existe atraves do email
-    try {
-        const usuarioCriado = await Usuario.create(req.body);
-        res.status(201).json(usuarioCriado);
-    } catch (error) {
-        res.status(400).json({message :"deu ruim"});
-    }
-  });
+router.delete('/:id', usuariosControllers.remove);
 
-
-router.delete('/:id', async (req, res) => {
-    try {
-        const usuario = await Usuario.findOne({
-            where: {
-                id: req.params.id
-            }
-        });
-        if (!usuario){
-            return res.status(404).json({message :"Usuário não foi encontrado! "});
-        }
-        await usuario.destroy();
-        res.status(204).end();
-
-    } catch (error) {
-        res.status(400).json({message :"deu ruim"});
-    }
-  });
-
-router.put('/:id', async (req, res) => {
-    try {
-        const usuario = await Usuario.findOne({
-            where: {
-                id: req.params.id
-            }
-        });
-        if (!usuario){
-            return res.status(404).json({message :"Usuário não foi encontrado! "});
-        }
-        const usuarioAtualizado = req.body;
-        Object.assign(usuario, usuarioAtualizado);
-        await usuario.save();
-        res.json(usuario);
-
-    } catch (error) {
-        res.status(400).json({message :"deu ruim"});
-    }
-});
+router.put('/:id', usuariosValidations.put, usuariosControllers.update);
 
 module.exports = router;
