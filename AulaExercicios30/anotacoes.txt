@@ -1,0 +1,45 @@
+autenticação jwt
+
+npm init -y
+required - 
+        dotenv
+        sequelize
+        sequelize-cli
+        express
+        pg
+        pg-hstore
+        bcrypt
+        jsonwebtoken
+
+npm i dotenv sequelize sequelize-cli express
+
+required dependencia -
+        nodemon
+
+npm i -D nodemon
+
+pra rodar server:
+
+    npm run dev
+
+obs:
+    antes colocar isso no package.json
+
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+
+
+no sequelizerc vai estar configurações para gerar arquivos padrões
+
+    npx sequelize init
+
+    gera as pastas que precisamos
+
+npx sequelize-cli db:create
+
+npx sequelize model:generate --name Usuario --attributes name:string,email:string,password:string
+
+npx sequelize db:migrate
+
+npx sequelize model:generate --name RefreshToken --attributes expiresIn:bigint
