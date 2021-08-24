@@ -1,0 +1,19 @@
+{
+  "name": "AutenticacaoGoogle",
+  "version": "1.0.0",
+  "main": "routes.js",
+  "scripts": {
+    "dev": "nodemon index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gcp-metadata": "^4.3.0",
+    "google-auth-library": "^7.6.2",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {},
+  "description": ""
+}
