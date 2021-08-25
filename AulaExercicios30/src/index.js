@@ -26,7 +26,7 @@ function authMiddleware(permissions) {
                 return res.status(403).json({message:"You don't have permission! "});
             }
             res.locals.userId = payload.sub;
-    
+            
             next();
         } catch (error) {
             console.log(error);

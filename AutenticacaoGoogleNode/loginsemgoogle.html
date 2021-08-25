@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" method="post"> 
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email">
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha">
+        <br>
+        <label for="avatar">Choose a profile picture:</label>
+        <br>
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+        <br>
+        <a href="#" onclick="cadastro();">Cadastrar</a>
+
+    </form>
+    <script>
+        async function cadastro() {
+            let nome = document.querySelector("#nome");
+            let email = document.querySelector("#email");
+            let password = document.querySelector("#password");
+            let file = document.querySelector("#avatar");
+            let imagem = await file.files[0]
+            console.log(imagem)
+            await fetch('http://localhost:3000/upload/', {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    file: JSON.stringify({
+                        imagem:imagem
+                    }),
+                });
+        }
+        
+    </script>
+</body>
+</html>

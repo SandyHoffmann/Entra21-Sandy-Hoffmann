@@ -38,7 +38,7 @@ no sequelizerc vai estar configurações para gerar arquivos padrões
 
 npx sequelize-cli db:create
 
-npx sequelize model:generate --name Usuario --attributes name:string,email:string,password:string
+npx sequelize model:generate --name Usuario --attributes name:string,email:string,token:string
 
 npx sequelize db:migrate
 
