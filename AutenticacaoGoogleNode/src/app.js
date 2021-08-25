@@ -1,9 +1,8 @@
 const express = require('express');
 const {OAuth2Client} = require('google-auth-library');
 const app = express();
-SECRET_CLIENT_ID = '-3uNOn1K7EC4AxAR3ROW70wA'
-CLIENT_ID = '398550612339-hvh64v6qohvoog82vj59rn82c1ogrol8.apps.googleusercontent.com'
-const client = new OAuth2Client(CLIENT_ID,SECRET_CLIENT_ID);
+require("dotenv").config;
+const client = new OAuth2Client(process.env.CLIENT_ID,process.env.SECRET_CLIENT_ID);
 const cors = require("cors");
 app.use(cors({
     origin: "http://localhost:5501"
@@ -15,7 +14,7 @@ async function authMiddleware(token) {
         try {
             const ticket = await client.verifyIdToken({
                 idToken: token,
-                audience: CLIENT_ID
+                audience: process.env.CLIENT_ID
                 // Specify the CLIENT_ID of the app that accesses the backend
                 // Or, if multiple clients access the backend:
                 //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
