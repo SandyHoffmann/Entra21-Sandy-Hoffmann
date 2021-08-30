@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  gap: 20px;
+  }
