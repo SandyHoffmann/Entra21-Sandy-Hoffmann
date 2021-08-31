@@ -4,10 +4,15 @@ import { Card } from './components/Card';
 import { ComProps } from './components/ComProps';
 import { Familia } from './components/Familia';
 import { ListaAlunos } from './components/ListaAlunos';
+import { ManipulandoEventos } from './components/ManipulandoEventos';
 import { MembroFamilia } from './components/MembroFamilia';
 import { Notificacao } from './components/Notificacao';
 import { ParOuImpar } from './components/ParOuImpar';
 import PrimeiroComponente from './components/PrimeiroComponente';
+import { Relogio } from './components/Relogio';
+import { ValorAleatorio } from './components/ValorAleatorio';
+import { ComponentesControlados } from './components/ComponentesControlados';
+import { Contador } from './components/Contador';
 
 function App() {
   return (
@@ -26,7 +31,7 @@ function App() {
       <Card titulo="Media Pedro" cor="orange">
         <Aluno nome="Pedro" media={9.5} />
       </Card>
-      <Card titulo="Media Pedro" cor="red">
+      <Card titulo="Media Maria" cor="red">
         <Aluno nome="Maria" media={5} />
       </Card>
       <Card titulo="Lista Alunos" cor="blue">
@@ -44,7 +49,21 @@ function App() {
         <ParOuImpar numero={10}/>
         <ParOuImpar numero={3}/>
         <hr></hr>
-        <Notificacao mensagens = {["Oi"]}/>
+        <Notificacao mensagens={["Oi"]}/>
+      </Card>
+      <Card titulo="Manipulando Eventos">
+        <ManipulandoEventos/>
+      </Card>
+      <Card titulo="State">
+        <Relogio/>
+        <hr/>
+        <ValorAleatorio/>
+      </Card>
+      <Card titulo="Componente Controlado">
+        <ComponentesControlados/>
+      </Card>
+      <Card titulo="State Assincrono">
+        <Contador/>
       </Card>
       </div>
     </div>
@@ -52,3 +71,4 @@ function App() {
 }
 
 export default App;
+// npx react-create-app .

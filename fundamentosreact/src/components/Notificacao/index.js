@@ -4,8 +4,8 @@ export function Notificacao(props){
 
         <>
         {
-            notificacoes.lenght>0 && 
-            <p>Você tem {props.mensagens.lenght} Notificações! </p> 
+            notificacoes.length>0 && 
+            <p>Você tem {props.mensagens.length} Notificações! </p> 
         }
         </>
     );
