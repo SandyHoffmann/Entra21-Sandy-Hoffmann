@@ -1,0 +1,13 @@
+.BotaoMenos{
+    background-color: red;
+}
+.todoapp{
+    text-align: center;
+    width: 100%;
+    display: flex;
+}
+
+.todoapp p{
+    display: inline;
+    margin: 0%;    
+}

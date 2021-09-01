@@ -1,0 +1,11 @@
+.DivBarraPesquisa{
+    width: 100%;
+    display: flex;
+}
+.BarraPesquisa{
+    width: 100%;
+
+}
+.BotaoMais{
+    background-color: cornflowerblue;
+}
